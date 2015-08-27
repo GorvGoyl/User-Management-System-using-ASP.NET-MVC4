@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<!-- Load SCRIPT.JS which will create datepicker for input field  -->
+<script src="../../script.js"></script>
+<link rel="stylesheet" href="style.css" />
+<meta name="viewport" content="width=device-width" />
+<script src="<%: Url.Content("~/Scripts/jquery-1.7.1.min.js") %>"></script>
+<script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>"></script>
+<script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<style type="text/css">
+    .TableColor
+    {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+  .TableColor td
+    {
+        font-family :Segoe UI ;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+    
+    }
+    .TableColor tr
+    {
+        font-family :Segoe UI ;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+    
+    }
+    .TableColor th
+    {
+        font-family :Segoe UI ;
+        font-size: 14px;
+        font-weight: normal;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+       
+    }
+    .TableColor tr:nth-child(odd) {
+    background: #e8edff;
+}
+
+.TableColor tr:nth-child(even) {
+    background: #D2E4FC;
+}
+ 
+</style>
+<style>
+        h1
+        {
+            font-size: 1.7em;
+            color: Navy;
+            font-weight: bold;
+            font-family: Segoe UI;
+        }
+        h4
+        {
+            font-family: Segoe UI;
+        }
+        h2
+        {
+            font-size: 1.7em;
+            color: Navy;
+            font-weight: bold;
+            font-family: Segoe UI;
+            margin-right: 4cm;
+            text-align: right;
+        }
+        p
+        {
+            color: blue;
+        }
+    </style>
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+       </title>
+</head>
+<body>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

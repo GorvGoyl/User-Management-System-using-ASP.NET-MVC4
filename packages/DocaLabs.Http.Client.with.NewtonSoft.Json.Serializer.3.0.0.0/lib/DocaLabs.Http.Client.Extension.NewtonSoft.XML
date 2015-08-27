@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DocaLabs.Http.Client.Extension.NewtonSoft</name>
+    </assembly>
+    <members>
+        <member name="T:DocaLabs.Http.Client.Extension.NewtonSoft.JsonDeserializer">
+            <summary>
+            Implements IJsonDeserializer using Newtonsoft JsonConvert.
+            </summary>
+        </member>
+        <member name="M:DocaLabs.Http.Client.Extension.NewtonSoft.JsonDeserializer.Deserialize(System.String,System.Type)">
+            <summary>
+            Deserializes an object from string in JSON notation.
+            </summary>
+        </member>
+        <member name="M:DocaLabs.Http.Client.Extension.NewtonSoft.JsonDeserializer.UpdateSettings(System.Type,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Updates/adds settings information which will be used when the specified type is being serialized.
+            Use that to customize behaviour of the JsonConvert.
+            </summary>
+        </member>
+        <member name="T:DocaLabs.Http.Client.Extension.NewtonSoft.JsonSerializer">
+            <summary>
+            Implements IJsonSerializer using Newtonsoft JsonConvert.
+            </summary>
+        </member>
+        <member name="M:DocaLabs.Http.Client.Extension.NewtonSoft.JsonSerializer.Serialize(System.Object)">
+            <summary>
+            Serializes an object into string using JSON notation.
+            </summary>
+        </member>
+        <member name="M:DocaLabs.Http.Client.Extension.NewtonSoft.JsonSerializer.UpdateSettings(System.Type,DocaLabs.Http.Client.Extension.NewtonSoft.SerializationSettings)">
+            <summary>
+            Updates/adds settings information which will be used when the specified type is being serialized.
+            Use that to customize behaviour of the JsonConvert.
+            </summary>
+        </member>
+        <member name="T:DocaLabs.Http.Client.Extension.NewtonSoft.SerializationSettings">
+            <summary>
+            Defines serialization settings that can be used to customize the behaviour of the NewtonSoftDefaultJsonSerializer class.
+            </summary>
+        </member>
+        <member name="M:DocaLabs.Http.Client.Extension.NewtonSoft.SerializationSettings.#ctor">
+            <summary>
+            Initializes an instance of the SerializationSettings class with default values.
+            </summary>
+        </member>
+        <member name="M:DocaLabs.Http.Client.Extension.NewtonSoft.SerializationSettings.#ctor(System.Type,Newtonsoft.Json.Formatting,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Initializes an instance of the SerializationSettings class with the specified values.
+            </summary>
+        </member>
+        <member name="P:DocaLabs.Http.Client.Extension.NewtonSoft.SerializationSettings.Type">
+            <summary>
+            The type of the value being serialized. This parameter is used when Newtonsoft.Json.TypeNameHandling" is Auto to write out the type name if the type of the value does not match.
+            Specifying the type is optional. The default value is null.
+            </summary>
+        </member>
+        <member name="P:DocaLabs.Http.Client.Extension.NewtonSoft.SerializationSettings.Formatting">
+            <summary>
+            Indicates how the output is formatted.
+            The default value is None.
+            </summary>
+        </member>
+        <member name="P:DocaLabs.Http.Client.Extension.NewtonSoft.SerializationSettings.Settings">
+            <summary>
+            The settings used to serialize the object. If this is null, default serialization settings will be is used.
+            The default value is null.
+            </summary>
+        </member>
+    </members>
+</doc>

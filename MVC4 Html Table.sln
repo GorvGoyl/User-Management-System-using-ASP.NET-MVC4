@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC4 Html Table", "MVC4 Html Table\MVC4 Html Table.csproj", "{B993E650-DD07-4C78-BF17-FD44679E200F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessAccessLayer", "BusinessAccessLayer\BusinessAccessLayer.csproj", "{71B2D303-516C-4FB7-B9EB-12250EAE9CA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{AD90EBBF-A1A6-4355-908A-A0C54142925F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B993E650-DD07-4C78-BF17-FD44679E200F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B993E650-DD07-4C78-BF17-FD44679E200F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B993E650-DD07-4C78-BF17-FD44679E200F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B993E650-DD07-4C78-BF17-FD44679E200F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B2D303-516C-4FB7-B9EB-12250EAE9CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B2D303-516C-4FB7-B9EB-12250EAE9CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B2D303-516C-4FB7-B9EB-12250EAE9CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B2D303-516C-4FB7-B9EB-12250EAE9CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD90EBBF-A1A6-4355-908A-A0C54142925F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD90EBBF-A1A6-4355-908A-A0C54142925F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD90EBBF-A1A6-4355-908A-A0C54142925F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD90EBBF-A1A6-4355-908A-A0C54142925F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

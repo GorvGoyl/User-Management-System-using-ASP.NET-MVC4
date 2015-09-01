@@ -13,13 +13,13 @@
     <%: Html.ValidationSummary(true) %>
     <%-- <fieldset>
         <legend>User</legend>--%>
-    <%--   <div class="editor-label">
-                <%: Html.LabelFor(model => model.GUID) %>
+       <div class="editor-label">
+                <%--<%: Html.LabelFor(model => model.GUID) %>--%>
             </div>
             <div class="editor-field">
-                <%: Html.EditorFor(model => model.GUID) %>
-                <%: Html.ValidationMessageFor(model => model.GUID) %>
-            </div>--%>
+                <%: Html.HiddenFor(model => model.GUID) %>
+                <%--<%: Html.ValidationMessageFor(model => model.GUID) %>--%>
+            </div>
     <table class="TableColor" align="center" style="margin-left:9cm" width ="50%">
         <thead>
             <tr>

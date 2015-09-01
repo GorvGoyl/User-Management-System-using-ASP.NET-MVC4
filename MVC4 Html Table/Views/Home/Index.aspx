@@ -53,7 +53,7 @@
                     Actions</h4>
             </th>
         </tr>
-        <%  
+        <%  if (ViewData["UserData"] != null)
             foreach (var customer in (ViewData["UserData"] as IEnumerable<MVC4_Html_Table.Models.User>))
             {
 
@@ -75,8 +75,8 @@
                 <%= customer.EMail %>
             </td>
             <td class="td">
-                <%: Html.ActionLink("Edit", "Edit", "Home", new { guid = customer.GUID }, new { guid = customer.GUID })%>
-                <%: Html.ActionLink("Delete", "Delete", "Home", new { guid = customer.GUID }, new { guid = customer.GUID })%>
+                <%: Html.ActionLink("Edit", "Edit", "Home", new { guid_value = customer.GUID }, new { guid_value = customer.GUID })%>
+                <%: Html.ActionLink("Delete", "Delete", "Home", new { guid_value = customer.GUID }, new { guid_value = customer.GUID })%>
             </td>
         </tr>
         <% } %>

@@ -6,20 +6,22 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using Newtonsoft.Json;
 using System.Configuration;
+using Models;
 namespace DataAccessLayer
 {
     public class DataLayerCode
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static string RetrieveAllData()
+        public static List<User> RetrieveAllData()
         {
             Logger.Debug("Method Start");
             string JsonUser = "";
+            List<User> UsersList = new List<User>();
             try
             {
-                string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
-
+                //string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString(); //for getting connection from web.config
+                string ConnString = "server=localhost;user id=root;Password=leadsquared;database=mvc_database;persist security info=False";
                 using (MySqlConnection Con = new MySqlConnection(ConnString))
                 {
                     Con.Open();
@@ -27,23 +29,23 @@ namespace DataAccessLayer
                     Comm.CommandType = CommandType.StoredProcedure;
 
                     MySqlDataReader Reader = Comm.ExecuteReader();
-                    Users UserData;// = new Users[Reader.FieldCount];
-                    List<Users> UserList = new List<Users>();
+                    User UserData;
+
                     while (Reader.Read())
                     {
-                        UserData = new Users();
+                        UserData = new User();
                         UserData.GUID = Reader["GUID"].ToString();
                         UserData.Name = Reader["NAME"].ToString();
                         UserData.Phone = Reader["PHONE"].ToString();
                         UserData.City = Reader["CITY"].ToString();
                         UserData.DOB = Reader["DOB"].ToString();
                         UserData.EMail = Reader["EMAIL"].ToString();
-                        UserList.Add(UserData);
+                        UsersList.Add(UserData);
 
                     }
 
 
-                    JsonUser = JsonConvert.SerializeObject(UserList);
+                    JsonUser = JsonConvert.SerializeObject(UsersList);
                 }
             }
             catch (MySqlException exception)
@@ -61,40 +63,38 @@ namespace DataAccessLayer
 
             Logger.Debug(JsonUser);
             Logger.Debug("Method End");
-            return JsonUser;
+            return UsersList;
         }
 
-        public static string RetrieveUser(string guid)
+        public static User RetrieveUser(string guid)
         {
             Logger.Debug("Method Start");
-            string JsonUser = "";
+           // string JsonUser = "";
+            User UserData = new User();
             try
             {
-                string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
-
+                // string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
+                string ConnString = "server=localhost;user id=root;Password=leadsquared;database=mvc_database;persist security info=False";
                 using (MySqlConnection Con = new MySqlConnection(ConnString))
                 {
                     Con.Open();
                     MySqlCommand Cmd = new MySqlCommand("udsp_User_Retrieve", Con);
                     Cmd.CommandType = CommandType.StoredProcedure;
+                    //string guid = "4";
                     Cmd.Parameters.AddWithValue("var_GUIDparam", guid);
-
                     MySqlDataReader Reader = Cmd.ExecuteReader();
-
-                    Users UserData = new Users();
-                    while (Reader.Read())
+                    if (Reader.Read())
                     {
-
                         UserData.GUID = Reader["GUID"].ToString();
                         UserData.Name = Reader["NAME"].ToString();
                         UserData.Phone = Reader["PHONE"].ToString();
                         UserData.City = Reader["CITY"].ToString();
                         UserData.DOB = Reader["DOB"].ToString();
                         UserData.EMail = Reader["EMAIL"].ToString();
-
                     }
-
-                    JsonUser = JsonConvert.SerializeObject(UserData);
+                    string JsonUser = JsonConvert.SerializeObject(UserData);
+                    return UserData;
+                    
                 }
             }
             catch (MySqlException exception)
@@ -109,43 +109,33 @@ namespace DataAccessLayer
                 Logger.Debug(exception.Message, exception);
                 throw exception;
             }
-
-            Logger.Debug(JsonUser);
-            Logger.Debug("Method End");
-            return JsonUser;
+            //JsonUser = JsonConvert.SerializeObject(UserData);
+            //Logger.Debug(JsonUser);
+            //Logger.Debug("Method End");
+            //return JsonUser;
+            
         }
 
-        public static void AddUserToDB(string jsonUserData)
+        public static void AddUserToDB(List<string> userData)
         {
             Logger.Debug("Method Start");
-            Users UserData;
-            try
-            {
-                UserData = JsonConvert.DeserializeObject<Users>(jsonUserData);
-
-            }
-            catch (Exception exception)
-            {
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
 
             try
             {
-                string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
-
+                //string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
+                string ConnString = "server=localhost;user id=root;Password=leadsquared;database=mvc_database;persist security info=False";
                 using (MySqlConnection Con = new MySqlConnection(ConnString))
                 {
                     Con.Open();
                     MySqlCommand Cmd = new MySqlCommand("udsp_User_Create", Con);
                     Cmd.CommandType = CommandType.StoredProcedure;
 
-                    Cmd.Parameters.AddWithValue("var_GUIDparam", UserData.GUID);
-                    Cmd.Parameters.AddWithValue("var_Nameparam", UserData.Name);
-                    Cmd.Parameters.AddWithValue("var_Phoneparam", UserData.Phone);
-                    Cmd.Parameters.AddWithValue("var_Cityparam", UserData.City);
-                    Cmd.Parameters.AddWithValue("var_DOBparam", UserData.DOB);
-                    Cmd.Parameters.AddWithValue("var_EMailparam", UserData.EMail);
+                    Cmd.Parameters.AddWithValue("var_GUIDparam", userData[0]);
+                    Cmd.Parameters.AddWithValue("var_Nameparam", userData[1]);
+                    Cmd.Parameters.AddWithValue("var_Phoneparam", userData[2]);
+                    Cmd.Parameters.AddWithValue("var_Cityparam", userData[3]);
+                    Cmd.Parameters.AddWithValue("var_DOBparam", userData[4]);
+                    Cmd.Parameters.AddWithValue("var_EMailparam", userData[5]);
                     Cmd.ExecuteNonQuery();
                 }
             }
@@ -162,42 +152,29 @@ namespace DataAccessLayer
                 throw exception;
             }
 
-
-
             Logger.Debug("Method End");
 
         }
 
-        public static void UpdateUser(string jsonUserData)
+        public static void UpdateUser(List<string> userData)
         {
             Logger.Debug("Method Start");
-            Users UserData;
-            try
-            {
-                UserData = JsonConvert.DeserializeObject<Users>(jsonUserData);
-
-            }
-            catch (Exception exception)
-            {
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
 
             try
             {
-                string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
-
+                // string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
+                string ConnString = "server=localhost;user id=root;Password=leadsquared;database=mvc_database;persist security info=False";
                 using (MySqlConnection Con = new MySqlConnection(ConnString))
                 {
                     Con.Open();
                     MySqlCommand Cmd = new MySqlCommand("udsp_User_Update", Con);
                     Cmd.CommandType = CommandType.StoredProcedure;
-                    Cmd.Parameters.AddWithValue("var_GUIDparam", UserData.GUID);
-                    Cmd.Parameters.AddWithValue("var_Nameparam", UserData.Name);
-                    Cmd.Parameters.AddWithValue("var_Phoneparam", UserData.Phone);
-                    Cmd.Parameters.AddWithValue("var_Cityparam", UserData.City);
-                    Cmd.Parameters.AddWithValue("var_DOBparam", UserData.DOB);
-                    Cmd.Parameters.AddWithValue("var_EMailparam", UserData.EMail);
+                    Cmd.Parameters.AddWithValue("var_GUIDparam", userData[0]);
+                    Cmd.Parameters.AddWithValue("var_Nameparam", userData[1]);
+                    Cmd.Parameters.AddWithValue("var_Phoneparam", userData[2]);
+                    Cmd.Parameters.AddWithValue("var_Cityparam", userData[3]);
+                    Cmd.Parameters.AddWithValue("var_DOBparam", userData[4]);
+                    Cmd.Parameters.AddWithValue("var_EMailparam", userData[5]);
                     Cmd.ExecuteNonQuery();
                 }
             }
@@ -222,10 +199,10 @@ namespace DataAccessLayer
         public static void DeleteUser(string guid)
         {
             Logger.Debug("Method Start");
-          try
+            try
             {
-                string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
-
+                // string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
+                string ConnString = "server=localhost;user id=root;Password=leadsquared;database=mvc_database;persist security info=False";
                 using (MySqlConnection Con = new MySqlConnection(ConnString))
                 {
                     Con.Open();

@@ -4,47 +4,52 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using DataAccessLayer;
+using Models;
+using System.Net;
 namespace BusinessAccessLayer
 {
     public class BusinesLayerCode
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static string Retrieve()
+        public static List<User> Retrieve()
         {
             Logger.Debug("Method Start");
             Logger.Debug("Method End");
-            return DataLayerCode.RetrieveAllData();
+            List<User> UserData= DataLayerCode.RetrieveAllData();
+            return UserData;
 
         }
 
-
-        public static void AddUser(string user)
+        public static User Edit(string guid)
         {
             Logger.Debug("Method Start");
-            DataLayerCode.AddUserToDB(user);
+            User UserData = DataLayerCode.RetrieveUser(guid);
+            Logger.Debug("Method End");
+            return UserData;
 
+        }
+
+        public static void AddUser(List<string> userData)
+        {
+            Logger.Debug("Method Start");
+            Logger.Debug(userData);
+            try
+            {
+                DataLayerCode.AddUserToDB(userData);
+            }
+            catch (WebException exception)
+            {
+                throw exception;
+            }
             Logger.Debug("Method End");
 
         }
-
-
-        public static string Edit(string guid)
+        public static void Update(List<string> userData)
         {
             Logger.Debug("Method Start");
-
-            string JsonUser = DataLayerCode.RetrieveUser(guid);
-
-            Logger.Debug("Method End");
-            return JsonUser;
-            //return DataLayerCode.RetrieveData();
-
-        }
-        public static void Update(string jsonUser)
-        {
-            Logger.Debug("Method Start");
-            Logger.Debug(jsonUser);
-            DataLayerCode.UpdateUser(jsonUser);
+            Logger.Debug(userData);
+            DataLayerCode.UpdateUser(userData);
 
             Logger.Debug("Method End");
 
@@ -54,7 +59,9 @@ namespace BusinessAccessLayer
 
         public static void DeleteUser(string guid)
         {
+            Logger.Debug("Method Start");
             DataLayerCode.DeleteUser(guid);
+            Logger.Debug("Method End");
         }
 
     }

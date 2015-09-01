@@ -187,14 +187,25 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessAccessLayer\BusinessAccessLayer.csproj">
-      <Project>{71B2D303-516C-4FB7-B9EB-12250EAE9CA1}</Project>
-      <Name>BusinessAccessLayer</Name>
+    <None Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="ViewMasterPage1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{AD90EBBF-A1A6-4355-908A-A0C54142925F}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modal\Models.csproj">
+      <Project>{6C363C4A-5547-4B45-B6C0-731FC49DE765}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WcfServiceRest\WcfServiceRest.csproj">
+      <Project>{D031261D-8090-492E-8D30-AF9D7859E11C}</Project>
+      <Name>WcfServiceRest</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\jquery-2.1.4.min.map" />
-    <Content Include="ViewMasterPage1.Master" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -211,7 +222,7 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>False</AutoAssignPort>
+          <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60000</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>

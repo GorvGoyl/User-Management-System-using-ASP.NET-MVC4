@@ -14,7 +14,7 @@ namespace MVC4_Html_Table
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
-        {
+        { 
             AreaRegistration.RegisterAllAreas();
             log4net.Config.XmlConfigurator.Configure(new FileInfo(Server.MapPath("~/Web.config")));
             WebApiConfig.Register(GlobalConfiguration.Configuration);

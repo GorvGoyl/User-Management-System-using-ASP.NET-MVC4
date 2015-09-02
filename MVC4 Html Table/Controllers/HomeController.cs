@@ -3,99 +3,60 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVC4_Html_Table.Models;
-using WcfServiceRest;
+using MVC4_Html_Table.Filters;
+using System.Web.Security;
 using Newtonsoft.Json;
-using log4net;
-using System.Net;
+using MVC4_Html_Table.Models;
 using System.IO;
-using System.Text;
+using System.Net;
+using Newtonsoft.Json.Linq;
+using System.Configuration;
 namespace MVC4_Html_Table.Controllers
 {
     public class HomeController : Controller
     {
-        private static readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
+        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        string BaseURL = ConfigurationManager.AppSettings["UserTableServiceURL"].ToString();
+        [AllowAnonymous] //This is for Un-Authorize User
         public ActionResult Index()
         {
             Logger.Debug("Method Start");
-            try
-            {
-                WebRequest Request = WebRequest.Create("http://localhost:65000/Service1.svc/RetrieveAll");
-                using (WebResponse Response = Request.GetResponse())
-                {
-                    Logger.Debug(((HttpWebResponse)Response).StatusDescription);
-                    using (Stream dataStream = Response.GetResponseStream())
-                    {
-                        using (StreamReader Reader = new StreamReader(dataStream))
-                        {
-                            string ResponseFromServer = Reader.ReadToEnd();
-                            Logger.Debug(ResponseFromServer);
-                            try
-                            {
-                                List<User> UserData = JsonConvert.DeserializeObject<List<User>>(ResponseFromServer);
-                                ViewData["UserData"] = UserData;
-                            }
-                            catch (Exception exception)
-                            {
-                                Logger.Debug(exception.Message, exception);
-                                throw exception;
-                            }
-                        }
-                    }
-                }
-            }
-            catch (WebException webExcp)
-            {
-                // If you reach this point, an exception has been caught.
-                Logger.Debug("A WebException has been caught.");
-                // Write out the WebException message.
-                Logger.Debug(webExcp.ToString());
-                // Get the WebException status code.
-                WebExceptionStatus status = webExcp.Status;
-                // If status is WebExceptionStatus.ProtocolError, 
-                //   there has been a protocol error and a WebResponse 
-                //   should exist. Display the protocol error.
-                if (status == WebExceptionStatus.ProtocolError)
-                {
-                    Logger.Debug("The server returned protocol error ");
-                    // Get HttpWebResponse so that you can check the HTTP status code.
-                    HttpWebResponse httpResponse = (HttpWebResponse)webExcp.Response;
-                    Logger.Debug((int)httpResponse.StatusCode + " - "
-                       + httpResponse.StatusCode);
-                }
-                throw webExcp;
-            }
-            catch (Exception exception)
-            {
-                Logger.Debug(exception.Message, exception);
-                throw exception;
- 
-            }
+
             Logger.Debug("Method End");
             return View();
         }
 
-        public ActionResult Create() //redirect to edit action with guid = 0
+
+        public ActionResult Register()
         {
             Logger.Debug("Method Start");
 
             Logger.Debug("Method End");
-            return RedirectToAction("Edit", "Home", new { guid_value = 0 });
-
+            return RedirectToAction("Create", "User", "Create");
         }
 
 
-        public ActionResult Edit(string guid_value) //guid = 0 when it's invoked from Create() action
+        public ActionResult Login()
         {
             Logger.Debug("Method Start");
-            Logger.Debug(guid_value);
-            if (!guid_value.Equals("0"))  //it means updating existing user with some guid value
+
+            Logger.Debug("Method End");
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Login(User user)
+        {
+            Logger.Debug("Method Start");
+
+
+            if (ModelState.IsValid)
             {
                 try
                 {
-                    HttpWebRequest Request = (HttpWebRequest)WebRequest.Create("http://localhost:65000/Service1.svc/Edit");
-                    var RequestData = new { guid = guid_value };
+                    HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(BaseURL + "ValidateUser");
+                    var RequestData = new { user = user };
                     Request.Method = "POST";
                     Request.ContentType = "application/json";
 
@@ -104,9 +65,9 @@ namespace MVC4_Html_Table.Controllers
                         Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
 
                     }
-                    using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
+                    using (HttpWebResponse HttpResponse = (HttpWebResponse)Request.GetResponse())
                     {
-                        using (Stream DataStream = Response.GetResponseStream())
+                        using (Stream DataStream = HttpResponse.GetResponseStream())
                         {
 
                             using (StreamReader Reader = new StreamReader(DataStream))
@@ -114,248 +75,76 @@ namespace MVC4_Html_Table.Controllers
                                 string UserDataResponse = Reader.ReadToEnd();
                                 Logger.Debug(UserDataResponse);
                                 User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
-                                ViewData["UserData"] = UserData; //show user details in textboxes
+                                if (String.IsNullOrEmpty(UserData.UserName))
+                                {
+                                    ViewBag.Message = "username or password is incorrect";
+                                    ModelState.Remove("Password");
+                                    Logger.Debug("Method End");
+                                    return View();
+                                }
+                                HttpCookie CustomAuthCookie = new HttpCookie("MXGourav");
+                                FormsAuthenticationTicket Ticket = new FormsAuthenticationTicket(
+                                   1,
+                                   user.UserName,
+                                   DateTime.Now,
+                                   DateTime.Now.AddMinutes(30),
+                                   true,
+                                   UserDataResponse,
+                                   CustomAuthCookie.Path);
 
-                                Logger.Debug("Method End");
-                                return View(UserData);
+                                string EncTicket = FormsAuthentication.Encrypt(Ticket);
+                                Response.Cookies.Add(new HttpCookie(CustomAuthCookie.Name, EncTicket));
+
+                                
+                                    return RedirectToAction("Index", "User");
+                                
                             }
                         }
                     }
+
                 }
-                catch (WebException webExcp)
-                {
-                    // If you reach this point, an exception has been caught.
-                    Logger.Debug("A WebException has been caught.");
-                    // Write out the WebException message.
-                    Logger.Debug(webExcp.ToString());
-                    // Get the WebException status code.
-                    WebExceptionStatus status = webExcp.Status;
-                    // If status is WebExceptionStatus.ProtocolError, 
-                    //   there has been a protocol error and a WebResponse 
-                    //   should exist. Display the protocol error.
-                    //if (status == WebExceptionStatus.ProtocolError)
-                   // {
-                        Logger.Debug("The server returned protocol error ");
-                        // Get HttpWebResponse so that you can check the HTTP status code.
-                        HttpWebResponse httpResponse = (HttpWebResponse)webExcp.Response;
-                        Logger.Debug((int)httpResponse.StatusCode + " - "
-                           + httpResponse.StatusCode);
-                   // }
-                    throw webExcp;
-                }
+
                 catch (Exception exception)
                 {
                     Logger.Debug(exception.Message, exception);
-                    throw exception;
-
+                    var protocolException = exception as WebException;
+                    if (protocolException != null)
+                    {
+                        var responseStream = protocolException.Response.GetResponseStream();
+                        var error = new StreamReader(protocolException.Response.GetResponseStream()).ReadToEnd();
+                        var ErrorInfoMessage = JToken.Parse(error)["ErrorInfo"];
+                        throw new Exception(ErrorInfoMessage.ToString());
+                    }
+                    else
+                    {
+                        throw new Exception("There is an unexpected error", exception);
+                    }
                 }
+
+            }
+            else
+            {
+
+                ModelState.Remove("Password");
+                return View();
             }
 
-            Logger.Debug("Method End");
-            return View(new User());  //else pass the empty user details in textboxes
         }
 
-        [HttpPost]  //posting the data to dB
-        public ActionResult Edit(User user) //one action for both update and create user
+
+        [CustomAuthorize]
+        public ActionResult Logout()
         {
             Logger.Debug("Method Start");
-            if (ModelState.IsValid)
-            {
-                if (String.IsNullOrEmpty(user.GUID))    //If it's a new User
-                {
+            HttpContext.Response.Cookies.Remove("MXGourav");
+            HttpContext.Response.Cookies["MXGourav"].Value = null;
+            //Clearing the cookies of the response doesn't instruct the
+            //browser to clear the cookie, it merely does not send the cookie back to the browser.
+            //To instruct the browser to clear the cookie you need to tell it the cookie has expired
+            HttpContext.Response.Cookies["MXGourav"].Expires = DateTime.Now.AddMonths(-1);
 
-                    List<string> UserData = new List<string>();
-
-                    Guid NewGUID = Guid.NewGuid();
-                    user.GUID = NewGUID.ToString();
-
-                    UserData.Add(user.GUID);
-                    UserData.Add(user.Name ?? string.Empty);
-                    UserData.Add(user.Phone ?? string.Empty);
-                    UserData.Add(user.City ?? string.Empty);
-                    UserData.Add(user.DOB ?? "2000-01-01");
-                    UserData.Add(user.EMail ?? string.Empty);
-                    try
-                    {
-                        HttpWebRequest Request = (HttpWebRequest)WebRequest.Create("http://localhost:65000/Service1.svc/AddUser");
-                        var RequestData = new { userData = UserData };
-
-                        Request.Method = "POST";
-                        Request.ContentType = "application/json";
-
-                        using (StreamWriter Writer = new StreamWriter(Request.GetRequestStream()))
-                        {
-                            Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
-
-                        }
-                        using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
-                        {
-
-                            using (Stream DataStream = Response.GetResponseStream())
-                            {
-
-                                using (StreamReader Reader = new StreamReader(DataStream))
-                                {
-                                    string Result = Reader.ReadToEnd();
-
-                                }
-                            }
-                        }
-                    }
-                    catch (WebException webExcp)
-                    {
-                        // If you reach this point, an exception has been caught.
-                        Logger.Debug("A WebException has been caught.");
-                        // Write out the WebException message.
-                        Logger.Debug(webExcp.ToString());
-                        // Get the WebException status code.
-                        WebExceptionStatus status = webExcp.Status;
-                        // If status is WebExceptionStatus.ProtocolError, 
-                        //   there has been a protocol error and a WebResponse 
-                        //   should exist. Display the protocol error.
-                        if (status == WebExceptionStatus.ProtocolError)
-                        {
-                            Logger.Debug("The server returned protocol error ");
-                            // Get HttpWebResponse so that you can check the HTTP status code.
-                            HttpWebResponse httpResponse = (HttpWebResponse)webExcp.Response;
-                            Logger.Debug((int)httpResponse.StatusCode + " - "
-                               + httpResponse.StatusCode);
-                        }
-                        throw webExcp;
-                    }
-                    catch (Exception exception)
-                    {
-                        Logger.Debug(exception.Message, exception);
-                        throw exception;
-
-                    }
-                }
-                else    //update the existing user
-                {
-                    List<string> UserData = new List<string>();
-
-                    UserData.Add(user.GUID);
-                    UserData.Add(user.Name ?? string.Empty);
-                    UserData.Add(user.Phone ?? string.Empty);
-                    UserData.Add(user.City ?? string.Empty);
-                    UserData.Add(user.DOB ?? "2000-01-01");
-                    UserData.Add(user.EMail ?? string.Empty);
-                    try
-                    {
-                        HttpWebRequest Request = (HttpWebRequest)WebRequest.Create("http://localhost:65000/Service1.svc/Update");
-                        var RequestData = new { userData = UserData };
-                        Request.Method = "POST";
-                        Request.ContentType = "application/json";
-                        using (StreamWriter Writer = new StreamWriter(Request.GetRequestStream()))
-                        {
-                            Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
-
-                        }
-                        using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
-                        {
-
-                            using (Stream DataStream = Response.GetResponseStream())
-                            {
-
-                                using (StreamReader Reader = new StreamReader(DataStream))
-                                {
-                                    string Result = Reader.ReadToEnd();
-
-                                }
-                            }
-                        }
-                    }
-                    catch (WebException webExcp)
-                    {
-                        // If you reach this point, an exception has been caught.
-                        Logger.Debug("A WebException has been caught.");
-                        // Write out the WebException message.
-                        Logger.Debug(webExcp.ToString());
-                        // Get the WebException status code.
-                        WebExceptionStatus status = webExcp.Status;
-                        // If status is WebExceptionStatus.ProtocolError, 
-                        //   there has been a protocol error and a WebResponse 
-                        //   should exist. Display the protocol error.
-                        if (status == WebExceptionStatus.ProtocolError)
-                        {
-                            Logger.Debug("The server returned protocol error ");
-                            // Get HttpWebResponse so that you can check the HTTP status code.
-                            HttpWebResponse httpResponse = (HttpWebResponse)webExcp.Response;
-                            Logger.Debug((int)httpResponse.StatusCode + " - "
-                               + httpResponse.StatusCode);
-                        }
-                        throw webExcp;
-                    }
-                    catch (Exception exception)
-                    {
-                        Logger.Debug(exception.Message, exception);
-                        throw exception;
-
-                    }
-                }
-                Logger.Debug("Method End");
-                return RedirectToAction("Index", "Home");
-            }
-            return View(user);
-
+            return RedirectToAction("Login", "Home");
         }
-
-        public ActionResult Delete(string guid)
-        {
-            Logger.Debug("Method Start");
-            Logger.Debug(guid);
-            try
-            {
-                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create("http://localhost:65000/Service1.svc/Delete");
-                var RequestData = new { guid = guid };
-                Request.Method = "POST";
-                Request.ContentType = "application/json";
-
-                using (StreamWriter Writer = new StreamWriter(Request.GetRequestStream()))
-                {
-                    Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
-                }
-
-                using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
-                {
-                    using (Stream DataStream = Response.GetResponseStream())
-                    {
-
-                    }
-                }
-
-            }
-            catch (WebException webExcp)
-            {
-                // If you reach this point, an exception has been caught.
-                Logger.Debug("A WebException has been caught.");
-                // Write out the WebException message.
-                Logger.Debug(webExcp.ToString());
-                // Get the WebException status code.
-                WebExceptionStatus status = webExcp.Status;
-                // If status is WebExceptionStatus.ProtocolError, 
-                //   there has been a protocol error and a WebResponse 
-                //   should exist. Display the protocol error.
-                if (status == WebExceptionStatus.ProtocolError)
-                {
-                    Logger.Debug("The server returned protocol error ");
-                    // Get HttpWebResponse so that you can check the HTTP status code.
-                    HttpWebResponse httpResponse = (HttpWebResponse)webExcp.Response;
-                    Logger.Debug((int)httpResponse.StatusCode + " - "
-                       + httpResponse.StatusCode);
-                }
-                throw webExcp;
-            }
-            catch (Exception exception)
-            {
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-
-            }
-            Logger.Debug("Method End");
-            return RedirectToAction("Index", "Home");
-        }
-
 
     }
 }

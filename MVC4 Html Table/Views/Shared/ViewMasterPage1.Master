@@ -1,24 +1,18 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+<link rel="stylesheet" href="../../Content/CSS/jquery-ui.css" />
 <!-- Load jQuery JS -->
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../Content/JS/jquery-1.9.1.js"></script>
 <!-- Load jQuery UI Main JS  -->
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../../Content/JS/jquery-ui.js"></script>
 <!-- Load SCRIPT.JS which will create datepicker for input field  -->
-<script src="../../script.js"></script>
-<link rel="stylesheet" href="style.css" />
+<script src="../../Content/JS/script.js"></script>
+<link rel="stylesheet" href="../../Content/CSS/style.css" />
 <meta name="viewport" content="width=device-width" />
-<script src="<%: Url.Content("~/Scripts/jquery-1.7.1.min.js") %>"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>"></script>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<!-- Load jQuery JS -->
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<!-- Load jQuery UI Main JS  -->
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<html>
+
 <style type="text/css">
     .TableColor
     {

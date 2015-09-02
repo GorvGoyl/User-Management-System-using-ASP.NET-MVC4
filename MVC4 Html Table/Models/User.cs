@@ -9,18 +9,22 @@ namespace MVC4_Html_Table.Models
     public class User
     {
 
+      
         public string GUID { get; set; }
-        [Required(ErrorMessage = "Name Required.", AllowEmptyStrings = false)]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "UserName Required.", AllowEmptyStrings = false)]
+        public string UserName { get; set; }
+        public string FullName { get; set; }
+       // [RegularExpression(@"^[0-9]{10}$", ErrorMessage = "Enter 10 digit phone number ")]
         public string Phone { get; set; }
+       // [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Email Format is wrong")]
+        //[Display(Name = "Email Id")]
+        public string Email { get; set; }
         public string City { get; set; }
-        //[Range(typeof(DateTime), "01/01/1900", "06/06/2016", ErrorMessage = "Date is Invalid")] 
+      //  [Required(ErrorMessage = "Please enter the date of birth")]
+      //  [RegularExpression(@"[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}", ErrorMessage = "Date format should be 'mm/dd/yyyy' ")]
+        public string Dob { get; set; }
+       // [Required(ErrorMessage = "Password Required.", AllowEmptyStrings = false)]
+        public string Password { get; set; }
 
-        [Required(ErrorMessage = "Please enter the date of birth")]
-        [RegularExpression(@"[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}", ErrorMessage = "Date format should be 'mm/dd/yyyy' ")]
-        public string DOB { get; set; }
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Email Format is wrong")]
-        [Display(Name = "Email Id")]
-        public string EMail { get; set; }
     }
 }

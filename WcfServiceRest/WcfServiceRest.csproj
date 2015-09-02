@@ -67,7 +67,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.svc" />
+    <Content Include="UserTableService.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -79,10 +79,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
+    <Compile Include="UserTableService.svc.cs">
+      <DependentUpon>UserTableService.svc</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="IUserTableService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,9 +93,13 @@
       <Project>{71B2D303-516C-4FB7-B9EB-12250EAE9CA1}</Project>
       <Name>BusinessAccessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modal\Models.csproj">
-      <Project>{6C363C4A-5547-4B45-B6C0-731FC49DE765}</Project>
-      <Name>Models</Name>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj">
+      <Project>{0C0EA193-0FEF-49D5-B0FB-1DE94804C9E7}</Project>
+      <Name>DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UtilityClassLibrary\Utilities.csproj">
+      <Project>{76931B54-9DCC-4316-8C46-66DA830B0B41}</Project>
+      <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

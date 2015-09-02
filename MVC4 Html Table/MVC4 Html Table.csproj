@@ -112,7 +112,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Filters\CustomAuthorizeAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -123,6 +126,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\CSS\jquery-ui.css" />
+    <Content Include="Content\JS\jquery-1.9.1.js" />
+    <Content Include="Content\JS\jquery-ui.js" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -157,17 +163,19 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Global.asax" />
-    <Content Include="script.js" />
-    <Content Include="Scripts\jquery-2.1.4-vsdoc.js" />
-    <Content Include="Scripts\jquery-2.1.4.js" />
-    <Content Include="Scripts\jquery-2.1.4.min.js" />
-    <Content Include="Scripts\jquery-ui-1.11.4.js" />
-    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
-    <Content Include="style.css" />
-    <Content Include="StyleSheet.css" />
-    <Content Include="Views\Home\Create.aspx" />
-    <Content Include="Views\Home\Edit.aspx" />
+    <Content Include="Content\JS\script.js" />
+    <Content Include="Content\Scripts\jquery-2.1.4-vsdoc.js" />
+    <Content Include="Content\Scripts\jquery-2.1.4.js" />
+    <Content Include="Content\Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Content\CSS\style.css" />
+    <Content Include="Content\CSS\StyleSheet.css" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\Login.aspx" />
+    <Content Include="Views\User\Create.aspx" />
+    <Content Include="Views\User\Edit.aspx" />
+    <Content Include="Views\User\Index.aspx" />
     <Content Include="Views\Shared\_Layout.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -187,17 +195,13 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\jquery-2.1.4.min.map" />
-    <Content Include="ViewMasterPage1.Master" />
+    <None Include="Content\Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Views\Shared\ViewMasterPage1.Master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{AD90EBBF-A1A6-4355-908A-A0C54142925F}</Project>
-      <Name>DataAccessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Modal\Models.csproj">
-      <Project>{6C363C4A-5547-4B45-B6C0-731FC49DE765}</Project>
-      <Name>Models</Name>
+    <ProjectReference Include="..\UtilityClassLibrary\Utilities.csproj">
+      <Project>{76931B54-9DCC-4316-8C46-66DA830B0B41}</Project>
+      <Name>Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="..\WcfServiceRest\WcfServiceRest.csproj">
       <Project>{D031261D-8090-492E-8D30-AF9D7859E11C}</Project>

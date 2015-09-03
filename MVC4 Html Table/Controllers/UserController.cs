@@ -16,7 +16,7 @@ using System.Configuration;
 using MVC4_Html_Table.Filters;
 namespace MVC4_Html_Table.Controllers
 {
-    public class UserController : Controller
+    public class UserController : BaseController
     {
         private readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserTableServiceURL"].ToString();
@@ -24,13 +24,11 @@ namespace MVC4_Html_Table.Controllers
         [CustomAuthorize]
         public ActionResult Index()
         {
-            Logger.Debug("Method Start");
-            try
-            {
-
-
-                WebRequest Request = WebRequest.Create(BaseURL + "RetrieveAll");
-                using (WebResponse Response = Request.GetResponse())
+            
+            string URL = BaseURL + "Retrieve";
+             try
+            {               
+                using (HttpWebResponse Response = ServiceConsumer.Get(URL))
                 {
                     Logger.Debug(((HttpWebResponse)Response).StatusDescription);
                     using (Stream dataStream = Response.GetResponseStream())
@@ -63,7 +61,9 @@ namespace MVC4_Html_Table.Controllers
                         }
                     }
                 }
+
             }
+
             catch (Exception exception)
             {
                 Logger.Debug(exception.Message, exception);
@@ -81,15 +81,16 @@ namespace MVC4_Html_Table.Controllers
                 }
 
             }
-            Logger.Debug("Method End");
+            
             return View();
         }
+
         [CustomAuthorize]
         public ActionResult Create() 
         {
-            Logger.Debug("Method Start");
+            
 
-            Logger.Debug("Method End");
+            
             return View(new User());
 
         }
@@ -97,37 +98,22 @@ namespace MVC4_Html_Table.Controllers
         [HttpPost]
         public ActionResult Create(User user)
         {
-            Logger.Debug("Method Start");
-            try
-            {
-                string JsonUser = JsonConvert.SerializeObject(user);
-                Logger.Debug(JsonUser);
-            }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
+            
 
             if (ModelState.IsValid)
             {
                 Guid NewGUID = Guid.NewGuid();
                 Logger.Debug(NewGUID);
-                user.GUID = NewGUID.ToString();
+                user.UserId    =   NewGUID.ToString();
+                string URL   =   BaseURL + "Create";
                 try
                 {
-                    HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(BaseURL + "AddUser");
-                    var RequestData = new { user = user };
-                    Request.Method = "POST";
-                    Request.ContentType = "application/json";
-                    using (StreamWriter Writer = new StreamWriter(Request.GetRequestStream()))
-                    {
-                        Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
-                    }
-                    using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
+                    using (HttpWebResponse HttpResponse = ServiceConsumer.Post(URL, user))
                     {
                     }
+
+                    string JsonUser = JsonConvert.SerializeObject(user);
+                    Logger.Debug(JsonUser);
                 }
 
                 catch (Exception exception)
@@ -145,31 +131,24 @@ namespace MVC4_Html_Table.Controllers
                         throw new Exception("There is an unexpected error", exception);
                 }
 
-                Logger.Debug("Method End");
+                
                 return RedirectToAction("Index", "User");
             }
             return View(user);
 
         }
 
-        [CustomAuthorize]
-        public ActionResult Edit(string guid_value) 
+        [CustomAuthorize] //retrieving user details from dB
+        public ActionResult Edit(string id_value) 
         {
-            Logger.Debug("Method Start");
-            Logger.Debug(guid_value);
+            
+            Logger.Debug(id_value);
+            User User  = new User();
+            User.UserId  = id_value;
+            string URL = BaseURL + "RetrieveUser";
             try
-            {
-                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(BaseURL + "Edit");
-                var RequestData = new { guid = guid_value };
-                Request.Method = "POST";
-                Request.ContentType = "application/json";
-
-                using (StreamWriter Writer = new StreamWriter(Request.GetRequestStream()))
-                {
-                    Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
-
-                }
-                using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
+            {              
+                using (HttpWebResponse Response = ServiceConsumer.Post(URL, User))
                 {
                     using (Stream DataStream = Response.GetResponseStream())
                     {
@@ -181,7 +160,7 @@ namespace MVC4_Html_Table.Controllers
                             User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
                             ViewData["UserData"] = UserData; //show user details in textboxes
 
-                            Logger.Debug("Method End");
+                            
                             return View(UserData);
                         }
                     }
@@ -211,32 +190,13 @@ namespace MVC4_Html_Table.Controllers
         [HttpPost]  //posting the data to dB
         public ActionResult Edit(User user)
         {
-            Logger.Debug("Method Start");
-            try
-            {
-                string JsonUser = JsonConvert.SerializeObject(user);
-                Logger.Debug(JsonUser);
-            }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-
+            
+            string URL = BaseURL + "Update";
             if (ModelState.IsValid)
             {
                 try
                 {
-                    HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(BaseURL + "Update");
-                    var RequestData = new { user = user };
-                    Request.Method = "POST";
-                    Request.ContentType = "application/json";
-                    using (StreamWriter Writer = new StreamWriter(Request.GetRequestStream()))
-                    {
-                        Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
-                    }
-                    using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
+                    using (HttpWebResponse Response = ServiceConsumer.Post(URL, user))
                     {
                     }
                 }
@@ -255,7 +215,7 @@ namespace MVC4_Html_Table.Controllers
                     else
                         throw new Exception("There is an unexpected error", exception);
                 }
-                Logger.Debug("Method End");
+                
                 return RedirectToAction("Index", "User");
             }
             return View(user);
@@ -263,23 +223,17 @@ namespace MVC4_Html_Table.Controllers
         }
 
         [CustomAuthorize]
-        public ActionResult Delete(string guid_value)
+        public ActionResult Delete(string id_value)
         {
-            Logger.Debug("Method Start");
-            Logger.Debug(guid_value);
+            
+            Logger.Debug(id_value);
+            User User = new User();
+            User.UserId = id_value;
+            string URL = BaseURL + "Delete";
             try
             {
-                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(BaseURL + "Delete");
-                var RequestData = new { guid = guid_value };
-                Request.Method = "POST";
-                Request.ContentType = "application/json";
-
-                using (StreamWriter Writer = new StreamWriter(Request.GetRequestStream()))
-                {
-                    Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
-                }
-
-                using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
+                
+                using (HttpWebResponse Response = ServiceConsumer.Post(URL, User))
                 {
 
                 }
@@ -301,14 +255,14 @@ namespace MVC4_Html_Table.Controllers
                     throw new Exception("There is an unexpected error", exception);
 
             }
-            Logger.Debug("Method End");
+            
             return RedirectToAction("Index", "User");
         }
 
         //[CustomAuthorize] // This is for Authorize user
         //public ActionResult MyProfile()
         //{
-        //    Logger.Debug("Method Start");
+        //    
         //    if (HttpContext.Request.Cookies["MXGourav"] != null)
         //    {
         //        HttpCookie cookie = HttpContext.Request.Cookies.Get("MXGourav");
@@ -320,7 +274,7 @@ namespace MVC4_Html_Table.Controllers
         //        ViewBag.Phone = UserData[2];
         //        ViewBag.City = UserData[3];
         //    }
-        //    Logger.Debug("Method End");
+        //    
         //    return View();
         //}
 

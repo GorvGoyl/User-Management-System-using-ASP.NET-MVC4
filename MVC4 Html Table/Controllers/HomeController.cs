@@ -11,61 +11,54 @@ using System.IO;
 using System.Net;
 using Newtonsoft.Json.Linq;
 using System.Configuration;
+using Utilities;
 namespace MVC4_Html_Table.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserTableServiceURL"].ToString();
+        
         [AllowAnonymous] //This is for Un-Authorize User
         public ActionResult Index()
         {
-            Logger.Debug("Method Start");
-
-            Logger.Debug("Method End");
+                     
             return View();
         }
 
+        public ActionResult Error()
+        {
 
+            return View();
+        }
         public ActionResult Register()
         {
-            Logger.Debug("Method Start");
+            
 
-            Logger.Debug("Method End");
+            
             return RedirectToAction("Create", "User", "Create");
         }
 
-
+    
         public ActionResult Login()
         {
-            Logger.Debug("Method Start");
-
-            Logger.Debug("Method End");
+            //throw new Exception();
             return View();
         }
 
 
         [HttpPost]
-        public ActionResult Login(User user)
+        public ActionResult Login(User user) //passing the username and password
         {
-            Logger.Debug("Method Start");
-
+            
+            string URL = BaseURL + "RetrieveUser";
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(BaseURL + "ValidateUser");
-                    var RequestData = new { user = user };
-                    Request.Method = "POST";
-                    Request.ContentType = "application/json";
-
-                    using (StreamWriter Writer = new StreamWriter(Request.GetRequestStream()))
-                    {
-                        Writer.Write(JsonConvert.SerializeObject(RequestData, Formatting.Indented));
-
-                    }
-                    using (HttpWebResponse HttpResponse = (HttpWebResponse)Request.GetResponse())
+                    
+                    using (HttpWebResponse HttpResponse = ServiceConsumer.Post(URL, User))
                     {
                         using (Stream DataStream = HttpResponse.GetResponseStream())
                         {
@@ -79,7 +72,7 @@ namespace MVC4_Html_Table.Controllers
                                 {
                                     ViewBag.Message = "username or password is incorrect";
                                     ModelState.Remove("Password");
-                                    Logger.Debug("Method End");
+                                    
                                     return View();
                                 }
                                 HttpCookie CustomAuthCookie = new HttpCookie("MXGourav");
@@ -132,10 +125,9 @@ namespace MVC4_Html_Table.Controllers
         }
 
 
-        [CustomAuthorize]
         public ActionResult Logout()
         {
-            Logger.Debug("Method Start");
+            
             HttpContext.Response.Cookies.Remove("MXGourav");
             HttpContext.Response.Cookies["MXGourav"].Value = null;
             //Clearing the cookies of the response doesn't instruct the

@@ -82,7 +82,7 @@
     <Compile Include="UserTableService.svc.cs">
       <DependentUpon>UserTableService.svc</DependentUpon>
     </Compile>
-    <Compile Include="IUserTableService.cs" />
+    <Compile Include="App_Code\Contracts\IUserTableService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

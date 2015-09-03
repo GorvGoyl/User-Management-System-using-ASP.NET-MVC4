@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MVC4_Html_Table.Filters
 {
-    public class CustomAuthorizeAttribute : System.Web.Mvc.AuthorizeAttribute
+    public class CustomAuthorizeAttribute : AuthorizeAttribute
     {
         public override void OnAuthorization(AuthorizationContext filterContext)
         {

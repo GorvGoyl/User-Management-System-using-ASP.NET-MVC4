@@ -5,6 +5,16 @@
     Edit
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            $("#Dob").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        }
+        );
+    </script>
     <h1 style="text-align: center">
         Edit and Create</h1>
     
@@ -15,7 +25,7 @@
             <%--<%: Html.LabelFor(model => model.GUID) %>--%>
         </div>
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.GUID) %>
+            <%: Html.HiddenFor(model => model.UserId) %>
             <%--<%: Html.ValidationMessageFor(model => model.GUID) %>--%>
         </div>
         <table class="TableColor" align="center" style="margin-left: 9cm" width="50%">

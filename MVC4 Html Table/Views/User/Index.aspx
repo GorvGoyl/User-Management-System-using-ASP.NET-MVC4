@@ -67,8 +67,8 @@
             </td>
            
             <td class="td">
-                <%: Html.ActionLink("Edit", "Edit", "User", new { guid_value = customer.GUID }, new { guid_value = customer.GUID })%>
-                <%: Html.ActionLink("Delete", "Delete", "User", new { guid_value = customer.GUID }, new { guid_value = customer.GUID })%>
+                <%: Html.ActionLink("Edit", "Edit", "User", new { id_value = customer.UserId }, new { id_value = customer.UserId })%>
+                <%: Html.ActionLink("Delete", "Delete", "User", new { id_value = customer.UserId }, new { id_value = customer.UserId })%>
             </td>
         </tr>
         <% } %>

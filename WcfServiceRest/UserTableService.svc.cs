@@ -17,19 +17,71 @@ namespace WcfServiceRest
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        public void Create(User user)
+        {
+            Logger.Debug("Method Start");
+            try
+            {
+                CustomJson.JsonAndLog(user);
+            }
+            catch (Exception exception)
+            {
 
-        public List<User> RetrieveAll()
+                Logger.Debug(exception.Message, exception);
+                throw exception;
+            }
+            try
+            {
+                UserCrudOperations.Create(user);
+            }
+            catch (Exception)
+            {
+                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't add the data to DataBase");
+                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
+            }
+            Logger.Debug("Method End");
+        }
+
+        public User RetrieveUser(User user)
+        {
+            Logger.Debug("Method Start");
+   
+            User UserData;
+            try
+            {
+                UserData = UserCrudOperations.RetrieveUser(user);
+            }
+            catch (Exception)
+            {
+                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't edit the data");
+                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
+            }
+            try
+            {
+                CustomJson.JsonAndLog(UserData);
+            }
+            catch (Exception exception)
+            {
+
+                Logger.Debug(exception.Message, exception);
+                throw exception;
+            }
+            Logger.Debug("Method End");
+            return UserData;
+        }
+
+        public List<User> Retrieve()
         {
             Logger.Debug("Method Start");
             List<User> UsersList;
 
             try
             {
-                UsersList = BusinessLayer.RetrieveAllData();
+                UsersList = UserCrudOperations.Retrieve();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't retrieve the data from DataBase");
+                MyCustomException Custom = new MyCustomException(ex.Message,JsonConvert.SerializeObject(ex));
                 throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
             }
             try
@@ -46,48 +98,13 @@ namespace WcfServiceRest
             return UsersList;
         }
 
-
-        public void AddUser(User user)
-        {
-            Logger.Debug("Method Start");
-            try
-            {
-                CustomJson.JsonAndLog(user);
-            }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-            try
-            {
-                BusinessLayer.AddUser(user);
-            }
-            catch (Exception)
-            {
-                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't add the data to DataBase");
-                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
-            }
-            Logger.Debug("Method End");
-        }
-
         public void Update(User user)
         {
             Logger.Debug("Method Start");
+            
             try
             {
-                CustomJson.JsonAndLog(user);
-            }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-            try
-            {
-                BusinessLayer.Update(user);
+                UserCrudOperations.Update(user);
             }
             catch (Exception)
             {
@@ -96,70 +113,15 @@ namespace WcfServiceRest
             }
             Logger.Debug("Method End");
 
-        }
+        }  
 
-        public User Edit(string guid)
+        public void Delete(User user)
         {
             Logger.Debug("Method Start");
-            Logger.Debug(guid);
-            User UserData;
-            try
-            {
-                UserData = BusinessLayer.RetrieveUser(guid);
-            }
-            catch (Exception)
-            {
-                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't edit the data");
-                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
-            }
-            try
-            {
-                CustomJson.JsonAndLog(UserData);
-            }
-            catch (Exception exception)
-            {
 
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-            Logger.Debug("Method End");
-            return UserData;
-        }
-
-        public User ValidateUser(User user)
-        {
-            Logger.Debug("Method Start");
-           
-            User UserData;
             try
             {
-                UserData = BusinessLayer.RetrieveUser(user);
-            }
-            catch (Exception)
-            {
-                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't edit the data");
-                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
-            }
-            try
-            {
-                CustomJson.JsonAndLog(UserData);
-            }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-            Logger.Debug("Method End");
-            return UserData;
-        }
-        public void Delete(string guid)
-        {
-            Logger.Debug("Method Start");
-            Logger.Debug(guid);
-            try
-            {
-                BusinessLayer.DeleteUser(guid);
+                UserCrudOperations.Delete(user);
             }
             catch (Exception)
             {

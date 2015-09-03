@@ -171,6 +171,7 @@
     <Content Include="Content\Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\StyleSheet.css" />
+    <Content Include="Views\Home\Error.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\Login.aspx" />
     <Content Include="Views\User\Create.aspx" />

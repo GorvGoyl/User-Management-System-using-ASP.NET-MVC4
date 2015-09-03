@@ -9,26 +9,16 @@ using System.Net;
 using Utilities;
 namespace BusinessAccessLayer
 {
-    public class BusinessLayer
+    public class UserCrudOperations
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static List<User> RetrieveAllData()
+        public static void Create(User user)
         {
             Logger.Debug("Method Start");
-            List<User> UsersList;
             try
             {
-                UsersList = DataLayer.RetrieveAllData();
-            }
-            catch (Exception exception)
-            {
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-            try
-            {
-                CustomJson.JsonAndLog(UsersList);
+                CustomJson.JsonAndLog(user);
             }
             catch (Exception exception)
             {
@@ -36,19 +26,27 @@ namespace BusinessAccessLayer
                 Logger.Debug(exception.Message, exception);
                 throw exception;
             }
+            try
+            {
+                User_MySQL.Create(user);
+            }
+            catch (Exception exception)
+            {
+                Logger.Debug(exception.Message, exception);
+                throw exception;
+            }
+
             Logger.Debug("Method End");
-            return UsersList;
 
-        }
+        }        
 
-        public static User RetrieveUser(string guid)
+        public static User RetrieveUser(User user)
         {
             Logger.Debug("Method Start");
-            Logger.Debug(guid);
             User UserData;
             try
             {
-                UserData = DataLayer.RetrieveUser(guid);
+                UserData = User_MySQL.RetrieveUser(user);
             }
             catch (Exception exception)
             {
@@ -70,32 +68,34 @@ namespace BusinessAccessLayer
 
         }
 
-        public static void AddUser(User user)
+        public static List<User> Retrieve()
         {
             Logger.Debug("Method Start");
+            List<User> UsersList;
             try
             {
-                CustomJson.JsonAndLog(user);
+                UsersList = User_MySQL.Retrieve();
+            }
+            catch (Exception exception)
+            {
+                Logger.Debug(exception.Message, exception);
+                throw exception;
+            }
+            try
+            {
+                CustomJson.JsonAndLog(UsersList);
             }
             catch (Exception exception)
             {
 
-                Logger.Debug(exception.Message, exception);
+                Logger.Error(exception.Message, exception);
                 throw exception;
             }
-            try
-            {
-                DataLayer.AddUserToDB(user);
-            }
-            catch (Exception exception)
-            {
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-           
             Logger.Debug("Method End");
+            return UsersList;
 
         }
+        
         public static void Update(User user)
         {
             Logger.Debug("Method Start");
@@ -111,7 +111,7 @@ namespace BusinessAccessLayer
             }
             try
             {
-                DataLayer.UpdateUser(user);
+                User_MySQL.Update(user);
             }
 
             catch (Exception exception)
@@ -123,13 +123,12 @@ namespace BusinessAccessLayer
 
         }
 
-        public static void DeleteUser(string guid)
+        public static void Delete(User user)
         {
             Logger.Debug("Method Start");
-            Logger.Debug(guid);
             try
             {
-                DataLayer.DeleteUser(guid);
+                User_MySQL.Delete(user);
             }
             catch (Exception exception)
             {
@@ -139,34 +138,7 @@ namespace BusinessAccessLayer
             Logger.Debug("Method End");
         }
 
-        public static User RetrieveUser(User user)
-        {
-            Logger.Debug("Method Start");
-            //Logger.Debug(guid);
-            User UserData;
-            try
-            {
-                UserData = DataLayer.RetrieveUser(user);
-            }
-            catch (Exception exception)
-            {
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-            try
-            {
-                CustomJson.JsonAndLog(UserData);
-            }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-            Logger.Debug("Method End");
-            return UserData;
-
-        }
+       
 
     }
 }

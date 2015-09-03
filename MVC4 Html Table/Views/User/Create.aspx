@@ -5,6 +5,16 @@
     Create
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            $("#Dob").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        }
+        );
+    </script>
     <h1 style="text-align: center">
         Create</h1>
     <% using (Html.BeginForm())

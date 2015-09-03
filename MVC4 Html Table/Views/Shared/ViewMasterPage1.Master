@@ -7,7 +7,7 @@
 <!-- Load jQuery UI Main JS  -->
 <script src="../../Content/JS/jquery-ui.js"></script>
 <!-- Load SCRIPT.JS which will create datepicker for input field  -->
-<script src="../../Content/JS/script.js"></script>
+<%--<script src="../../Content/JS/script.js"></script>--%>
 <link rel="stylesheet" href="../../Content/CSS/style.css" />
 <meta name="viewport" content="width=device-width" />
 

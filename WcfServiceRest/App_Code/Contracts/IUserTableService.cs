@@ -25,7 +25,7 @@ namespace WcfServiceRest
         [WebInvoke(Method = "POST",
                     RequestFormat = WebMessageFormat.Json,
                     ResponseFormat = WebMessageFormat.Json,
-                    BodyStyle = WebMessageBodyStyle.WrappedRequest,
+                    BodyStyle = WebMessageBodyStyle.WrappedResponse,
                     UriTemplate = "RetrieveUser"
                    )]
         User RetrieveUser(User user);
@@ -58,5 +58,18 @@ namespace WcfServiceRest
         void Delete(User user);
     }
 
+    [DataContract]
+    public class CustomException
+    {
+        public CustomException(string errorInfo, string errorDetail)
+        {
+            ErrorDetail = errorDetail;
+            ErrorInfo = errorInfo;
+        }
+        [DataMember]
+        public string ErrorInfo { get; set; }
+        [DataMember]
+        public string ErrorDetail { get; set; }
+    }
 
 }

@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="CustomJson.cs" />
     <Compile Include="ServiceConsumer.cs" />
-    <Compile Include="CustomException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

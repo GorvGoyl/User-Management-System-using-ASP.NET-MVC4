@@ -17,7 +17,7 @@ namespace MVC4_Html_Table.Controllers
     public class HomeController : BaseController
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        string BaseURL = ConfigurationManager.AppSettings["UserTableServiceURL"].ToString();
+        string BaseURL = ConfigurationManager.AppSettings["UserServiceURL"].ToString();
 
         #region Index
         [AllowAnonymous] //This is for Un-Authorize User

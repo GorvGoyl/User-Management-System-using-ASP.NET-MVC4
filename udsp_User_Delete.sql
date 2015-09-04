@@ -16,7 +16,7 @@ DELIMITER //
 
 CREATE PROCEDURE udsp_User_Delete
 (
-	var_UserId	varchar(45)
+	var_UserId	VARCHAR(45)
 )
 BEGIN
 	DELETE FROM user_data WHERE UserId = var_UserId ;

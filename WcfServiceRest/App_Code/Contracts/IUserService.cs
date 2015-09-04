@@ -10,7 +10,7 @@ namespace WcfServiceRest
 {
 
     [ServiceContract]
-    public interface IUserTableService
+    public interface IUserService
     {
         [OperationContract]
         [WebInvoke(Method = "POST",

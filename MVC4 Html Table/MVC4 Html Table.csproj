@@ -179,7 +179,6 @@
     <Content Include="Views\User\Create.aspx" />
     <Content Include="Views\User\Edit.aspx" />
     <Content Include="Views\User\Index.aspx" />
-    <Content Include="Views\Shared\_Layout.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -199,7 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\Scripts\jquery-2.1.4.min.map" />
-    <Content Include="Views\Shared\ViewMasterPage1.Master" />
+    <Content Include="Views\Shared\ViewMasterPage.Master" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UtilityClassLibrary\Utilities.csproj">

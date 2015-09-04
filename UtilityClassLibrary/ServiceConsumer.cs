@@ -23,9 +23,9 @@ namespace Utilities
                 HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(url);
                 HttpWebResponse HttpResponse = (HttpWebResponse)Request.GetResponse();
                 Logger.Debug(((HttpWebResponse)HttpResponse).StatusDescription);
-                using (Stream dataStream = HttpResponse.GetResponseStream())
+                using (Stream DataStream = HttpResponse.GetResponseStream())
                 {
-                    using (StreamReader Reader = new StreamReader(dataStream))
+                    using (StreamReader Reader = new StreamReader(DataStream))
                     {
                         string ResponseFromServer = Reader.ReadToEnd();
                         Logger.Debug(ResponseFromServer);
@@ -42,6 +42,7 @@ namespace Utilities
                 {
                     var responseStream = protocolException.Response.GetResponseStream();
                     var error = new StreamReader(protocolException.Response.GetResponseStream()).ReadToEnd();
+                    //Handle All Exceptions
                     var ErrorInfoMessage = JToken.Parse(error)["ErrorInfo"];
                     throw new Exception(ErrorInfoMessage.ToString());
                 }

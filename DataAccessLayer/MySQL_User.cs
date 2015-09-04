@@ -11,10 +11,12 @@ using log4net;
 using Utilities;
 namespace DataAccessLayer
 {
-    public class User_MySQL
+    public class MySQL_User
     {
         private static readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        
         protected static string ConnString  = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
+        
         #region Create
         public static void Create(User user)
         {
@@ -86,14 +88,14 @@ namespace DataAccessLayer
                 while (Reader.Read())
                 {
                     UserData = new User();
-                    UserData.UserId = Reader["UserId"].ToString();
-                    UserData.UserName = Reader["UserName"].ToString();
-                    UserData.FullName = Reader["FullName"].ToString();
-                    UserData.Phone = Reader["Phone"].ToString();
-                    UserData.Email = Reader["Email"].ToString();
-                    UserData.City = Reader["City"].ToString();
-                    UserData.Dob = Reader["Dob"].ToString();
-                    UserData.Password = Reader["Password"].ToString();
+                    UserData.UserId     = Reader["UserId"].ToString();
+                    UserData.UserName   = Reader["UserName"].ToString();
+                    UserData.FullName   = Reader["FullName"].ToString();
+                    UserData.Phone      = Reader["Phone"].ToString();
+                    UserData.Email      = Reader["Email"].ToString();
+                    UserData.City       = Reader["City"].ToString();
+                    UserData.Dob        = Reader["Dob"].ToString();
+                    UserData.Password   = Reader["Password"].ToString();
                     UsersList.Add(UserData);
                 }
                 LogHelper.LogMaker(UsersList);
@@ -134,6 +136,10 @@ namespace DataAccessLayer
             User UserData = new User();
             MySqlConnection Con = null;
             MySqlDataReader Reader = null;
+            if (user.UserName == null)
+            {
+                return UserData;
+            }
             try
             {
                 Con = new MySqlConnection(ConnString);

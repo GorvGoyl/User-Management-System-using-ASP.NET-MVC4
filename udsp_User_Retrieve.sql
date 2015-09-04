@@ -16,9 +16,9 @@ DELIMITER //
 
 CREATE PROCEDURE udsp_User_Retrieve
 (
-	var_UserId	 varchar(45),
-	var_UserName varchar(45),
-	var_Password varchar(45)
+	var_UserId	 VARCHAR(45),
+	var_UserName VARCHAR(45),
+	var_Password VARCHAR(45)
 )
 BEGIN
 	IF(IFNULL(var_UserId,'')!='') THEN 

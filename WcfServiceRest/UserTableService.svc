@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfServiceRest.UserTableService" CodeBehind="UserTableService.svc.cs" %>

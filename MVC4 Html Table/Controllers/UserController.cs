@@ -19,7 +19,7 @@ namespace MVC4_Html_Table.Controllers
     public class UserController : BaseController
     {
         private readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        string BaseURL = ConfigurationManager.AppSettings["UserTableServiceURL"].ToString();
+        string BaseURL = ConfigurationManager.AppSettings["UserServiceURL"].ToString();
 
         #region Index
         [CustomAuthorize]

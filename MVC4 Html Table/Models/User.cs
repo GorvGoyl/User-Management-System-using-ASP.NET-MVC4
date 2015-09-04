@@ -11,7 +11,7 @@ namespace MVC4_Html_Table.Models
 
       
         public string UserId { get; set; }
-        [Required(ErrorMessage = "UserName Required.", AllowEmptyStrings = false)]
+       // [Required(ErrorMessage = "UserName Required.", AllowEmptyStrings = false)]
         public string UserName { get; set; }
         public string FullName { get; set; }
        // [RegularExpression(@"^[0-9]{10}$", ErrorMessage = "Enter 10 digit phone number ")]

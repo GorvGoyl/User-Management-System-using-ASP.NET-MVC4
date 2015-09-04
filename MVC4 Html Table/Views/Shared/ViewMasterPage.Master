@@ -1,0 +1,207 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../Content/CSS/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="../../Content/JS/jquery-1.9.1.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="../../Content/JS/jquery-ui.js"></script>
+<!-- Load SCRIPT.JS which will create datepicker for input field  -->
+<%--<script src="../../Content/JS/script.js"></script>--%>
+<link rel="stylesheet" href="../../Content/CSS/style.css" />
+<meta name="viewport" content="width=device-width" />
+<html>
+<style type="text/css">
+    .TableColor
+    {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+    .TableColor td
+    {
+        font-family: Segoe UI;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+    }
+    .TableColor tr
+    {
+        font-family: Segoe UI;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+    }
+    .TableColor th
+    {
+        font-family: Segoe UI;
+        font-size: 14px;
+        font-weight: normal;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+    .TableColor tr:nth-child(odd)
+    {
+        background: #e8edff;
+    }
+    
+    .TableColor tr:nth-child(even)
+    {
+        background: #D2E4FC;
+    }
+</style>
+<style>
+    
+    .Label
+    {
+        background-color: #DCF8F9;
+      
+        border-radius: 5px;
+        text-align:center;
+        position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:2em;
+    margin-top: -1em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+       
+    }
+    .Box
+    {
+        background-color: #DCF8F9;
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-top: 15%;
+       
+        min-height: 200px;
+overflow: hidden;
+        border-radius: 5px;
+        -webkit-box-shadow: 10px 10px 19px 0px rgba(0,60,97,1);
+-moz-box-shadow: 10px 10px 19px 0px rgba(0,60,97,1);
+box-shadow: 10px 10px 19px 0px rgba(0,60,97,1);
+    }
+    .TextBox
+    {
+        
+        padding:2%;
+        border-radius: 5px;
+        
+    }
+    
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+	background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+	background-color:#d0451b;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+	text-align:center;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+	background-color:#bc3315;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+    
+    
+    
+    #myDIV {
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {text-shadow: 10px 20px 30px blue;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {text-shadow: 10px 20px 30px blue;}
+}
+    body {
+    background-image: url("../../Content/Images/rays-background-2.jpg");
+    background-attachment: fixed;
+background-size:100% 100%;
+}
+        h1
+        {
+            font-size: 1.7em;
+            color: Navy;
+            font-weight: bold;
+            font-family: Segoe UI;
+        }
+        h4
+        {
+            font-family: Segoe UI;
+        }
+        h2
+        {
+            font-size: 1.7em;
+            color: Navy;
+            font-weight: bold;
+            font-family: Segoe UI;
+            margin-right: 4cm;
+            text-align: right;
+        }
+        p
+        {
+            color: blue;
+        }
+    </style>
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+</head>
+<body>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

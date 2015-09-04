@@ -1,6 +1,6 @@
 ﻿/*
 Name		: udsp_User_Create
-Description	: Create User
+Description	: Creates User
 Author		: Gourav Goyal
 
 Modification Log: Change
@@ -16,14 +16,14 @@ DELIMITER //
 
 CREATE PROCEDURE udsp_User_Create
 (
-	var_UserId		varchar(45), 
-	var_UserName	varchar(45),
-	var_FullName    varchar(45),
-	var_Phone	    varchar(45),
-	var_Email	    varchar(45),
-	var_City		varchar(45),
-	var_Dob			varchar(45),
-	var_Password    varchar(45)
+	var_UserId		VARCHAR(45), 
+	var_UserName	VARCHAR(45),
+	var_FullName    VARCHAR(45),
+	var_Phone	    VARCHAR(45),
+	var_Email	    VARCHAR(45),
+	var_City		VARCHAR(45),
+	var_Dob			VARCHAR(45),
+	var_Password    VARCHAR(45)
 )
 BEGIN
 	INSERT INTO user_data

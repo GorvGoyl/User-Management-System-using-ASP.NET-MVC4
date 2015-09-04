@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/ViewMasterPage1.Master" Title="Content Page edit"
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/ViewMasterPage.Master" Title="Content Page edit"
     Inherits="System.Web.Mvc.ViewPage<MVC4_Html_Table.Models.User>"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="Server">

@@ -1,98 +1,103 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
-using System.Data;
-using DataAccessLayer;
+using BusinessAccessLayer;
 using DataObjects;
+using Newtonsoft.Json;
 using System.Net;
 using Utilities;
-namespace BusinessAccessLayer
+namespace WcfServiceRest
 {
-    public class UserCrudOperations
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
+    public class UserService : IUserService
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        
         #region Create
-        public static void Create(User user)
+        public void Create(User user)
         {
             Logger.Debug("Method Start");
             try
             {
                 LogHelper.LogMaker(user);
-                User_MySQL.Create(user);
+                Users.Create(user);
             }
             catch (Exception exception)
             {
                 Logger.Error(exception.Message, exception);
-                throw exception;
+                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
-
             Logger.Debug("Method End");
-
         }
         #endregion
 
         #region RetrieveUser
-        public static User RetrieveUser(User user)
+        public User RetrieveUser(User user)
         {
             Logger.Debug("Method Start");
             User UserData;
             try
             {
-                UserData = User_MySQL.RetrieveUser(user);
                 LogHelper.LogMaker(user);
+                UserData = Users.RetrieveUser(user);
                 LogHelper.LogMaker(UserData);
-
-
             }
             catch (Exception exception)
             {
                 Logger.Error(exception.Message, exception);
-                throw exception;
+                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
 
             Logger.Debug("Method End");
             return UserData;
-
         }
         #endregion
 
         #region Retrieve
-        public static List<User> Retrieve()
+        public List<User> Retrieve()
         {
             Logger.Debug("Method Start");
             List<User> UsersList;
+
             try
             {
-                UsersList = User_MySQL.Retrieve();
+                UsersList = Users.Retrieve();
                 LogHelper.LogMaker(UsersList);
+
             }
             catch (Exception exception)
             {
                 Logger.Error(exception.Message, exception);
-                throw exception;
+                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
 
             Logger.Debug("Method End");
             return UsersList;
-
         }
         #endregion
 
         #region Update
-        public static void Update(User user)
+        public void Update(User user)
         {
             Logger.Debug("Method Start");
+
             try
             {
                 LogHelper.LogMaker(user);
-                User_MySQL.Update(user);
+                Users.Update(user);
             }
-
             catch (Exception exception)
             {
                 Logger.Error(exception.Message, exception);
-                throw exception;
+                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
             Logger.Debug("Method End");
 
@@ -100,24 +105,23 @@ namespace BusinessAccessLayer
         #endregion
 
         #region Delete
-        public static void Delete(User user)
+        public void Delete(User user)
         {
             Logger.Debug("Method Start");
+
             try
             {
                 LogHelper.LogMaker(user);
-                User_MySQL.Delete(user);
+                Users.Delete(user);
             }
             catch (Exception exception)
             {
                 Logger.Error(exception.Message, exception);
-                throw exception;
+                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
             Logger.Debug("Method End");
         }
         #endregion
-
     }
 }
-
-

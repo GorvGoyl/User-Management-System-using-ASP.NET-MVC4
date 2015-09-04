@@ -25,7 +25,7 @@ namespace WcfServiceRest
         [WebInvoke(Method = "POST",
                     RequestFormat = WebMessageFormat.Json,
                     ResponseFormat = WebMessageFormat.Json,
-                    BodyStyle = WebMessageBodyStyle.WrappedResponse,
+                    BodyStyle = WebMessageBodyStyle.WrappedRequest,
                     UriTemplate = "RetrieveUser"
                    )]
         User RetrieveUser(User user);

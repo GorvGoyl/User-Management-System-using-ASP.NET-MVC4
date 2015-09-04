@@ -7,16 +7,12 @@ using Newtonsoft.Json;
 using log4net;
 namespace Utilities
 {
-    public class CustomJson
+    public class LogHelper
     {
-        private static readonly ILog Logger;
-        static CustomJson()
-        {
-            Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        }
+        private static readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-
-        public static void JsonAndLog(User user)
+        #region LogMaker
+        public static void LogMaker(User user)
         {
             Logger.Debug("Method Start");
             try
@@ -27,12 +23,15 @@ namespace Utilities
             catch (Exception exception)
             {
 
-                Logger.Debug(exception.Message, exception);
+                Logger.Error(exception.Message, exception);
                 throw exception;
             }
             Logger.Debug("Method End");
         }
-        public static void JsonAndLog(List<User> usersList)
+        #endregion
+
+        #region LogMaker
+        public static void LogMaker(List<User> usersList)
         {
             Logger.Debug("Method Start");
             try
@@ -43,10 +42,11 @@ namespace Utilities
             catch (Exception exception)
             {
 
-                Logger.Debug(exception.Message, exception);
+                Logger.Error(exception.Message, exception);
                 throw exception;
             }
             Logger.Debug("Method End");
         }
+        #endregion
     }
 }

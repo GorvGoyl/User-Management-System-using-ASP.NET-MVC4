@@ -14,18 +14,29 @@ namespace Utilities
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static HttpWebResponse Get(string url)
+        #region Get
+        public static string Get(string url)
         {
             try
             {
+                Logger.Debug(url);
                 HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(url);
                 HttpWebResponse HttpResponse = (HttpWebResponse)Request.GetResponse();
-                return HttpResponse;
+                Logger.Debug(((HttpWebResponse)HttpResponse).StatusDescription);
+                using (Stream dataStream = HttpResponse.GetResponseStream())
+                {
+                    using (StreamReader Reader = new StreamReader(dataStream))
+                    {
+                        string ResponseFromServer = Reader.ReadToEnd();
+                        Logger.Debug(ResponseFromServer);
+                        return ResponseFromServer;
+                    }
+                }
 
             }
             catch (Exception exception)
             {
-                Logger.Debug(exception.Message, exception);
+                Logger.Error(exception.Message, exception);
                 var protocolException = exception as WebException;
                 if (protocolException != null)
                 {
@@ -40,9 +51,12 @@ namespace Utilities
                 }
             }
         }
+        #endregion
 
-        public static HttpWebResponse Post(string url, Object user)
+        #region Post
+        public static string Post(string url, Object user)
         {
+            string ResponseFromServer = null;
             try
             {
                 HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(url);
@@ -59,7 +73,20 @@ namespace Utilities
 
                 HttpWebResponse HttpResponse = (HttpWebResponse)Request.GetResponse();
 
-                return HttpResponse;
+                Logger.Debug(((HttpWebResponse)HttpResponse).StatusDescription);
+                if (HttpResponse.GetResponseStream() != null && HttpResponse.GetResponseStream() != Stream.Null)
+                {
+                    using (Stream dataStream = HttpResponse.GetResponseStream())
+                    {
+                        using (StreamReader Reader = new StreamReader(dataStream))
+                        {
+                            ResponseFromServer = Reader.ReadToEnd();
+                            Logger.Debug(ResponseFromServer);
+                            return ResponseFromServer;
+                        }
+                    }
+                }
+                return ResponseFromServer;
 
             }
             catch (Exception exception)
@@ -92,5 +119,6 @@ namespace Utilities
                     throw new Exception("There is an unexpected error with reading the stream.", exception);
             }
         }
+        #endregion
     }
 }

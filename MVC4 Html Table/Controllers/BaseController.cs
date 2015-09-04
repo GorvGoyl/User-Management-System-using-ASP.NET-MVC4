@@ -29,10 +29,10 @@ namespace MVC4_Html_Table.Controllers
         //    // filterContext.Controller.ViewBag.ExceptionMessage = "Custom Exception: Message from OnException method.";
         //    filterContext.ExceptionHandled = true;
         //    filterContext.Result = this.RedirectToAction("Error", "Home");
-        
+
         //    base.OnException(filterContext);
-            
-        
+
+
         //}  
 
     }

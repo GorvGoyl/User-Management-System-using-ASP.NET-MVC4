@@ -21,243 +21,163 @@ namespace MVC4_Html_Table.Controllers
         private readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserTableServiceURL"].ToString();
 
+        #region Index
         [CustomAuthorize]
         public ActionResult Index()
         {
-            
-            string URL = BaseURL + "Retrieve";
-             try
-            {               
-                using (HttpWebResponse Response = ServiceConsumer.Get(URL))
-                {
-                    Logger.Debug(((HttpWebResponse)Response).StatusDescription);
-                    using (Stream dataStream = Response.GetResponseStream())
-                    {
-                        using (StreamReader Reader = new StreamReader(dataStream))
-                        {
-                            string ResponseFromServer = Reader.ReadToEnd();
-                            Logger.Debug(ResponseFromServer);
-                            try
-                            {
-                                List<User> UsersList = JsonConvert.DeserializeObject<List<User>>(ResponseFromServer);
-                                try
-                                {
-                                    string JsonUser = JsonConvert.SerializeObject(UsersList);
-                                    Logger.Debug(JsonUser);
-                                }
-                                catch (Exception exception)
-                                {
 
-                                    Logger.Debug(exception.Message, exception);
-                                    throw exception;
-                                }
-                                ViewData["UserData"] = UsersList;
-                            }
-                            catch (Exception exception)
-                            {
-                                Logger.Debug(exception.Message, exception);
-                                throw exception;
-                            }
-                        }
-                    }
+            string URL = BaseURL + "Retrieve";
+            try
+            {
+                string ResponseFromServer = ServiceConsumer.Get(URL);
+                Logger.Debug(ResponseFromServer);
+                try
+                {
+                    List<User> UsersList = JsonConvert.DeserializeObject<List<User>>(ResponseFromServer);
+                    string JsonUser = JsonConvert.SerializeObject(UsersList);
+                    Logger.Debug(JsonUser);
+                    ViewData["UserData"] = UsersList;
                 }
+                catch (Exception exception)
+                {
+                    Logger.Error(exception.Message, exception);
+                    throw exception;
+                }
+
 
             }
 
             catch (Exception exception)
             {
-                Logger.Debug(exception.Message, exception);
-                var protocolException = exception as WebException;
-                if (protocolException != null)
-                {
-                    var responseStream = protocolException.Response.GetResponseStream();
-                    var error = new StreamReader(protocolException.Response.GetResponseStream()).ReadToEnd();
-                    var ErrorInfoMessage = JToken.Parse(error)["ErrorInfo"];
-                    throw new Exception(ErrorInfoMessage.ToString());
-                }
-                else
-                {
-                    throw new Exception("There is an unexpected error", exception);
-                }
-
+                Logger.Error(exception.Message, exception);
+                throw exception;
             }
-            
+
             return View();
         }
+        #endregion
 
+        #region Create
         [CustomAuthorize]
-        public ActionResult Create() 
+        public ActionResult Create()
         {
-            
-
-            
             return View(new User());
-
         }
+        #endregion
 
+        #region Create
         [HttpPost]
         public ActionResult Create(User user)
         {
-            
-
             if (ModelState.IsValid)
             {
                 Guid NewGUID = Guid.NewGuid();
                 Logger.Debug(NewGUID);
-                user.UserId    =   NewGUID.ToString();
-                string URL   =   BaseURL + "Create";
+                user.UserId = NewGUID.ToString();
+                string URL = BaseURL + "Create";
                 try
                 {
-                    using (HttpWebResponse HttpResponse = ServiceConsumer.Post(URL, user))
-                    {
-                    }
-
+                    Logger.Debug(user);
+                    string ResponseFromServer = ServiceConsumer.Post(URL,user);
+                    Logger.Debug(ResponseFromServer);
                     string JsonUser = JsonConvert.SerializeObject(user);
                     Logger.Debug(JsonUser);
                 }
 
                 catch (Exception exception)
                 {
-                    Logger.Debug(exception.Message, exception);
-                    var protocolException = exception as WebException;
-                    if (protocolException.Response != null)
-                    {
-                        var responseStream = protocolException.Response.GetResponseStream();
-                        var error = new StreamReader(protocolException.Response.GetResponseStream()).ReadToEnd();
-                        var ErrorInfoMessage = JToken.Parse(error)["ErrorInfo"];
-                        throw new Exception(ErrorInfoMessage.ToString());
-                    }
-                    else
-                        throw new Exception("There is an unexpected error", exception);
+                    Logger.Error(exception.Message, exception);
+                    throw exception;
                 }
 
-                
+
                 return RedirectToAction("Index", "User");
             }
             return View(user);
 
         }
+        #endregion
 
+        #region Edit
         [CustomAuthorize] //retrieving user details from dB
-        public ActionResult Edit(string id_value) 
+        public ActionResult Edit(string id_value)
         {
-            
+
             Logger.Debug(id_value);
-            User User  = new User();
-            User.UserId  = id_value;
+            User User = new User();
+            User.UserId = id_value;
             string URL = BaseURL + "RetrieveUser";
             try
-            {              
-                using (HttpWebResponse Response = ServiceConsumer.Post(URL, User))
-                {
-                    using (Stream DataStream = Response.GetResponseStream())
-                    {
-
-                        using (StreamReader Reader = new StreamReader(DataStream))
-                        {
-                            string UserDataResponse = Reader.ReadToEnd();
-                            Logger.Debug(UserDataResponse);
-                            User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
-                            ViewData["UserData"] = UserData; //show user details in textboxes
-
-                            
-                            return View(UserData);
-                        }
-                    }
-                }
-
+            {
+                string UserDataResponse = ServiceConsumer.Post(URL, User);
+                Logger.Debug(UserDataResponse);
+                User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
+                Logger.Debug(UserData);
+                ViewData["UserData"] = UserData; //show user details in textboxes
+                return View(UserData);
             }
 
             catch (Exception exception)
             {
-                Logger.Debug(exception.Message, exception);
-                var protocolException = exception as WebException;
-                if (protocolException != null)
-                {
-                    var responseStream = protocolException.Response.GetResponseStream();
-                    var error = new StreamReader(protocolException.Response.GetResponseStream()).ReadToEnd();
-                    var ErrorInfoMessage = JToken.Parse(error)["ErrorInfo"];
-                    throw new Exception(ErrorInfoMessage.ToString());
-                }
-                else
-                {
-                    throw new Exception("There is an unexpected error", exception);
-                }
+                Logger.Error(exception.Message, exception);
+                throw exception;
             }
 
         }
+        #endregion
 
+        #region Edit
         [HttpPost]  //posting the data to dB
         public ActionResult Edit(User user)
         {
-            
+
             string URL = BaseURL + "Update";
             if (ModelState.IsValid)
             {
                 try
                 {
-                    using (HttpWebResponse Response = ServiceConsumer.Post(URL, user))
-                    {
-                    }
+                    Logger.Debug(user);
+                    string UserDataResponse = ServiceConsumer.Post(URL, User);
+                    Logger.Debug(UserDataResponse);
                 }
 
                 catch (Exception exception)
                 {
-                    Logger.Debug(exception.Message, exception);
-                    var protocolException = exception as WebException;
-                    if (protocolException != null)
-                    {
-                        var responseStream = protocolException.Response.GetResponseStream();
-                        var error = new StreamReader(protocolException.Response.GetResponseStream()).ReadToEnd();
-                        var ErrorInfoMessage = JToken.Parse(error)["ErrorInfo"];
-                        throw new Exception(ErrorInfoMessage.ToString());
-                    }
-                    else
-                        throw new Exception("There is an unexpected error", exception);
+                    Logger.Error(exception.Message, exception);
+                    throw exception;
                 }
-                
+
                 return RedirectToAction("Index", "User");
             }
             return View(user);
 
         }
+        #endregion
 
+        #region Delete
         [CustomAuthorize]
         public ActionResult Delete(string id_value)
         {
-            
+
             Logger.Debug(id_value);
             User User = new User();
             User.UserId = id_value;
             string URL = BaseURL + "Delete";
             try
             {
-                
-                using (HttpWebResponse Response = ServiceConsumer.Post(URL, User))
-                {
-
-                }
-
+                string UserDataResponse = ServiceConsumer.Post(URL, User);
+                Logger.Debug(UserDataResponse);
             }
 
             catch (Exception exception)
             {
-                Logger.Debug(exception.Message, exception);
-                var protocolException = exception as WebException;
-                if (protocolException != null)
-                {
-                    var responseStream = protocolException.Response.GetResponseStream();
-                    var error = new StreamReader(protocolException.Response.GetResponseStream()).ReadToEnd();
-                    var ErrorInfoMessage = JToken.Parse(error)["ErrorInfo"];
-                    throw new Exception(ErrorInfoMessage.ToString());
-                }
-                else
-                    throw new Exception("There is an unexpected error", exception);
-
+                Logger.Error(exception.Message, exception);
+                throw exception;
             }
-            
+
             return RedirectToAction("Index", "User");
         }
+        #endregion
 
         //[CustomAuthorize] // This is for Authorize user
         //public ActionResult MyProfile()

@@ -14,7 +14,7 @@
 
  
     <table class="TableColor" align="center" style="margin-left: 9cm" width="50%">
-        <thead>
+        <%--<thead>
             <tr>
                 <th>
                     <h1>
@@ -25,7 +25,7 @@
                         Value</h1>
                 </th>
             </tr>
-        </thead>
+        </thead>--%>
         <tr>
             <td class="td">
                 <div class="editor-label">
@@ -67,7 +67,7 @@
         </tfoot>
     </table>
     <% } %>
-    <div style="text-align: left">
+    <div id="myDIV" style="text-align: left">
         <%: Html.ActionLink("Back to List", "Index") %>
     </div>
 </asp:Content>

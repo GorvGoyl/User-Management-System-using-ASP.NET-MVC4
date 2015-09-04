@@ -127,6 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\CSS\jquery-ui.css" />
+    <Content Include="Content\Images\rays-background-2.jpg" />
     <Content Include="Content\JS\jquery-1.9.1.js" />
     <Content Include="Content\JS\jquery-ui.js" />
     <Content Include="Content\themes\base\accordion.css" />
@@ -171,6 +172,7 @@
     <Content Include="Content\Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\CSS\StyleSheet.css" />
+    <Content Include="Views\Home\Demo.aspx" />
     <Content Include="Views\Home\Error.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\Login.aspx" />

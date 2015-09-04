@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Utilities
 {
-    public class MyCustomException
+    public class CustomException
     {
-        public MyCustomException(string errorInfo, string errorDetail)
+        public CustomException(string errorInfo, string errorDetail)
         {
             ErrorDetail = errorDetail;
             ErrorInfo = errorInfo;

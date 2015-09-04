@@ -53,16 +53,7 @@ namespace BusinessAccessLayer
                 Logger.Debug(exception.Message, exception);
                 throw exception;
             }
-            try
-            {
-                CustomJson.JsonAndLog(UserData);
-            }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
+           
             Logger.Debug("Method End");
             return UserData;
 

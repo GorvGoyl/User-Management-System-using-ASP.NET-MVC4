@@ -28,7 +28,7 @@
         <%--<%: Html.ValidationMessageFor(model => model.GUID) %>--%>
     <%--</div>--%>
     <table class="TableColor" align="center" style="margin-left: 9cm" width="50%">
-        <thead>
+        <%--<thead>
             <tr>
                 <th>
                     <h1>
@@ -39,7 +39,7 @@
                         Value</h1>
                 </th>
             </tr>
-        </thead>
+        </thead>--%>
         <tr>
             <td class="td">
                 <div class="editor-label">

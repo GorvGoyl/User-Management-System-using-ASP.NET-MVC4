@@ -23,17 +23,17 @@ namespace MVC4_Html_Table.Controllers
         }
 
 
-        protected override void OnException(ExceptionContext filterContext)
-        {
-            //filterContext.
-            // filterContext.Controller.ViewBag.ExceptionMessage = "Custom Exception: Message from OnException method.";
-            filterContext.ExceptionHandled = true;
-            filterContext.Result = this.RedirectToAction("Error", "Home");
+        //protected override void OnException(ExceptionContext filterContext)
+        //{
+        //    //filterContext.
+        //    // filterContext.Controller.ViewBag.ExceptionMessage = "Custom Exception: Message from OnException method.";
+        //    filterContext.ExceptionHandled = true;
+        //    filterContext.Result = this.RedirectToAction("Error", "Home");
         
-            base.OnException(filterContext);
+        //    base.OnException(filterContext);
             
         
-        }  
+        //}  
 
     }
     //public class CustAuthFilter : AuthorizeAttribute,IExceptionFilter,IActionFilter

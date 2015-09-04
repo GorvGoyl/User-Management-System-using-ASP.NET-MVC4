@@ -36,8 +36,8 @@ namespace WcfServiceRest
             }
             catch (Exception)
             {
-                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't add the data to DataBase");
-                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
+                CustomException Custom = new CustomException("DataBase Error", "Can't add the data to DataBase");
+                throw new WebFaultException<CustomException>(Custom, HttpStatusCode.BadRequest);
             }
             Logger.Debug("Method End");
         }
@@ -51,21 +51,13 @@ namespace WcfServiceRest
             {
                 UserData = UserCrudOperations.RetrieveUser(user);
             }
-            catch (Exception)
-            {
-                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't edit the data");
-                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
-            }
-            try
-            {
-                CustomJson.JsonAndLog(UserData);
-            }
             catch (Exception exception)
             {
-
                 Logger.Debug(exception.Message, exception);
-                throw exception;
+                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                throw new WebFaultException<CustomException>(Error,HttpStatusCode.InternalServerError);
             }
+            
             Logger.Debug("Method End");
             return UserData;
         }
@@ -81,8 +73,8 @@ namespace WcfServiceRest
             }
             catch (Exception ex)
             {
-                MyCustomException Custom = new MyCustomException(ex.Message,JsonConvert.SerializeObject(ex));
-                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
+                CustomException Custom = new CustomException(ex.Message,JsonConvert.SerializeObject(ex));
+                throw new WebFaultException<CustomException>(Custom, HttpStatusCode.BadRequest);
             }
             try
             {
@@ -108,8 +100,8 @@ namespace WcfServiceRest
             }
             catch (Exception)
             {
-                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't update the data to DataBase");
-                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
+                CustomException Custom = new CustomException("DataBase Error", "Can't update the data to DataBase");
+                throw new WebFaultException<CustomException>(Custom, HttpStatusCode.BadRequest);
             }
             Logger.Debug("Method End");
 
@@ -125,8 +117,8 @@ namespace WcfServiceRest
             }
             catch (Exception)
             {
-                MyCustomException Custom = new MyCustomException("DataBase Error", "Can't delete the data from DataBase");
-                throw new WebFaultException<MyCustomException>(Custom, HttpStatusCode.BadRequest);
+                CustomException Custom = new CustomException("DataBase Error", "Can't delete the data from DataBase");
+                throw new WebFaultException<CustomException>(Custom, HttpStatusCode.BadRequest);
             }
             Logger.Debug("Method End");
         }

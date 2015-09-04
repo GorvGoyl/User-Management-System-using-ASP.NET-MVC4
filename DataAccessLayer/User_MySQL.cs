@@ -125,17 +125,19 @@ namespace DataAccessLayer
         {
             Logger.Debug("Method Start");
             User UserData = new User();
+            MySqlConnection Con=null;
+            MySqlDataReader Reader=null;
             try
             {
-                using (MySqlConnection Con = new MySqlConnection(ConnString))
-                {
+                    Con = new MySqlConnection(ConnString);               
                     Con.Open();
                     MySqlCommand Cmd = new MySqlCommand("udsp_User_Retrieve", Con);
+                
                     Cmd.CommandType = CommandType.StoredProcedure;
                     Cmd.Parameters.AddWithValue("var_UserId", user.UserId);  //guid is for editing user data
                     Cmd.Parameters.AddWithValue("var_UserName", user.UserName); //username and passoword is for login part
                     Cmd.Parameters.AddWithValue("var_Password", user.Password);
-                    MySqlDataReader Reader = Cmd.ExecuteReader();
+                    Reader = Cmd.ExecuteReader();
                     if (Reader.Read())
                     {
                         UserData.UserId = Reader["UserId"].ToString();
@@ -148,7 +150,7 @@ namespace DataAccessLayer
                         UserData.Password = Reader["Password"].ToString();
                     }
 
-                }
+                
             }
             catch (MySqlException exception)
             {
@@ -162,16 +164,18 @@ namespace DataAccessLayer
                 Logger.Debug(exception.Message, exception);
                 throw exception;
             }
-            try
+            finally
             {
-                CustomJson.JsonAndLog(UserData);
+                if (Con != null)
+                {
+                    Con.Close();
+                }
+                if (Reader != null)
+                {
+                    Reader.Close();
+                }
             }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
+            
 
             Logger.Debug("Method End");
             return UserData;

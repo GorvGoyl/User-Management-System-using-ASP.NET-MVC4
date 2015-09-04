@@ -18,11 +18,11 @@ namespace MVC4_Html_Table.Controllers
     {
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserTableServiceURL"].ToString();
-        
+
         [AllowAnonymous] //This is for Un-Authorize User
         public ActionResult Index()
         {
-                     
+
             return View();
         }
 
@@ -31,15 +31,18 @@ namespace MVC4_Html_Table.Controllers
 
             return View();
         }
+        public ActionResult Demo()
+        {
+
+            return View();
+        }
         public ActionResult Register()
         {
-            
 
-            
             return RedirectToAction("Create", "User", "Create");
         }
 
-    
+
         public ActionResult Login()
         {
             //throw new Exception();
@@ -50,19 +53,17 @@ namespace MVC4_Html_Table.Controllers
         [HttpPost]
         public ActionResult Login(User user) //passing the username and password
         {
-            
+
             string URL = BaseURL + "RetrieveUser";
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    
-                    using (HttpWebResponse HttpResponse = ServiceConsumer.Post(URL, User))
+                   using (HttpWebResponse HttpResponse = ServiceConsumer.Post(URL, User))
                     {
                         using (Stream DataStream = HttpResponse.GetResponseStream())
                         {
-
                             using (StreamReader Reader = new StreamReader(DataStream))
                             {
                                 string UserDataResponse = Reader.ReadToEnd();
@@ -72,7 +73,6 @@ namespace MVC4_Html_Table.Controllers
                                 {
                                     ViewBag.Message = "username or password is incorrect";
                                     ModelState.Remove("Password");
-                                    
                                     return View();
                                 }
                                 HttpCookie CustomAuthCookie = new HttpCookie("MXGourav");
@@ -87,47 +87,29 @@ namespace MVC4_Html_Table.Controllers
 
                                 string EncTicket = FormsAuthentication.Encrypt(Ticket);
                                 Response.Cookies.Add(new HttpCookie(CustomAuthCookie.Name, EncTicket));
-
-                                
-                                    return RedirectToAction("Index", "User");
-                                
+                                return RedirectToAction("Index", "User");
                             }
                         }
                     }
-
                 }
 
                 catch (Exception exception)
                 {
-                    Logger.Debug(exception.Message, exception);
-                    var protocolException = exception as WebException;
-                    if (protocolException != null)
-                    {
-                        var responseStream = protocolException.Response.GetResponseStream();
-                        var error = new StreamReader(protocolException.Response.GetResponseStream()).ReadToEnd();
-                        var ErrorInfoMessage = JToken.Parse(error)["ErrorInfo"];
-                        throw new Exception(ErrorInfoMessage.ToString());
-                    }
-                    else
-                    {
-                        throw new Exception("There is an unexpected error", exception);
-                    }
+                    throw exception;
                 }
 
             }
             else
             {
-
                 ModelState.Remove("Password");
                 return View();
             }
-
         }
 
 
         public ActionResult Logout()
         {
-            
+
             HttpContext.Response.Cookies.Remove("MXGourav");
             HttpContext.Response.Cookies["MXGourav"].Value = null;
             //Clearing the cookies of the response doesn't instruct the

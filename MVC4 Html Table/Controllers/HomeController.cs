@@ -54,11 +54,13 @@ namespace MVC4_Html_Table.Controllers
         public ActionResult Login()
         {
             //throw new Exception();
+            int x = 11;
+            LogHelper.LogMaker(x);
             return View();
         }
         #endregion
 
-        #region Login
+        #region Login Post
         [HttpPost]
         public ActionResult Login(User user) //passing the username and password
         {
@@ -68,7 +70,7 @@ namespace MVC4_Html_Table.Controllers
                 try
                 {
                     Logger.Debug(user);
-                    string UserDataResponse = ServiceConsumer.Post(URL, User);
+                    string UserDataResponse = ServiceConsumer.Post(URL,user);
                     Logger.Debug(UserDataResponse);
                     User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
                     if (String.IsNullOrEmpty(UserData.UserName))

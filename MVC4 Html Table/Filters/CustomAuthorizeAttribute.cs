@@ -10,10 +10,24 @@ namespace MVC4_Html_Table.Filters
     {
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
-            if (HttpContext.Current.Request.Cookies["MXGourav"] == null)
+            if (filterContext == null)
+            {
+                throw new ArgumentNullException("filterContext");
+            }
+
+            if (HttpContext.Current.Request.Cookies["MXGourav"] != null)
+            {
+                base.OnAuthorization(filterContext);
+
+
+            }
+            else
             {
                 filterContext.Result = new HttpUnauthorizedResult();
+                filterContext.RequestContext.HttpContext.Response.Redirect("~/home/Login", true);
+
             }
+
 
         }
 

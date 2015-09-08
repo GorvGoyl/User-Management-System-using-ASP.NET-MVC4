@@ -58,14 +58,14 @@ namespace MVC4_Html_Table.Controllers
         #endregion
 
         #region Create
-        [CustomAuthorize]
+        
         public ActionResult Create()
         {
             return View(new User());
         }
         #endregion
 
-        #region Create
+        #region Create Post
         [HttpPost]
         public ActionResult Create(User user)
         {
@@ -136,8 +136,9 @@ namespace MVC4_Html_Table.Controllers
             {
                 try
                 {
-                    Logger.Debug(user);
-                    string UserDataResponse = ServiceConsumer.Post(URL, User);
+                    string JasonUser = JsonConvert.SerializeObject(user, Formatting.Indented);
+                    Logger.Debug(JasonUser);
+                    string UserDataResponse = ServiceConsumer.Post(URL, JasonUser);
                     Logger.Debug(UserDataResponse);
                 }
 

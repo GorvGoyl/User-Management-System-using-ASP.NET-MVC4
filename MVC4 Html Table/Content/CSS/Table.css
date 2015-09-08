@@ -1,0 +1,56 @@
+﻿.TableColor
+		{
+			border-width: 1px;
+			border-spacing: 0;
+			border-color: #184354;
+			border-style: solid;
+			overflow: hidden;
+		}
+		.TableColor th
+		{
+			font-family: Segoe UI Semibold;
+			font-size: 16px;
+			
+			border-style: solid;
+			border-width: 1px;
+			overflow: hidden;
+			word-break: normal;
+			border-color: #184354;
+		
+			color: #FFFFFF;
+			background-color:#166984;
+		}
+		.TableColor td
+		{
+			font-family: Segoe UI;
+			font-size: 14px;
+			padding: 10px 5px;
+			border-style: solid;
+			border-width: 1px;
+			overflow: hidden;
+			word-break: normal;
+			border-color: #184354;
+			color: #669;
+		}
+		.TableColor tr
+		{
+			font-family: Segoe UI;
+			font-size: 14px;
+			padding: 10px 5px;
+			border-style: solid;
+			border-width: 1px;
+			overflow: hidden;
+			word-break: normal;
+			border-color: #184354;
+			color: #669;
+		}
+		
+		.TableColor tr:nth-child(odd)
+		{
+			background: #94D2E8;
+		}
+		
+		.TableColor tr:nth-child(even)
+		{
+			background: #DCF8F9;
+		}

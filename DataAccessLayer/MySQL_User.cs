@@ -136,7 +136,7 @@ namespace DataAccessLayer
             User UserData = new User();
             MySqlConnection Con = null;
             MySqlDataReader Reader = null;
-            if (user.UserName == null)
+            if (user.UserName == null && user.UserId == null)
             {
                 return UserData;
             }

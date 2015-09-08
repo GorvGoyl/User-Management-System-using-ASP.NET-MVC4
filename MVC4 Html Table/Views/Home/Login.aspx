@@ -2,41 +2,38 @@
     Inherits="System.Web.Mvc.ViewPage<MVC4_Html_Table.Models.User>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="Server">
-    Create
+    Login
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
-    <h1 style="text-align: center">
-        Create</h1>
+ 
     <% using (Html.BeginForm())
        { %>
     <%: Html.ValidationSummary(true) %>
-   <%-- <div class="Label">
-     <div >
-            
-            <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", @PlaceHolder = "UserName*" })%>
-            <%--  <%: Html.ValidationMessageFor(model => model.UserName)%>
+  
+    <div class="Box flipInY" id="animated-example" >
+    <div class="Label" style="top: -202px;">
+            <div style="position: relative; top: 2px;">
+                Login</div>
         </div>
-    </div>--%>
-
-    <div class ="Box" >
-    <br /><br /><br />
-        <div >
-            
-            <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", @PlaceHolder = "UserName*" })%>
-            <%--  <%: Html.ValidationMessageFor(model => model.UserName)%>--%>
+        <div>
+            <br />
+        </div>
+        <div>
+            <br />
+        </div>
+        <div>
+            <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", @PlaceHolder = "UserName*", @required = "required",  pattern = "[a-zA-Z]{3,10}", title = "UserName must be 3 to 10 characters long and consists only letters." })%>
         </div>
         <br />
-        <div >
-       
-            <%: Html.PasswordFor(model => model.Password, new { @class = "TextBox", @PlaceHolder = "Password*" })%>
-            <%-- <%: Html.ValidationMessageFor(model => model.Password)%>--%>
+        <div>
+            <%: Html.PasswordFor(model => model.Password, new { @class = "TextBox", @PlaceHolder = "Password*", @required = "required", pattern = "[a-zA-Z0-9]{3,10}", title = "Password must be 3 to 10 characters long and contains letters and numbers only." })%>
         </div>
-      <br />
-        <input type="submit" class="myButton" value="LOGIN" style="font-family: Segoe UI;
-            font-weight: bold;" />
-        <% } %>
+        <br />
+        <div style = "position:relative;">
+            <input type="submit" class="myButton" value="Login" style="font-weight: bold;" />
+            <%: Html.ActionLink("Register", "Register", null, new { @class = "myButton" , style="font-weight: bold; position : right" })%>
+        </div>
+         <div><br /></div>
     </div>
-    <div id="myDIV" style="text-align: left">
-        <%: Html.ActionLink("Back to List", "Index") %>
-    </div>
+    <% } %>
 </asp:Content>

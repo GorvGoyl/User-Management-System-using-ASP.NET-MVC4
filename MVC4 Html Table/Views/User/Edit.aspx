@@ -15,144 +15,72 @@
         }
         );
     </script>
-    <h1 style="text-align: center">
-        Edit</h1>
-    
-        <% using (Html.BeginForm())
-           { %>
-        <%: Html.ValidationSummary(true) %>
-        <div class="editor-label">
-            <%--<%: Html.LabelFor(model => model.GUID) %>--%>
-        </div>
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.UserId) %>
-            <%--<%: Html.ValidationMessageFor(model => model.GUID) %>--%>
-        </div>
-        <table class="TableColor" align="center" style="margin-left: 9cm" width="50%">
-            <%--<thead>
-                <tr>
-                    <th>
-                        <h1>
-                            Data</h1>
-                    </th>
-                    <th>
-                        <h1 style="text-align: left">
-                            Value</h1>
-                    </th>
-                </tr>
-            </thead>--%>
-            <tr>
-                <td class="td">
-                    <div class="editor-label">
-                        <%: Html.LabelFor(model => model.UserName)%>
-                    </div>
-                </td>
-                <td class="td">
-                  
-                        <div class="editor-field" style="text-align: left">
-                            <%: Html.EditorFor(model => model.UserName)%>
-                            <%: Html.ValidationMessageFor(model => model.UserName)%>
-                        </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="td">
-                    <div class="editor-label">
-                        <%: Html.LabelFor(model => model.FullName)%>
-                    </div>
-                </td>
-                <td class="td">
-                  
-                        <div class="editor-field" style="text-align: left">
-                            <%: Html.EditorFor(model => model.FullName)%>
-                            <%: Html.ValidationMessageFor(model => model.FullName)%>
-                        </div>
-                </td>
-            </tr>
+ 
+     <% using (Html.BeginForm())
+       { %>
+    <%: Html.ValidationSummary(true) %>
 
-            <tr>
-                <td class="td">
-                    <div class="editor-label">
-                        <%: Html.LabelFor(model => model.Phone) %>
-                    </div>
-                </td>
-                <td class="td">
-                    <div class="editor-field" style="text-align: left">
-                        <%: Html.EditorFor(model => model.Phone) %>
-                        <%: Html.ValidationMessageFor(model => model.Phone) %>
-                    </div>
-                </td>
-            </tr>
-             <tr>
-                <td class="td">
-                    <div class="editor-label">
-                        <%: Html.LabelFor(model => model.Email) %>
-                    </div>
-                </td>
-                <td class="td">
-                  
-                        <div class="editor-field" style="text-align: left">
-                            <%: Html.EditorFor(model => model.Email) %>
-                            <%: Html.ValidationMessageFor(model => model.Email) %>
-                        </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="td">
-                    <div class="editor-label">
-                        <%: Html.LabelFor(model => model.City) %>
-                    </div>
-                </td>
-                <td class="td">
-               
-                        <div class="editor-field" style="text-align: left">
-                            <%: Html.EditorFor(model => model.City) %>
-                            <%: Html.ValidationMessageFor(model => model.City) %>
-                        </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="td">
-                    <div class="editor-label">
-                        <%: Html.LabelFor(model => model.Dob) %>
-                    </div>
-                </td>
-                <td class="td">
-                
-                        <div class="editor-field" style="text-align: left">
-                            <%: Html.EditorFor(model => model.Dob)%>
-                            <%: Html.ValidationMessageFor(model => model.Dob)%>
-                        </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="td">
-                    <div class="editor-label">
-                      <%--  <%: Html.LabelFor(model => model.Password) %>--%>
-                    </div>
-                </td>
-                <td class="td">
-                
-                        <div class="editor-field" style="text-align: left">
-                            <%: Html.HiddenFor(model => model.Password)%>
-                           <%-- <%: Html.ValidationMessageFor(model => model.Password)%>--%>
-                        </div>
-                </td>
-            </tr>
-            <tfoot>
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                        <p style="text-align: left">
-                            <input type="submit" value="Save" />
-                        </p>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-        <% } %>
+    <div class="Box flipInY" id="animated-example" >
+    <div class="Label" style="top: -425px;">
+            <div style="position: relative; top: 2px;">
+                Edit Details</div>
+        </div>
+
+        <div>
+            <br />
+        </div>
+        <div>
+            <br />
+        </div>
+
+       
+        <div style = "margin-right: 8px;" >
+          <%: Html.LabelFor(model => model.UserName)%>
+           <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", @PlaceHolder = "UserName*", @required = "required",  pattern = "[a-zA-Z]{3,10}", title = "UserName must be 3 to 10 characters long and consists only letters." })%>
+          
+        </div>
+        <br />
+        <div style = "margin-right: 4px;" >
+         <%: Html.LabelFor(model => model.FullName)%>
+           <%: Html.TextBoxFor(model => model.FullName, new { @class = "TextBox", @PlaceHolder = "FullName*", @required = "required" })%>
+        </div>
+        <br />
+        <div style = "margin-right: -17px;" >
+         <%: Html.LabelFor(model => model.Phone)%>
+           <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone" ,pattern = "[0-9]{10}", title = "Phone Number must be 10 digits long and consists only digits." })%>
+        </div>
+        <br />
+        <div style = "margin-right: -22px;" >
+         <%: Html.LabelFor(model => model.Email)%>
+             <%: Html.TextBoxFor(model => model.Email, new { @class = "TextBox", @PlaceHolder = "Email*" , @required = "required",  id="email" , type="email" })%>
+        </div>
+        <br />
+        <div style = "margin-right: -32px;" >
+         <%: Html.LabelFor(model => model.City)%>
+            <%: Html.TextBoxFor(model => model.Dob, new { @class = "TextBox", @PlaceHolder = "Dob" ,pattern = @"[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}", title = "Date format should be 'mm/dd/yyyy'" })%>
+        </div>
+        <br />
+        <div style = "margin-right: -28px;" >
+         <%: Html.LabelFor(model => model.Dob)%>
+            <%: Html.TextBoxFor(model => model.Dob, new { @class = "TextBox", @PlaceHolder = "Dob" })%>
+        </div>
+        
+        <div>
+            <%: Html.HiddenFor(model => model.Password)%>
+            <%: Html.HiddenFor(model => model.UserId)%>
+        </div>
+        <br />
+        <div>
+            <input type="submit" class="myButton" value="Update" style="font-weight: bold;" />
+           
+        </div>
+        <div><br /></div>
+    </div>
+    
+    <% } %>
+
+
         <div style="text-align: left">
-            <%: Html.ActionLink("Back to List", "Index") %>
+            <%: Html.ActionLink("Back to List", "Index",null, new { @class = "myButton", style = "font-weight: bold; position : left" })%>
         </div>
 </asp:Content>

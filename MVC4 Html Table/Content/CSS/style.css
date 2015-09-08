@@ -1,8 +1,45 @@
-﻿h1 {
+﻿h1
+{
   font-family: Helvetica;
   font-weight: 100;
 }
-body {
-  color:#333;
-	text-align:center;
+body
+{
+  color: #333;
+  text-align: center;
+  font-family: Segoe UI;
+  background-image: url("../../Content/Images/rays-background-2.jpg");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.Label
+{
+  color: #FFFFFF;
+  font-size: larger;
+  font-weight: bolder;
+  background-color: #066488;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: -290px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 36px;
+  z-index: 1;
+}
+
+
+
+
+.TextBox
+{
+  padding: 2%;
+  border-radius: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: #94D2E8;
 }

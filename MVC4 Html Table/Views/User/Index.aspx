@@ -5,8 +5,14 @@
     Super User
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+<div class="Label" style=" text-align:right;">
+            <div style="position: relative; top: 2px;">
+                User Table</div>
+         </div>
     <div>
         <div>
+        <br />
+        <br />
             <div style="margin-left: 67.5%; margin-bottom: 10px;">
                 <%: Html.ActionLink("Create", "Create", "User", new { @class = "myButton", style = "font-weight: bold; " })%>
             </div>
@@ -29,7 +35,7 @@
                             City
                         </th>
                         <th align="right" style="padding-right: 5px;">
-                            Date Of Birth
+                            Dob(mm/dd/yyyy)
                         </th>
                         <th align="center">
                             Actions
@@ -44,22 +50,22 @@
                                 if (customer == null) continue; %>
                     <tr>
                         <td class="td" align="left">
-                            <%= customer.UserName%>
+                            <%= Html.Encode(customer.UserName)%>
                         </td>
                         <td class="td" align="left">
-                            <%= customer.FullName%>
+                            <%= Html.Encode(customer.FullName)%>
                         </td>
                         <td class="td" align="right">
-                            <%= customer.Phone %>
+                            <%= Html.Encode(customer.Phone )%>
                         </td>
                         <td class="td" align="left">
-                            <%= customer.Email %>
+                            <%= Html.Encode(customer.Email) %>
                         </td>
                         <td class="td" align="left">
-                            <%= customer.City %>
+                            <%= Html.Encode(customer.City) %>
                         </td>
                         <td class="td" align="right">
-                            <%= customer.Dob %>
+                            <%= Html.Encode(customer.Dob) %>
                         </td>
                         <td class="td" style="min-width: 200px;">
                             <%: Html.ActionLink("Edit", "Edit", "User", new { id_value = customer.UserId }, new { @class = "myButton", style = "font-weight: bold; " })%>

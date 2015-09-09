@@ -43,12 +43,47 @@ namespace MVC4_Html_Table.Controllers
         #endregion
 
         #region Register
+
         public ActionResult Register()
         {
-
-            return RedirectToAction("Create", "User", "Create");
+            return View(new User());
         }
         #endregion
+
+        #region Register Post
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Register(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                Guid NewGUID = Guid.NewGuid();
+                Logger.Debug(NewGUID);
+                user.UserId = NewGUID.ToString();
+                string URL = BaseURL + "Create";
+                try
+                {
+                    Logger.Debug(user);
+                    string ResponseFromServer = ServiceConsumer.Post(URL, user);
+                    Logger.Debug(ResponseFromServer);
+                    string JsonUser = JsonConvert.SerializeObject(user);
+                    Logger.Debug(JsonUser);
+                }
+
+                catch (Exception exception)
+                {
+                    Logger.Error(exception.Message, exception);
+                    throw exception;
+                }
+
+
+                return RedirectToAction("Index", "User");
+            }
+            return View(user);
+
+        }
+        #endregion
+
 
         #region Login
         public ActionResult Login()
@@ -62,6 +97,7 @@ namespace MVC4_Html_Table.Controllers
 
         #region Login Post
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Login(User user) //passing the username and password
         {
             string URL = BaseURL + "RetrieveUser";

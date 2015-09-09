@@ -2,7 +2,7 @@
     Inherits="System.Web.Mvc.ViewPage<MVC4_Html_Table.Models.User>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="Server">
-    Create
+    Register
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
     <script type="text/javascript">
@@ -31,6 +31,7 @@
             Citylabel.innerHTML = "&nbsp;";
             Doblabel.innerHTML = "&nbsp;";
             Passwordlabel.innerHTML = "&nbsp;";
+
 
             if (username == null || username == "") {
                 UserNamelabel.innerHTML = "*Please enter a Username";
@@ -105,8 +106,8 @@
     <div class="Box flipInY" id="animated-example">
         <div class="Label" style="top: -477px;">
             <div style="position: relative; top: 2px;">
-                Create User</div>
-        </div>
+                New User</div>
+         </div>
         <div>
             <br />
         </div>
@@ -156,7 +157,9 @@
             </div>
         </div>
         <div>
-            <input type="submit" class="myButton" value="Create" style="font-weight: bold;" onclick="return validateform(UserName,FullName,Phone,Email,City,Dob,Password)" />
+            <input type="submit" class="myButton" value="Register" style="font-weight: bold;"
+                onclick="return validateform(UserName,FullName,Phone,Email,City,Dob,Password)" />
+            <%: Html.ActionLink("Login","Login", "Home", null, new { @class = "myButton" , style="font-weight: bold; position : right" })%>
         </div>
         <div>
             <br />

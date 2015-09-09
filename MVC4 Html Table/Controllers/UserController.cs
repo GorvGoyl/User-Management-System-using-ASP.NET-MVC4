@@ -23,6 +23,7 @@ namespace MVC4_Html_Table.Controllers
 
         #region Index
         [CustomAuthorize]
+        [ValidateInput(false)]
         public ActionResult Index()
         {
 
@@ -66,7 +67,8 @@ namespace MVC4_Html_Table.Controllers
         #endregion
 
         #region Create Post
-        [HttpPost]
+        [HttpPost] 
+        [ValidateInput(false)]
         public ActionResult Create(User user)
         {
             if (ModelState.IsValid)
@@ -126,8 +128,9 @@ namespace MVC4_Html_Table.Controllers
         }
         #endregion
 
-        #region Edit
+        #region Edit Post
         [HttpPost]  //posting the data to dB
+        [ValidateInput(false)]
         public ActionResult Edit(User user)
         {
 

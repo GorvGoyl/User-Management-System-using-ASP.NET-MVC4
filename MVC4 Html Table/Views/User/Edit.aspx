@@ -5,8 +5,8 @@
     Edit
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
-<script type="text/javascript">
-    $(document).ready(
+    <script type="text/javascript">
+        $(document).ready(
         function () {
             $("#Dob").datepicker({
                 changeMonth: true,
@@ -15,72 +15,146 @@
         }
         );
     </script>
- 
-     <% using (Html.BeginForm())
+    <script type="text/javascript">
+        function validateform() {
+            
+            var username = document.getElementById("UserName").value;
+            var fullname = document.getElementById("FullName").value;
+            var phone = document.getElementById("Phone").value;
+            var email = document.getElementById("Email").value;
+            var dob = document.getElementById("Dob").value;
+
+            UserNamelabel.innerHTML = "&nbsp;";
+            FullNamelabel.innerHTML = "&nbsp;";
+            Phonelabel.innerHTML = "&nbsp;";
+            Emaillabel.innerHTML = "&nbsp;";
+            Citylabel.innerHTML = "&nbsp;";
+            Doblabel.innerHTML = "&nbsp;";
+
+
+            if (username == null || username == "") {
+                UserNamelabel.innerHTML = "*Please enter a Username";
+                UserName.focus();
+                return false;
+            }
+            if (username.length < 3) {
+                UserNamelabel.innerHTML = "*UserName must be at least 3 characters long";
+                UserName.focus();
+                return false;
+            }
+            if (fullname == null || fullname == "") {
+                FullNamelabel.innerHTML = "*Please enter your Name";
+                FullName.focus();
+                return false;
+            }
+            var phonePat = /^([0-9]{10})$/
+            var PhonematchArray = phone.match(phonePat);
+            if (PhonematchArray == null) {
+                Phonelabel.innerHTML = "*Please enter 10 digit Phone Number";
+                Phone.focus();
+                return false;
+
+            }
+
+            if (email == null || email == "") {
+                Emaillabel.innerHTML = "*Please enter Email";
+                Email.focus();
+                return false;
+            }
+
+            var emailPat = /^(\".*\"|[A-Za-z]\w*)@(\[\d{1,3}(\.\d{1,3}){3}]|[A-Za-z]\w*(\.[A-Za-z]\w*)+)$/
+            var EmailmatchArray = email.match(emailPat);
+            if (EmailmatchArray == null) {
+                Emaillabel.innerHTML = "*Please enter valid Email";
+                Email.focus();
+                return false;
+
+            }
+            var dobPat = /^([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4})$/
+
+            var DobmatchArray = dob.match(dobPat);
+            if (DobmatchArray == null) {
+                Doblabel.innerHTML = "*Date format should be 'mm/dd/yyyy'";
+                Dob.focus();
+                return false;
+
+            }
+            return true;
+
+        } 
+    </script>
+
+    <% using (Html.BeginForm())
        { %>
     <%: Html.ValidationSummary(true) %>
-
-    <div class="Box flipInY" id="animated-example" >
-    <div class="Label" style="top: -425px;">
+    <div class="Box flipInY" id="animated-example">
+        <div class="Label" style="top: -425px;">
             <div style="position: relative; top: 2px;">
                 Edit Details</div>
         </div>
-
         <div>
             <br />
-        </div>
-        <div>
             <br />
         </div>
 
-       
-        <div style = "margin-right: 8px;" >
-          <%: Html.LabelFor(model => model.UserName)%>
-           <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", @PlaceHolder = "UserName*", @required = "required",  pattern = "[a-zA-Z]{3,10}", title = "UserName must be 3 to 10 characters long and consists only letters." })%>
-          
+        <div style="margin-right: 8px;">
+            
+            <%: Html.LabelFor(model => model.UserName)%>
+            <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", @PlaceHolder = "UserName*"})%>
+            <div id='UserNamelabel' class="ValidationLabel">&nbsp;
+            </div>
         </div>
-        <br />
-        <div style = "margin-right: 4px;" >
-         <%: Html.LabelFor(model => model.FullName)%>
-           <%: Html.TextBoxFor(model => model.FullName, new { @class = "TextBox", @PlaceHolder = "FullName*", @required = "required" })%>
+    
+        <div style="margin-right: 4px;">
+            </div>
+            <%: Html.LabelFor(model => model.FullName)%>
+            <%: Html.TextBoxFor(model => model.FullName, new { @class = "TextBox", @PlaceHolder = "FullName*" })%>
+        <div id='FullNamelabel' class="ValidationLabel">&nbsp;
+
         </div>
-        <br />
-        <div style = "margin-right: -17px;" >
-         <%: Html.LabelFor(model => model.Phone)%>
-           <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone" ,pattern = "[0-9]{10}", title = "Phone Number must be 10 digits long and consists only digits." })%>
-        </div>
-        <br />
-        <div style = "margin-right: -22px;" >
-         <%: Html.LabelFor(model => model.Email)%>
-             <%: Html.TextBoxFor(model => model.Email, new { @class = "TextBox", @PlaceHolder = "Email*" , @required = "required",  id="email" , type="email" })%>
-        </div>
-        <br />
-        <div style = "margin-right: -32px;" >
-         <%: Html.LabelFor(model => model.City)%>
-            <%: Html.TextBoxFor(model => model.Dob, new { @class = "TextBox", @PlaceHolder = "Dob" ,pattern = @"[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}", title = "Date format should be 'mm/dd/yyyy'" })%>
-        </div>
-        <br />
-        <div style = "margin-right: -28px;" >
-         <%: Html.LabelFor(model => model.Dob)%>
-            <%: Html.TextBoxFor(model => model.Dob, new { @class = "TextBox", @PlaceHolder = "Dob" })%>
-        </div>
+      
+        <div style="margin-right: -17px;">
         
+            <%: Html.LabelFor(model => model.Phone)%>
+            <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone" })%>
+            <div id='Phonelabel' class="ValidationLabel">&nbsp;
+            </div>
+        </div>
+       
+        <div style="margin-right: -22px;">
+       
+            <%: Html.LabelFor(model => model.Email)%>
+            <%: Html.TextBoxFor(model => model.Email, new { @class = "TextBox", @PlaceHolder = "Email*" })%>
+              <div id='Emaillabel' class="ValidationLabel">&nbsp;
+            </div>
+        </div>
+       
+        <div style="margin-right: -32px;">
+         
+            <%: Html.LabelFor(model => model.City)%>
+            <%: Html.TextBoxFor(model => model.City, new { @class = "TextBox", @PlaceHolder = "City" })%>
+              <div id='Citylabel' class="ValidationLabel">&nbsp;
+            </div>
+        </div>
+    
+        <div style="margin-right: -28px;">
+          
+            <%: Html.LabelFor(model => model.Dob)%>
+            <%: Html.TextBoxFor(model => model.Dob, new { @class = "TextBox", @PlaceHolder = "Dob" })%>
+            <div id='Doblabel' class="ValidationLabel">&nbsp;
+            </div>
+        </div>
         <div>
             <%: Html.HiddenFor(model => model.Password)%>
             <%: Html.HiddenFor(model => model.UserId)%>
         </div>
-        <br />
+        
         <div>
-            <input type="submit" class="myButton" value="Update" style="font-weight: bold;" />
-           
+            <input type="submit" class="myButton" onclick="return validateform(UserName,FullName,Phone,Email,Dob)" value="Update" style="font-weight: bold;"  />
         </div>
-        <div><br /></div>
+        <div>
+            <br />
+        </div>
     </div>
-    
     <% } %>
-
-
-        <div style="text-align: left">
-            <%: Html.ActionLink("Back to List", "Index",null, new { @class = "myButton", style = "font-weight: bold; position : left" })%>
-        </div>
 </asp:Content>

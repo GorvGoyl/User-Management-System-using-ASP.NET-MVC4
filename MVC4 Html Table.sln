@@ -25,6 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObjects", "DataObjects\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase Scripts", "DataBase Scripts", "{BC79A6AB-FD5B-4E46-8883-0F0FB6BAF2A1}"
 	ProjectSection(SolutionItems) = preProject
+		udsp_Create__User_Schema.sql = udsp_Create__User_Schema.sql
 		udsp_User_Create.sql = udsp_User_Create.sql
 		udsp_User_Delete.sql = udsp_User_Delete.sql
 		udsp_User_Retrieve.sql = udsp_User_Retrieve.sql

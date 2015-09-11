@@ -10,7 +10,9 @@
         function () {
             $("#Dob").datepicker({
                 changeMonth: true,
-                changeYear: true
+                changeYear: true,
+                maxDate: "-1d",
+                minDate: "-70y"
             });
         }
         );
@@ -71,13 +73,14 @@
 
             }
             var dobPat = /^([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4})$/
-
             var DobmatchArray = dob.match(dobPat);
-            if (DobmatchArray == null) {
-                Doblabel.innerHTML = "*Date format should be 'mm/dd/yyyy'";
-                Dob.focus();
-                return false;
+            if (dob != null && dob != "") {
+                if (DobmatchArray == null) {
+                    Doblabel.innerHTML = "*Date format should be 'mm/dd/yyyy'";
+                    Dob.focus();
+                    return false;
 
+                }
             }
             return true;
 
@@ -88,20 +91,19 @@
        { %>
     <%: Html.ValidationSummary(true) %>
     <div class="Box flipInY" id="animated-example">
-        <div class="Label" style="top: -425px;">
-            <div style="position: relative; top: 2px;">
-                Edit Details</div>
+        <div class="Label" style="width:132px;">
+            <span style="position: relative; top: 2px;">
+                Edit Details</span>
         </div>
         <div>
-            <br />
-            <br />
+         
         </div>
 
         <div style="margin-right: 8px;">
             
             <%: Html.LabelFor(model => model.UserName)%>
             <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", @PlaceHolder = "UserName*"})%>
-            <div id='UserNamelabel' class="ValidationLabel">&nbsp;
+            <div id='UserNamelabel' class="ValidationLabel" style="margin-left: 132px;">&nbsp;
             </div>
         </div>
     
@@ -109,7 +111,7 @@
             </div>
             <%: Html.LabelFor(model => model.FullName)%>
             <%: Html.TextBoxFor(model => model.FullName, new { @class = "TextBox", @PlaceHolder = "FullName*" })%>
-        <div id='FullNamelabel' class="ValidationLabel">&nbsp;
+        <div id='FullNamelabel' class="ValidationLabel" style="margin-left: 132px;">&nbsp;
 
         </div>
       
@@ -117,7 +119,7 @@
         
             <%: Html.LabelFor(model => model.Phone)%>
             <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone" })%>
-            <div id='Phonelabel' class="ValidationLabel">&nbsp;
+            <div id='Phonelabel' class="ValidationLabel" style="margin-left: 132px;">&nbsp;
             </div>
         </div>
        
@@ -125,7 +127,7 @@
        
             <%: Html.LabelFor(model => model.Email)%>
             <%: Html.TextBoxFor(model => model.Email, new { @class = "TextBox", @PlaceHolder = "Email*" })%>
-              <div id='Emaillabel' class="ValidationLabel">&nbsp;
+              <div id='Emaillabel' class="ValidationLabel" style="margin-left: 132px;">&nbsp;
             </div>
         </div>
        
@@ -133,7 +135,7 @@
          
             <%: Html.LabelFor(model => model.City)%>
             <%: Html.TextBoxFor(model => model.City, new { @class = "TextBox", @PlaceHolder = "City" })%>
-              <div id='Citylabel' class="ValidationLabel">&nbsp;
+              <div id='Citylabel' class="ValidationLabel" style="margin-left: 132px;">&nbsp;
             </div>
         </div>
     
@@ -141,7 +143,7 @@
           
             <%: Html.LabelFor(model => model.Dob)%>
             <%: Html.TextBoxFor(model => model.Dob, new { @class = "TextBox", @PlaceHolder = "Dob" })%>
-            <div id='Doblabel' class="ValidationLabel">&nbsp;
+            <div id='Doblabel' class="ValidationLabel" style="margin-left: 132px;">&nbsp;
             </div>
         </div>
         <div>

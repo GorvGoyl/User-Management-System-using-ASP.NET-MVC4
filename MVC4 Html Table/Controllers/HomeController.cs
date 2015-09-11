@@ -27,6 +27,53 @@ namespace MVC4_Html_Table.Controllers
         }
         #endregion
 
+        #region Password
+        public ActionResult Password()
+        {
+
+            return View();
+        }
+        #endregion
+
+        #region Password Post
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Password(User user) //passing the username and email
+        {
+            string URL = BaseURL + "RetrieveUser";
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    Logger.Debug(user);
+                    string UserDataResponse = ServiceConsumer.Post(URL, user);
+                    Logger.Debug(UserDataResponse);
+                    User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
+                    if (UserData.Password != null)
+                    {
+                        return RedirectToAction("Index", "User");
+                    }
+                    else
+                    {
+                        return View();
+                    }
+                }
+
+                catch (Exception exception)
+                {
+                    Logger.Error(exception.Message, exception);
+                    throw exception;
+                }
+
+            }
+            else
+            {
+
+                return View();
+            }
+        }
+        #endregion
+
         #region Error
         public ActionResult Error()
         {
@@ -88,9 +135,7 @@ namespace MVC4_Html_Table.Controllers
         #region Login
         public ActionResult Login()
         {
-            //throw new Exception();
-            int x = 11;
-            LogHelper.LogMaker(x);
+
             return View();
         }
         #endregion
@@ -106,7 +151,7 @@ namespace MVC4_Html_Table.Controllers
                 try
                 {
                     Logger.Debug(user);
-                    string UserDataResponse = ServiceConsumer.Post(URL,user);
+                    string UserDataResponse = ServiceConsumer.Post(URL, user);
                     Logger.Debug(UserDataResponse);
                     User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
                     if (String.IsNullOrEmpty(UserData.UserName))

@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="../../Content/CSS/Buttons.css" />
 	<link rel="stylesheet" href="../../Content/CSS/Table.css" />
 	<link rel="stylesheet" href="../../Content/CSS/jquery-ui.css" />
+	<%--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">--%>
 	<link rel="stylesheet" href="../../Content/CSS/Box.css" />
 
 	<script type="text/javascript" src="../../Content/JS/jquery-1.9.1.js"></script>
@@ -32,14 +33,23 @@
 
 			<div class="header-limiter">
 
-				<h1><img src="../../Content/Images/queueoverflowlogo.png" /><a href="../Home/login">Queue<span>Overflow</span></a></h1>
+				<h1><img src="../../Content/Images/queueoverflowlogo.png" /><a style="pointer-events:none;" href="../Home/login">Queue<span>Overflow</span></a></h1>
 
 				<nav>
-					<a href="#">Home</a>
-					<a href="../Home/login" >Login</a>
+				<% if(Request.Cookies["MXGourav"] == null)%>
+			<%: Html.ActionLink("Home", "../Home/Login", null, new { @class = "a", style = "" })%>
+			<% if(Request.Cookies["MXGourav"] != null)%>
+			<%: Html.ActionLink("Admin", "../User/Index", null, new { @class = "a", style = "" })%>
+					
 					<a href="#">About</a>
-					<a href="#">Faq</a>
+					<a href="#">FAQ</a>
 					<a href="#">Contact</a>
+			<% if(Request.Cookies["MXGourav"] == null)%>
+			<%: Html.ActionLink("Login", "../Home/Login", null, new { @class = "a", style = "" })%>
+			<% if(Request.Cookies["MXGourav"] != null)%>
+			<%: Html.ActionLink("Logout", "../Home/Logout", null, new { @class = "a", style = "" })%>
+				
+					
 				</nav>
 			</div>
 
@@ -54,7 +64,8 @@
 	<footer class="footer-basic-centered">
 
 			<%--<p class="footer-company-motto">The Best Answer to any Question</p>--%>
-			<%--//<%: ViewContext.RouteData.GetRequiredString("action")==--%>
+			<% String action = ViewContext.RouteData.GetRequiredString("action").ToString();%>
+			<% if(action == "Create" ||action == "Edit" )%>
 			<%: Html.ActionLink("Back to List", "../User/Index", null, new { @class = "myButton", style = "margin-top: 9px; position : absolute; right:0; margin-right:5px;" })%>
 			
 

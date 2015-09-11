@@ -149,6 +149,7 @@ namespace DataAccessLayer
                 Cmd.Parameters.AddWithValue("var_UserId", user.UserId);  //guid is for editing user data
                 Cmd.Parameters.AddWithValue("var_UserName", user.UserName); //username and passoword is for login part
                 Cmd.Parameters.AddWithValue("var_Password", user.Password);
+                Cmd.Parameters.AddWithValue("var_Email", user.Email);   //for forget password
                 Reader = Cmd.ExecuteReader();
                 if (Reader.Read())
                 {

@@ -14,12 +14,37 @@ using Newtonsoft.Json.Linq;
 using Utilities;
 using System.Configuration;
 using MVC4_Html_Table.Filters;
+using System.Web.Services;
 namespace MVC4_Html_Table.Controllers
 {
     public class UserController : BaseController
     {
         private readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserServiceURL"].ToString();
+        
+        //[CustomAuthorize]
+        //[ValidateInput(false)]
+        public JsonResult GetData() //Show the details of the data after insert in HTML Table
+        {
+            string URL =BaseURL + "Retrieve";
+            List<User> UsersList = null;
+            try
+            {
+                string ResponseFromServer = ServiceConsumer.Get(URL);
+                Logger.Debug(ResponseFromServer);
+            
+                    UsersList = JsonConvert.DeserializeObject<List<User>>(ResponseFromServer);
+                    string JsonUser = JsonConvert.SerializeObject(UsersList);
+                    Logger.Debug(JsonUser);
+            }
+
+            catch (Exception exception)
+            {
+                Logger.Error(exception.Message, exception);
+                throw exception;
+            }
+            return Json(new {Data = UsersList });
+        }
 
         #region Index
         [CustomAuthorize]
@@ -32,20 +57,11 @@ namespace MVC4_Html_Table.Controllers
             {
                 string ResponseFromServer = ServiceConsumer.Get(URL);
                 Logger.Debug(ResponseFromServer);
-                try
-                {
-                    List<User> UsersList = JsonConvert.DeserializeObject<List<User>>(ResponseFromServer);
-                    string JsonUser = JsonConvert.SerializeObject(UsersList);
-                    Logger.Debug(JsonUser);
-                    ViewData["UserData"] = UsersList;
-                }
-                catch (Exception exception)
-                {
-                    Logger.Error(exception.Message, exception);
-                    throw exception;
-                }
 
-
+                List<User> UsersList = JsonConvert.DeserializeObject<List<User>>(ResponseFromServer);
+                string JsonUser = JsonConvert.SerializeObject(UsersList);
+                Logger.Debug(JsonUser);
+                ViewData["UserData"] = UsersList;
             }
 
             catch (Exception exception)
@@ -59,7 +75,7 @@ namespace MVC4_Html_Table.Controllers
         #endregion
 
         #region Create
-        
+
         public ActionResult Create()
         {
             return View(new User());
@@ -67,7 +83,7 @@ namespace MVC4_Html_Table.Controllers
         #endregion
 
         #region Create Post
-        [HttpPost] 
+        [HttpPost]
         [ValidateInput(false)]
         public ActionResult Create(User user)
         {
@@ -80,7 +96,7 @@ namespace MVC4_Html_Table.Controllers
                 try
                 {
                     Logger.Debug(user);
-                    string ResponseFromServer = ServiceConsumer.Post(URL,user);
+                    string ResponseFromServer = ServiceConsumer.Post(URL, user);
                     Logger.Debug(ResponseFromServer);
                     string JsonUser = JsonConvert.SerializeObject(user);
                     Logger.Debug(JsonUser);

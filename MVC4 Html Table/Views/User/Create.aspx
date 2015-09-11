@@ -72,15 +72,16 @@
             }
 
             var dobPat = /^([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4})$/
-
             var DobmatchArray = dob.match(dobPat);
+             if(dob!=null && dob!="")
+             {
             if (DobmatchArray == null) {
                 Doblabel.innerHTML = "*Date format should be 'mm/dd/yyyy'";
                 Dob.focus();
                 return false;
 
             }
-
+            }
             if (password == null || password == "") {
                 Passwordlabel.innerHTML = "*Please enter a password";
                 Password.focus();
@@ -103,13 +104,11 @@
        { %>
     <%: Html.ValidationSummary(true) %>
     <div class="Box flipInY" id="animated-example">
-        <div class="Label" style="top: -477px;">
+        <div class="Label" style="width:132px">
             <div style="position: relative; top: 2px;">
                 Create User</div>
         </div>
-        <div>
-            <br />
-        </div>
+      
         <div>
             <br />
         </div>

@@ -130,9 +130,27 @@
     <Content Include="Content\CSS\Buttons.css" />
     <Content Include="Content\CSS\footer-basic-centered.css" />
     <Content Include="Content\CSS\header-basic.css" />
+    <Content Include="Content\CSS\IconButton.css" />
     <Content Include="Content\CSS\jquery-ui.css" />
+    <Content Include="Content\CSS\jquery.dataTables.min.css" />
     <Content Include="Content\CSS\Table.css" />
     <Content Include="Content\CSS\ValidationLabel.css" />
+    <Content Include="Content\Images\delete.png" />
+    <Content Include="Content\Images\edit.png" />
+    <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\sort_asc.png" />
+    <Content Include="Content\Images\sort_asc_disabled.png" />
+    <Content Include="Content\Images\sort_both.png" />
+    <Content Include="Content\Images\sort_desc.png" />
+    <Content Include="Content\Images\sort_desc_disabled.png" />
+    <Content Include="Content\Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\JS\jquery.dataTables.min.js" />
+    <Content Include="Content\JS\jquery.js" />
     <Content Include="Content\Images\queueoverflowlogo.png" />
     <Content Include="Content\Images\rays-background-2.jpg" />
     <Content Include="Content\JS\jquery-1.9.1.js" />
@@ -183,6 +201,7 @@
     <Content Include="Views\Home\Error.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\Login.aspx" />
+    <Content Include="Views\Home\Password.aspx" />
     <Content Include="Views\Home\Register.aspx" />
     <Content Include="Views\User\Create.aspx" />
     <Content Include="Views\User\Edit.aspx" />
@@ -205,6 +224,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\Images\Sorting icons.psd" />
     <None Include="Content\Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Shared\ViewMasterPage.Master" />
   </ItemGroup>

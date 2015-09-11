@@ -2,17 +2,14 @@
 	background-color: #041A23;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
-
-
-
-		display: block;
 		padding: 0px 0px;
 		/* clear: both; */
-		position: fixed;
+		position:fixed;
+	
 		width: 100%;
 		bottom: 0;
 		z-index: 5;
-
+		height:45px;
 }
 
 .footer-basic-centered .footer-company-motto{

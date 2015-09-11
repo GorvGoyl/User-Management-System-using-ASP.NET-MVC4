@@ -6,6 +6,7 @@
 			border-style: solid;
 			overflow: hidden;
 			margin-bottom: 5em;
+		
 		}
 		.TableColor th
 		{
@@ -29,7 +30,7 @@
 			border-style: solid;
 			border-width: 1px;
 			overflow: hidden;
-			word-break: normal;
+			word-break: break-all;
 			border-color: #184354;
 			color: #669;
 		}
@@ -45,6 +46,14 @@
 			border-color: #184354;
 			color: #669;
 		}
+
+	
+		table.TableColor tr:hover td {
+    background-color: #F5C8A8 !important;
+    color: Black;
+    border-bottom: 1px solid #ffb676 !important;
+    border-top: 1px solid #ffb676 !important;
+}
 		
 		.TableColor tr:nth-child(odd)
 		{

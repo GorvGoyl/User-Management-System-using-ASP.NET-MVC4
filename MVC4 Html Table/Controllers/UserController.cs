@@ -22,8 +22,7 @@ namespace MVC4_Html_Table.Controllers
         private readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserServiceURL"].ToString();
         
-        //[CustomAuthorize]
-        //[ValidateInput(false)]
+  
         public JsonResult GetData() //Show the details of the data after insert in HTML Table
         {
             string URL =BaseURL + "Retrieve";
@@ -45,6 +44,58 @@ namespace MVC4_Html_Table.Controllers
             }
             return Json(new {Data = UsersList });
         }
+
+        #region CreateUser
+        [WebMethod]
+        public JsonResult CreateUser(User objUser)
+        {
+            string URL = BaseURL + "Create";
+            Guid NewGUID = Guid.NewGuid();
+            Logger.Debug(NewGUID);
+            objUser.UserId = NewGUID.ToString();
+            try
+            {
+                LogHelper.LogMaker(objUser);
+                string ResponseFromServer = ServiceConsumer.Post(URL, objUser);
+                Logger.Debug(ResponseFromServer);
+               
+            }
+
+            catch (Exception exception)
+            {
+                Logger.Error(exception.Message, exception);
+                throw exception;
+            }
+
+            return Json(new { Status = "Success" });
+
+        }
+        #endregion
+
+        #region SaveUser
+        [WebMethod]
+        public JsonResult SaveUser(User objUser)  
+        {
+            string URL = BaseURL + "Update";
+          
+                try
+                {
+                    string JasonUser = JsonConvert.SerializeObject(objUser, Formatting.Indented);
+                    Logger.Debug(JasonUser);
+                    string UserDataResponse = ServiceConsumer.Post(URL, JasonUser);
+                    Logger.Debug(UserDataResponse);
+                }
+
+                catch (Exception exception)
+                {
+                    Logger.Error(exception.Message, exception);
+                    throw exception;
+                }
+
+                return Json(new { Status = "Success" });
+            
+        }
+        #endregion
 
         #region Index
         [CustomAuthorize]
@@ -95,11 +146,10 @@ namespace MVC4_Html_Table.Controllers
                 string URL = BaseURL + "Create";
                 try
                 {
-                    Logger.Debug(user);
+                    LogHelper.LogMaker(user);
                     string ResponseFromServer = ServiceConsumer.Post(URL, user);
                     Logger.Debug(ResponseFromServer);
-                    string JsonUser = JsonConvert.SerializeObject(user);
-                    Logger.Debug(JsonUser);
+                    
                 }
 
                 catch (Exception exception)

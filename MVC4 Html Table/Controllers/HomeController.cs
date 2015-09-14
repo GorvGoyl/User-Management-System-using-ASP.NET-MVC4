@@ -30,8 +30,35 @@ namespace MVC4_Html_Table.Controllers
         #region Password
         public ActionResult Password()
         {
+            ViewBag.Pass = string.Empty;
 
             return View();
+        }
+        #endregion
+
+        #region Password ajax
+        public JsonResult GetPassword(User objUser) //passing the username and email
+        {
+            string URL = BaseURL + "RetrieveUser";
+            string ResponseFromServer="";
+            try
+            {
+                LogHelper.LogMaker(objUser);
+                ResponseFromServer = ServiceConsumer.Post(URL, objUser);
+                Logger.Debug(ResponseFromServer);
+
+            }
+
+            catch (Exception exception)
+            {
+                Logger.Error(exception.Message, exception);
+                throw exception;
+            }
+
+            return Json( ResponseFromServer);
+
+            
+       
         }
         #endregion
 
@@ -51,10 +78,12 @@ namespace MVC4_Html_Table.Controllers
                     User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
                     if (UserData.Password != null)
                     {
-                        return RedirectToAction("Index", "User");
+                        ViewBag.Pass = "Password : " + UserData.Password;
+                        return View();
                     }
                     else
                     {
+                        ViewBag.Pass = "Username or Email is incorrect";
                         return View();
                     }
                 }

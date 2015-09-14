@@ -82,6 +82,7 @@ namespace DataAccessLayer
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Cmd.Parameters.AddWithValue("var_UserId", "");
                 Cmd.Parameters.AddWithValue("var_UserName", "");
+                Cmd.Parameters.AddWithValue("var_Email", "");
                 Cmd.Parameters.AddWithValue("var_Password", "");
                 Reader = Cmd.ExecuteReader();
                 User UserData;

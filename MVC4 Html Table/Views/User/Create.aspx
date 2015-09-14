@@ -49,11 +49,13 @@
             }
             var phonePat = /^([0-9]{10})$/
             var PhonematchArray = phone.match(phonePat);
-            if (PhonematchArray == null) {
-                Phonelabel.innerHTML = "*Please enter 10 digit Phone Number";
-                Phone.focus();
-                return false;
+            if (phone != null && phone != "") {
+                if (PhonematchArray == null) {
+                    Phonelabel.innerHTML = "*Please enter 10 digit Phone Number";
+                    Phone.focus();
+                    return false;
 
+                }
             }
 
             if (email == null || email == "") {
@@ -95,11 +97,40 @@
                 return false;
             }
 
-            return true;
+            var user = {};
+            user.UserName = $("#UserName").val();
+            user.FullName = $("#FullName").val();
+            user.Phone = $("#Phone").val();
+            user.Email = $("#Email").val();
+            user.City = $("#City").val();
+            user.Dob = $("#Dob").val();
+            user.Password = $("#Password").val();
+            $.ajax({
+                type: "POST",
+                url: "../User/CreateUser",
+                data: '{objUser: ' + JSON.stringify(user) + '}',
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function () {
+                    $("#message").fadeIn("slow").delay(1000).fadeOut("fast", function () {
+                        window.location = "Index";
+                    });
+
+                },
+                error: function () {
+                    alert("Error while creating user");
+                }
+            });
+            return false; 
 
 
         } 
     </script>
+      <div id="message" class="Message" style="width:274px; display:none;position: relative;
+    top: 25px;">
+            <span style="position: relative; top: 2px;">
+                User Created Successfully</span>
+        </div>
     <% using (Html.BeginForm())
        { %>
     <%: Html.ValidationSummary(true) %>

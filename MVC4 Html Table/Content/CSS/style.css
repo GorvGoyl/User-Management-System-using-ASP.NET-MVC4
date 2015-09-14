@@ -30,7 +30,21 @@ body
   z-index: 1;
 }
 
+.Message
+{
+      background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
 
+  text-align: center;
+    position: relative;
+    width: 86px;
+    margin: auto;
+ border-radius: 5px;
+    bottom: 15px;
+    height: 34px;
+  z-index: 1;
+}
 
 
 .TextBox

@@ -36,11 +36,11 @@
 				<h1><img src="../../Content/Images/queueoverflowlogo.png" /><a style="pointer-events:none;" href="../Home/login">Queue<span>Overflow</span></a></h1>
 
 				<nav>
-				<% if(Request.Cookies["MXGourav"] == null)%>
+		<%--		<% if(Request.Cookies["MXGourav"] == null)%>
 			<%: Html.ActionLink("Home", "../Home/Login", null, new { @class = "a", style = "" })%>
 			<% if(Request.Cookies["MXGourav"] != null)%>
-			<%: Html.ActionLink("Admin", "../User/Index", null, new { @class = "a", style = "" })%>
-					
+			<%: Html.ActionLink("Admin", "../User/Index", null, new { @class = "a", style = "" })%>--%>
+					<a href="#">Home</a>
 					<a href="#">About</a>
 					<a href="#">FAQ</a>
 					<a href="#">Contact</a>

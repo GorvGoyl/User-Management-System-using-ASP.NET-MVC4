@@ -7,11 +7,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
     <script type="text/javascript">
         function validateform() {
-
+            debugger;
             var username = document.getElementById("UserName").value;
             var email = document.getElementById("Email").value;
             UserNamelabel.innerHTML = "";
-            Passwordlabel.innerHTML = "";
+            Emaillabel.innerHTML = "";
             if (username == null || username == "") {
                 UserNamelabel.innerHTML = "*Please enter your Username";
                 UserName.focus();
@@ -36,22 +36,45 @@
                 return false;
 
             }
-            return true;
+//            var user = {};
+//            user.UserName = $("#UserName").val();
+//            user.Email = $("#Email").val();
+//            $.ajax({
+//                type: "POST",
+//                url: "../Home/Password",
+//                data: '{objUser: ' + JSON.stringify(user) + '}',
+//                dataType: "json",
+//                contentType: "application/json; charset=utf-8",
+//                success: function () {
+//                    $("#message").fadeIn("slow").delay(1000).fadeOut("fast", function () {
+//                        window.location = "Index";
+//                    });
+
+//                },
+//                error: function () {
+//                    alert("Error while updating user");
+//                }
+//            });
+            return true;   
 
 
         } 
     </script>
+     <div id="message" class="Message" style="width:274px; position: relative;
+    top: 25px;background-color:transparent;">
+            <span style="position: relative; top: 2px;">
+                <%:ViewBag.Pass as string%></span>
+        </div>
+
     <% using (Html.BeginForm())
        { %>
     <%: Html.ValidationSummary(true) %>
     <div class="Box flipInY" id="animated-example">
-        <div class="Label" style="top: -202px;">
+        <div class="Label" style="width: 204px;">
             <div style="position: relative; top: 2px;">
-                Login</div>
+                Retrieve Password</div>
         </div>
-        <div>
-            <br />
-        </div>
+       
         <div>
             <br />
         </div>
@@ -70,9 +93,9 @@
         </div>
         <br />
         <div style="position: relative;">
-            <input type="submit" id="submit" class="myButton" value="Retrieve Password" onclick="return validateform(UserName,Email)"
+            <input type="submit" id="submit" class="myButton" value="Retrieve Password" onclick="return validateform()"
                 style="font-weight: bold;" />
-            <%: Html.ActionLink("Retrieve Password", "Password", null, new { @class = "myButton" , style="font-weight: bold; position : right" })%>
+           <%-- <%: Html.ActionLink("Retrieve Password", "Password", "Home", new { @class = "myButton" , onclick="return validateform(UserName,Email)",style=" position : center" })%>--%>
         </div>
         <div>
             <br />

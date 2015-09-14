@@ -9,16 +9,29 @@ namespace Utilities
 {
     public class LogHelper
     {
-        private static readonly ILog Logger;
-        static LogHelper()
-        {
-            Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        }
+        private static readonly ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        #region LogMaker
+        public static void LogMaker(Object obj)
+        {
+            _Logger.Info("Method Start");
+            try
+            {
+                _Logger.Debug(JsonConvert.SerializeObject(obj));
+            }
+            catch (Exception exception)
+            {
+
+                _Logger.Error(exception.Message, exception);
+                throw exception;
+            }
+            _Logger.Info("Method End");
+        }
+        #endregion
 
         //public static void LogMaker(User user)
         //{
-        //    Logger.Debug("Method Start");
+        //    Logger.Info("Method Start");
         //    try
         //    {
         //        string JsonUser = JsonConvert.SerializeObject(user);
@@ -27,29 +40,15 @@ namespace Utilities
         //    catch (Exception exception)
         //    {
 
-        //        Logger.Debug(exception.Message, exception);
+        //        Logger.Error(exception.Message, exception);
         //        throw exception;
         //    }
-        //    Logger.Debug("Method End");
+        //    Logger.Info("Method End");
         //}
-        public static void LogMaker(Object obj)
-        {
-            Logger.Debug("Method Start");
-            try
-            {
-                Logger.Debug(JsonConvert.SerializeObject(obj));
-            }
-            catch (Exception exception)
-            {
-
-                Logger.Debug(exception.Message, exception);
-                throw exception;
-            }
-            Logger.Debug("Method End");
-        }
+      
         //public static void LogMaker(List<User> usersList)
         //{
-        //    Logger.Debug("Method Start");
+        //    Logger.Info("Method Start");
         //    try
         //    {
         //        string JsonUser = JsonConvert.SerializeObject(usersList);
@@ -58,10 +57,10 @@ namespace Utilities
         //    catch (Exception exception)
         //    {
 
-        //        Logger.Debug(exception.Message, exception);
+        //        Logger.Error(exception.Message, exception);
         //        throw exception;
         //    }
-        //    Logger.Debug("Method End");
+        //    Logger.Info("Method End");
         //}
     }
 }

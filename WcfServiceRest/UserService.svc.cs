@@ -15,12 +15,12 @@ namespace WcfServiceRest
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     public class UserService : IUserService
     {
-        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        
+        private static readonly log4net.ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         #region Create
         public void Create(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             try
             {
                 LogHelper.LogMaker(user);
@@ -28,18 +28,18 @@ namespace WcfServiceRest
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
         }
         #endregion
 
         #region RetrieveUser
         public User RetrieveUser(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             User UserData;
             try
             {
@@ -49,12 +49,12 @@ namespace WcfServiceRest
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
 
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
             return UserData;
         }
         #endregion
@@ -62,7 +62,7 @@ namespace WcfServiceRest
         #region Retrieve
         public List<User> Retrieve()
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             List<User> UsersList;
 
             try
@@ -73,12 +73,12 @@ namespace WcfServiceRest
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
-                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                _Logger.Error(exception.Message, exception);
+                CustomException Error = new CustomException("Unexpected error caused by " + exception.Source, exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
 
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
             return UsersList;
         }
         #endregion
@@ -86,7 +86,7 @@ namespace WcfServiceRest
         #region Update
         public void Update(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
 
             try
             {
@@ -95,11 +95,11 @@ namespace WcfServiceRest
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
 
         }
         #endregion
@@ -107,7 +107,7 @@ namespace WcfServiceRest
         #region Delete
         public void Delete(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
 
             try
             {
@@ -116,11 +116,11 @@ namespace WcfServiceRest
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
         }
         #endregion
     }

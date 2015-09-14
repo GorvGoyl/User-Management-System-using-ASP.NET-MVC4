@@ -8,39 +8,26 @@ namespace MVC4_Html_Table.Controllers
 {
     public class BaseController : Controller,  IExceptionFilter, IActionFilter
     {
-        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        #region OnActionExecuting
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-
-            Logger.Debug("Method Start" +" ACTION: " + filterContext.ActionDescriptor.ActionName +" CONTROLLER: "+ filterContext.ActionDescriptor.ControllerDescriptor.ControllerName);
+            _Logger.Info("Method Start" +" ACTION: " + filterContext.ActionDescriptor.ActionName +" CONTROLLER: "+ filterContext.ActionDescriptor.ControllerDescriptor.ControllerName);
             base.OnActionExecuting(filterContext);
         }
+        #endregion
 
+        #region OnActionExecuted
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            Logger.Debug("Method End" + " ACTION: " + filterContext.ActionDescriptor.ActionName + " CONTROLLER: " + filterContext.ActionDescriptor.ControllerDescriptor.ControllerName);
+            _Logger.Info("Method End" + " ACTION: " + filterContext.ActionDescriptor.ActionName + " CONTROLLER: " + filterContext.ActionDescriptor.ControllerDescriptor.ControllerName);
         }
+        #endregion
 
-
-        //protected override void OnException(ExceptionContext filterContext)
-        //{
-        //    //filterContext.
-        //    // filterContext.Controller.ViewBag.ExceptionMessage = "Custom Exception: Message from OnException method.";
-        //    filterContext.ExceptionHandled = true;
-        //    filterContext.Result = this.RedirectToAction("Error", "Home");
-
-        //    base.OnException(filterContext);
-
-
-        //}  
+        
 
     }
-    //public class CustAuthFilter : AuthorizeAttribute,IExceptionFilter,IActionFilter
-    //{
-    //    public override void OnAuthorization(AuthorizationContext filterContext)
-    //    {
-    //        filterContext.Controller.ViewBag.AutherizationMessage = "Custom Authorization: Message from OnAuthorization method.";
-    //    }
-    //}
+
+    
 }

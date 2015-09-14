@@ -26,7 +26,7 @@ CREATE PROCEDURE udsp_User_Create
 	var_Password    VARCHAR(45)
 )
 BEGIN
-	INSERT INTO user_data
+	INSERT INTO USER_DATA
 	(
 		UserId,
 		UserName,

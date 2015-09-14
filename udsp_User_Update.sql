@@ -26,7 +26,7 @@ CREATE PROCEDURE udsp_User_Update
 	var_Password    VARCHAR(45)
 )
 BEGIN
-	UPDATE     user_data SET 
+	UPDATE     USER_DATA SET 
 	UserName = var_UserName ,
 	FullName = var_FullName	,
 	Phone    = var_Phone	,

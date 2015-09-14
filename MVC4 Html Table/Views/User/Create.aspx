@@ -10,7 +10,9 @@
         function () {
             $("#Dob").datepicker({
                 changeMonth: true,
-                changeYear: true
+                changeYear: true,
+                maxDate: "-12y",
+                minDate: "-100y"
             });
         }
         );
@@ -156,7 +158,7 @@
             </div>
         </div>
         <div>
-            <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone"  })%>
+            <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone*"  })%>
             <div id='Phonelabel' class="ValidationLabel">
                 &nbsp;
             </div>

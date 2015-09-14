@@ -11,12 +11,12 @@ namespace BusinessAccessLayer
 {
     public class Users
     {
-        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         
         #region Create
         public static void Create(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             try
             {
                 LogHelper.LogMaker(user);
@@ -24,11 +24,11 @@ namespace BusinessAccessLayer
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
 
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
 
         }
         #endregion
@@ -36,7 +36,7 @@ namespace BusinessAccessLayer
         #region RetrieveUser
         public static User RetrieveUser(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             User UserData;
             try
             {
@@ -48,11 +48,11 @@ namespace BusinessAccessLayer
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
 
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
             return UserData;
 
         }
@@ -61,7 +61,7 @@ namespace BusinessAccessLayer
         #region Retrieve
         public static List<User> Retrieve()
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             List<User> UsersList;
             try
             {
@@ -70,11 +70,11 @@ namespace BusinessAccessLayer
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
 
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
             return UsersList;
 
         }
@@ -83,7 +83,7 @@ namespace BusinessAccessLayer
         #region Update
         public static void Update(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             try
             {
                 LogHelper.LogMaker(user);
@@ -92,10 +92,10 @@ namespace BusinessAccessLayer
 
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
 
         }
         #endregion
@@ -103,7 +103,7 @@ namespace BusinessAccessLayer
         #region Delete
         public static void Delete(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             try
             {
                 LogHelper.LogMaker(user);
@@ -111,10 +111,10 @@ namespace BusinessAccessLayer
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
-            Logger.Debug("Method End");
+            _Logger.Info("Method End");
         }
         #endregion
 

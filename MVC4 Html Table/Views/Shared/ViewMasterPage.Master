@@ -40,10 +40,17 @@
 			<%: Html.ActionLink("Home", "../Home/Login", null, new { @class = "a", style = "" })%>
 			<% if(Request.Cookies["MXGourav"] != null)%>
 			<%: Html.ActionLink("Admin", "../User/Index", null, new { @class = "a", style = "" })%>--%>
-					<a href="#">Home</a>
-					<a href="#">About</a>
-					<a href="#">FAQ</a>
-					<a href="#">Contact</a>
+				
+					
+			<% if(Request.Cookies["MXGourav"] == null)%>
+			<%: Html.ActionLink("Home", "../Home/Login", null, new { @class = "a", style = "" })%>
+			<% if(Request.Cookies["MXGourav"] != null)%>
+				<%: Html.ActionLink("Dashboard", "../User/Dashboard", null, new { @class = "a", style = "" })%>
+			
+
+			<a href="#">About</a>
+			<a href="#">FAQ</a>
+			<a href="#">Contact</a>
 			<% if(Request.Cookies["MXGourav"] == null)%>
 			<%: Html.ActionLink("Login", "../Home/Login", null, new { @class = "a", style = "" })%>
 			<% if(Request.Cookies["MXGourav"] != null)%>

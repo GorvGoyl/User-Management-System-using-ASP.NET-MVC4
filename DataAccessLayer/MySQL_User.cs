@@ -13,20 +13,21 @@ namespace DataAccessLayer
 {
     public class MySQL_User
     {
-        private static readonly ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        
-        protected static string ConnString  = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
-        
+        private static readonly ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        protected static string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
+        protected static MySqlConnection Con = new MySqlConnection(ConnString);
+        protected static MySqlDataReader Reader = null;
+
         #region Create
         public static void Create(User user)
         {
-            Logger.Debug("Method Start");
-            MySqlConnection Con = null;
-            MySqlDataReader Reader = null;
+            _Logger.Info("Method Start");
+
             try
             {
                 LogHelper.LogMaker(user);
-                Con = new MySqlConnection(ConnString);
+
                 Con.Open();
                 MySqlCommand Cmd = new MySqlCommand("udsp_User_Create", Con);
                 Cmd.CommandType = CommandType.StoredProcedure;
@@ -42,12 +43,12 @@ namespace DataAccessLayer
             }
             catch (MySqlException exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             finally
@@ -60,7 +61,7 @@ namespace DataAccessLayer
                 {
                     Reader.Close();
                 }
-                Logger.Debug("Method End");
+                _Logger.Info("Method End");
             }
 
         }
@@ -69,14 +70,13 @@ namespace DataAccessLayer
         #region Retrieve
         public static List<User> Retrieve()
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             List<User> UsersList = new List<User>();
-            MySqlConnection Con = null;
-            MySqlDataReader Reader = null;
+
             try
             {
                 //string ConnString = "server=localhost;user id=root;Password=leadsquared;database=mvc_database;persist security info=False";
-                Con = new MySqlConnection(ConnString);
+
                 Con.Open();
                 MySqlCommand Cmd = new MySqlCommand("udsp_User_Retrieve", Con);
                 Cmd.CommandType = CommandType.StoredProcedure;
@@ -89,14 +89,14 @@ namespace DataAccessLayer
                 while (Reader.Read())
                 {
                     UserData = new User();
-                    UserData.UserId     = Reader["UserId"].ToString();
-                    UserData.UserName   = Reader["UserName"].ToString();
-                    UserData.FullName   = Reader["FullName"].ToString();
-                    UserData.Phone      = Reader["Phone"].ToString();
-                    UserData.Email      = Reader["Email"].ToString();
-                    UserData.City       = Reader["City"].ToString();
-                    UserData.Dob        = Reader["Dob"].ToString();
-                    UserData.Password   = Reader["Password"].ToString();
+                    UserData.UserId = Reader["UserId"].ToString();
+                    UserData.UserName = Reader["UserName"].ToString();
+                    UserData.FullName = Reader["FullName"].ToString();
+                    UserData.Phone = Reader["Phone"].ToString();
+                    UserData.Email = Reader["Email"].ToString();
+                    UserData.City = Reader["City"].ToString();
+                    UserData.Dob = Reader["Dob"].ToString();
+                    UserData.Password = Reader["Password"].ToString();
                     UsersList.Add(UserData);
                 }
                 LogHelper.LogMaker(UsersList);
@@ -104,13 +104,13 @@ namespace DataAccessLayer
             catch (MySqlException exception)
             {
 
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             catch (Exception exception)
             {
 
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             finally
@@ -123,7 +123,7 @@ namespace DataAccessLayer
                 {
                     Reader.Close();
                 }
-                Logger.Debug("Method End");
+                _Logger.Info("Method End");
             }
 
             return UsersList;
@@ -133,17 +133,13 @@ namespace DataAccessLayer
         #region RetrieveUser
         public static User RetrieveUser(User user)
         {
-            Logger.Debug("Method Start");
+            _Logger.Info("Method Start");
             User UserData = new User();
-            MySqlConnection Con = null;
-            MySqlDataReader Reader = null;
-            if (user.UserName == null && user.UserId == null)
-            {
-                return UserData;
-            }
+
             try
             {
-                Con = new MySqlConnection(ConnString);
+                LogHelper.LogMaker(user);
+
                 Con.Open();
                 MySqlCommand Cmd = new MySqlCommand("udsp_User_Retrieve", Con);
                 Cmd.CommandType = CommandType.StoredProcedure;
@@ -166,12 +162,12 @@ namespace DataAccessLayer
             }
             catch (MySqlException exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             finally
@@ -184,7 +180,7 @@ namespace DataAccessLayer
                 {
                     Reader.Close();
                 }
-                Logger.Debug("Method End");
+                _Logger.Info("Method End");
             }
 
             return UserData;
@@ -195,15 +191,15 @@ namespace DataAccessLayer
         #region Update
         public static void Update(User user)
         {
-            Logger.Debug("Method Start");
-            MySqlConnection Con = null;
-            //MySqlDataReader Reader = null;
+            _Logger.Info("Method Start");
+
             try
             {
-                Con = new MySqlConnection(ConnString);
+                LogHelper.LogMaker(user);
+
                 Con.Open();
                 MySqlCommand Cmd = new MySqlCommand("udsp_User_Update", Con);
-                Cmd.CommandType  = CommandType.StoredProcedure;
+                Cmd.CommandType = CommandType.StoredProcedure;
                 Cmd.Parameters.AddWithValue("var_UserId", user.UserId);
                 Cmd.Parameters.AddWithValue("var_UserName", user.UserName);
                 Cmd.Parameters.AddWithValue("var_FullName", user.FullName);
@@ -218,12 +214,12 @@ namespace DataAccessLayer
             }
             catch (MySqlException exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             catch (Exception exception)
             {
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             finally
@@ -232,11 +228,11 @@ namespace DataAccessLayer
                 {
                     Con.Close();
                 }
-                //if (Reader != null)
-                //{
-                //    Reader.Close();
-                //}
-                Logger.Debug("Method End");
+                if (Reader != null)
+                {
+                    Reader.Close();
+                }
+                _Logger.Info("Method End");
             }
         }
         #endregion
@@ -244,12 +240,12 @@ namespace DataAccessLayer
         #region Delete
         public static void Delete(User user)
         {
-            Logger.Debug("Method Start");
-            MySqlConnection Con = null;
-            // MySqlDataReader Reader = null;
+            _Logger.Info("Method Start");
+
+
             try
             {
-                Con = new MySqlConnection(ConnString);
+                LogHelper.LogMaker(user);
 
                 Con.Open();
                 MySqlCommand Cmd = new MySqlCommand("udsp_User_Delete", Con);
@@ -261,13 +257,13 @@ namespace DataAccessLayer
             catch (MySqlException exception)
             {
 
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             catch (Exception exception)
             {
 
-                Logger.Error(exception.Message, exception);
+                _Logger.Error(exception.Message, exception);
                 throw exception;
             }
             finally
@@ -276,11 +272,11 @@ namespace DataAccessLayer
                 {
                     Con.Close();
                 }
-                //if (Reader != null)
-                //{
-                //    Reader.Close();
-                //}
-                Logger.Debug("Method End");
+                if (Reader != null)
+                {
+                    Reader.Close();
+                }
+                _Logger.Info("Method End");
             }
         }
         #endregion

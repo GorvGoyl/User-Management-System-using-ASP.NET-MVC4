@@ -12,8 +12,8 @@
             $("#Dob").datepicker({
                 changeMonth: true,
                 changeYear: true,
-                maxDate: "-1d",
-                minDate: "-70y"
+                maxDate: "-12y",
+                minDate: "-100y"
             });
         }
         );
@@ -84,8 +84,9 @@
                 }
             }
 
-       
+
             var user = {};
+            user.UserId = $("#UserId").val();
             user.UserName = $("#UserName").val();
             user.FullName = $("#FullName").val();
             user.Phone = $("#Phone").val();
@@ -149,7 +150,7 @@
         <div style="margin-right: -17px;">
         
             <%: Html.LabelFor(model => model.Phone)%>
-            <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone" })%>
+            <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone*" })%>
             <div id='Phonelabel' class="ValidationLabel" style="margin-left: 132px;">&nbsp;
             </div>
         </div>

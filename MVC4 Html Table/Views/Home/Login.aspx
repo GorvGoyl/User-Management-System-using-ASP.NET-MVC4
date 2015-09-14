@@ -38,6 +38,11 @@
 
         } 
     </script>
+     <div id="message" class="Message" style="width:274px; position: relative;
+    top: 25px;background-color:transparent;    color: red;">
+            <span style="position: relative; top: 2px;">
+                <%:ViewBag.Pass as string%></span>
+        </div>
     <% using (Html.BeginForm())
        { %>
     <%: Html.ValidationSummary(true) %>

@@ -134,6 +134,7 @@
     <Content Include="Content\CSS\jquery-ui.css" />
     <Content Include="Content\CSS\jquery.dataTables.min.css" />
     <Content Include="Content\CSS\Table.css" />
+    <Content Include="Content\CSS\Tabs.css" />
     <Content Include="Content\CSS\ValidationLabel.css" />
     <Content Include="Content\Images\delete.png" />
     <Content Include="Content\Images\edit.png" />
@@ -197,13 +198,11 @@
     <Content Include="Content\Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Content\Scripts\jquery-ui-1.11.4.min.js" />
     <Content Include="Content\CSS\Style.css" />
-    <Content Include="Views\Home\Demo.aspx" />
-    <Content Include="Views\Home\Error.aspx" />
-    <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\Login.aspx" />
     <Content Include="Views\Home\Password.aspx" />
     <Content Include="Views\Home\Register.aspx" />
     <Content Include="Views\User\Create.aspx" />
+    <Content Include="Views\User\Dashboard.aspx" />
     <Content Include="Views\User\Edit.aspx" />
     <Content Include="Views\User\Index.aspx" />
     <Content Include="Web.config">

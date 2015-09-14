@@ -22,15 +22,18 @@ CREATE PROCEDURE udsp_User_Retrieve
 	var_Email varchar(45)
 )
 BEGIN
+
 	IF(IFNULL(var_UserId,'')!='') THEN 
-		SELECT * FROM user_data WHERE UserId =var_UserId;
-	ELSEIF(IFNULL(var_UserName,'')!='' AND IFNULL(var_Password,'')!='') THEN
-		SELECT * FROM user_data WHERE UserName = var_UserName AND Password = var_Password;
-	ELSEIF(IFNULL(var_UserName,'')!='' AND IFNULL(var_Email,'')!='' ) THEN
-		SELECT * FROM user_data WHERE UserName = var_UserName AND Email = var_Email;
+		SELECT * FROM USER_DATA WHERE UserId =var_UserId;
+	ELSEIF(IFNULL(var_UserName,'')!='' and IFNULL(var_Password,'')!='') THEN
+		SELECT * FROM USER_DATA WHERE UserName = var_UserName AND Password = var_Password;
+	ELSEIF(IFNULL(var_UserName,'')!='' and IFNULL(var_Email,'')!='' ) THEN
+		SELECT * FROM USER_DATA WHERE UserName = var_UserName AND Email = var_Email;
+	ELSEIF(IFNULL(var_UserName,'')!='' and IFNULL(var_Password,'')='') THEN
+		SELECT * FROM USER_DATA WHERE UserName = var_UserName;
 	ELSE
-		SELECT * FROM user_data;
+		SELECT * FROM USER_DATA;
 	END IF;
 
-END //
+END//
 DELIMITER ;

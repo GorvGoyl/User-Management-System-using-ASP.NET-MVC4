@@ -101,6 +101,11 @@
 
         } 
     </script>
+         <div id="message" class="Message" style="width:274px; position: relative;
+    top: 25px;background-color:transparent;color:Red;">
+            <span style="position: relative; top: 2px;">
+                <%:ViewBag.Pass as string%></span>
+        </div>
     <% using (Html.BeginForm())
        { %>
     <%: Html.ValidationSummary(true) %>
@@ -126,7 +131,7 @@
             </div>
         </div>
         <div>
-            <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone"  })%>
+            <%: Html.TextBoxFor(model => model.Phone, new { @class = "TextBox", @PlaceHolder = "Phone*"  })%>
             <div id='Phonelabel' class="ValidationLabel">
                 &nbsp;
             </div>

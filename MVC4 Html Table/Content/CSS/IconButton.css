@@ -34,7 +34,8 @@
 	background: -ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
 	background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
-	background-color: #bc3315;
+	cursor: pointer;
+    font-size: 12px;
 }
 .IconButtons:active
 {

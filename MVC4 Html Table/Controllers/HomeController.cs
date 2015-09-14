@@ -16,51 +16,41 @@ namespace MVC4_Html_Table.Controllers
 {
     public class HomeController : BaseController
     {
-        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserServiceURL"].ToString();
-
-        #region Index
-        [AllowAnonymous] //This is for Un-Authorize User
-        public ActionResult Index()
-        {
-            return View();
-        }
-        #endregion
 
         #region Password
         public ActionResult Password()
         {
             ViewBag.Pass = string.Empty;
-
             return View();
         }
         #endregion
 
-        #region Password ajax
-        public JsonResult GetPassword(User objUser) //passing the username and email
-        {
-            string URL = BaseURL + "RetrieveUser";
-            string ResponseFromServer="";
-            try
-            {
-                LogHelper.LogMaker(objUser);
-                ResponseFromServer = ServiceConsumer.Post(URL, objUser);
-                Logger.Debug(ResponseFromServer);
+        //#region Password ajax
+        //public JsonResult GetPassword(User objUser) //passing the username and email
+        //{
+        //    _Logger.Info("Method Start");
+        //    string URL = BaseURL + "RetrieveUser";
+        //    _Logger.Debug("URL = " + URL);
+        //    string ResponseFromServer = "";
+        //    try
+        //    {
+        //        LogHelper.LogMaker(objUser);
+        //        ResponseFromServer = ServiceConsumer.Post(URL, objUser);
+        //        _Logger.Debug("ResponseFromServer = " + ResponseFromServer);
+        //    }
 
-            }
+        //    catch (Exception exception)
+        //    {
+        //        _Logger.Error(exception.Message, exception);
+        //        throw exception;
+        //    }
 
-            catch (Exception exception)
-            {
-                Logger.Error(exception.Message, exception);
-                throw exception;
-            }
-
-            return Json( ResponseFromServer);
-
-            
-       
-        }
-        #endregion
+        //    _Logger.Info("Method End");
+        //    return Json(ResponseFromServer);
+        //}
+        //#endregion
 
         #region Password Post
         [HttpPost]
@@ -68,37 +58,32 @@ namespace MVC4_Html_Table.Controllers
         public ActionResult Password(User user) //passing the username and email
         {
             string URL = BaseURL + "RetrieveUser";
-            if (ModelState.IsValid)
+            _Logger.Debug("URL = " + URL);
+            try
             {
-                try
+                LogHelper.LogMaker(user);
+                string UserDataResponse = ServiceConsumer.Post(URL, user);
+                _Logger.Debug("UserDataResponse = " + UserDataResponse);
+                
+                User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
+                LogHelper.LogMaker(UserData);
+                
+                if (UserData.Password != null)
                 {
-                    Logger.Debug(user);
-                    string UserDataResponse = ServiceConsumer.Post(URL, user);
-                    Logger.Debug(UserDataResponse);
-                    User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
-                    if (UserData.Password != null)
-                    {
-                        ViewBag.Pass = "Password : " + UserData.Password;
-                        return View();
-                    }
-                    else
-                    {
-                        ViewBag.Pass = "Username or Email is incorrect";
-                        return View();
-                    }
+                    ViewBag.Pass = "Password : " + UserData.Password;
+                    return View();
                 }
-
-                catch (Exception exception)
+                else
                 {
-                    Logger.Error(exception.Message, exception);
-                    throw exception;
+                    ViewBag.Pass = "Username or Email is incorrect";
+                    return View();
                 }
-
             }
-            else
-            {
 
-                return View();
+            catch (Exception exception)
+            {
+                _Logger.Error(exception.Message, exception);
+                throw exception;
             }
         }
         #endregion
@@ -122,6 +107,7 @@ namespace MVC4_Html_Table.Controllers
 
         public ActionResult Register()
         {
+            ViewBag.Pass = string.Empty;
             return View(new User());
         }
         #endregion
@@ -131,40 +117,48 @@ namespace MVC4_Html_Table.Controllers
         [ValidateInput(false)]
         public ActionResult Register(User user)
         {
-            if (ModelState.IsValid)
+            User CheckUser = new User();
+            CheckUser.UserName = user.UserName;
+            string UserResponseFromServer = ServiceConsumer.Post(BaseURL + "Retrieveuser", CheckUser);
+            User RetrieveUser = JsonConvert.DeserializeObject<User>(UserResponseFromServer);
+            if(!String.IsNullOrEmpty(RetrieveUser.UserName))
             {
-                Guid NewGUID = Guid.NewGuid();
-                Logger.Debug(NewGUID);
-                user.UserId = NewGUID.ToString();
-                string URL = BaseURL + "Create";
-                try
-                {
-                    Logger.Debug(user);
-                    string ResponseFromServer = ServiceConsumer.Post(URL, user);
-                    Logger.Debug(ResponseFromServer);
-                    string JsonUser = JsonConvert.SerializeObject(user);
-                    Logger.Debug(JsonUser);
-                }
-
-                catch (Exception exception)
-                {
-                    Logger.Error(exception.Message, exception);
-                    throw exception;
-                }
-
-
-                return RedirectToAction("Index", "User");
+                ViewBag.Pass = "UserName already Exist";
+                ModelState.Remove("UserName");
+                return View();
             }
-            return View(user);
+            Guid NewGUID = Guid.NewGuid();
+            _Logger.Debug(NewGUID);
+            user.UserId = NewGUID.ToString();
+            string URL = BaseURL + "Create";
+            _Logger.Debug("URL = " + URL);
+            try
+            {
+                LogHelper.LogMaker(user);
+                string ResponseFromServer = ServiceConsumer.Post(URL, user);
+                _Logger.Debug("ResponseFromServer = " + ResponseFromServer);
+                string JsonUser = JsonConvert.SerializeObject(user);
+                _Logger.Debug(JsonUser);
+            }
+
+            catch (Exception exception)
+            {
+                _Logger.Error(exception.Message, exception);
+                throw exception;
+            }
+            return RedirectToAction("Index", "User");
 
         }
         #endregion
 
-
         #region Login
         public ActionResult Login()
         {
-
+            ViewBag.Pass = string.Empty;
+            if (Request.Cookies["MXGourav"] != null)
+            {
+                return RedirectToAction("Index", "User");
+            }
             return View();
         }
         #endregion
@@ -175,50 +169,47 @@ namespace MVC4_Html_Table.Controllers
         public ActionResult Login(User user) //passing the username and password
         {
             string URL = BaseURL + "RetrieveUser";
-            if (ModelState.IsValid)
+            _Logger.Debug("URL = " + URL);
+            try
             {
-                try
+                LogHelper.LogMaker(user);
+                string UserDataResponse = ServiceConsumer.Post(URL, user);
+                _Logger.Debug("UserDataResponse = " + UserDataResponse);
+                User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
+                LogHelper.LogMaker(UserData);
+                if (String.IsNullOrEmpty(UserData.UserName))
                 {
-                    Logger.Debug(user);
-                    string UserDataResponse = ServiceConsumer.Post(URL, user);
-                    Logger.Debug(UserDataResponse);
-                    User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
-                    if (String.IsNullOrEmpty(UserData.UserName))
-                    {
-                        ViewBag.Message = "username or password is incorrect";
-                        ModelState.Remove("Password");
-                        return View();
-                    }
-
-                    HttpCookie CustomAuthCookie = new HttpCookie("MXGourav");
-                    FormsAuthenticationTicket Ticket = new FormsAuthenticationTicket(
-                       1,
-                       user.UserName,
-                       DateTime.Now,
-                       DateTime.Now.AddMinutes(30),
-                       true,
-                       UserDataResponse,
-                       CustomAuthCookie.Path);
-
-                    string EncTicket = FormsAuthentication.Encrypt(Ticket);
-                    Response.Cookies.Add(new HttpCookie(CustomAuthCookie.Name, EncTicket));
-                    return RedirectToAction("Index", "User");
-
+                    ViewBag.Pass = "UserName or Password is incorrect";
+                    ModelState.Remove("Password");
+                    return View();
                 }
 
-                catch (Exception exception)
-                {
-                    Logger.Error(exception.Message, exception);
-                    throw exception;
-                }
+                HttpCookie CustomAuthCookie = new HttpCookie("MXGourav");
+                FormsAuthenticationTicket Ticket = new FormsAuthenticationTicket(
+                   1,
+                   user.UserName,
+                   DateTime.Now,
+                   DateTime.Now.AddMinutes(30),
+                   false,
+                   UserDataResponse,
+                   CustomAuthCookie.Path);
+
+                string EncTicket = FormsAuthentication.Encrypt(Ticket);
+                _Logger.Debug("EncTicket = " + EncTicket);
+                Response.Cookies.Add(new HttpCookie(CustomAuthCookie.Name, EncTicket));
+                return RedirectToAction("Index", "User");
 
             }
-            else
+
+            catch (Exception exception)
             {
-                ModelState.Remove("Password");
-                return View();
+                _Logger.Error(exception.Message, exception);
+                throw exception;
             }
+
         }
+
+
         #endregion
 
         #region Logout
@@ -231,7 +222,6 @@ namespace MVC4_Html_Table.Controllers
             //browser to clear the cookie, it merely does not send the cookie back to the browser.
             //To instruct the browser to clear the cookie you need to tell it the cookie has expired
             HttpContext.Response.Cookies["MXGourav"].Expires = DateTime.Now.AddMonths(-1);
-
             return RedirectToAction("Login", "Home");
         }
         #endregion

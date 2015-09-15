@@ -154,6 +154,7 @@ namespace MVC4_Html_Table.Controllers
         #region Login
         public ActionResult Login()
         {
+            _Logger.Debug("URLs = ");
             ViewBag.Pass = string.Empty;
             if (Request.Cookies["MXGourav"] != null)
             {

@@ -100,6 +100,7 @@ namespace MVC4_Html_Table.Controllers
         [ValidateInput(false)]
         public ActionResult Index()
         {
+            _Logger.Debug("entered index page");
             HttpCookie cookie = HttpContext.Request.Cookies.Get("MXGourav");
             FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(cookie.Value);
             string UserData = ticket.UserData;

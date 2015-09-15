@@ -40,6 +40,7 @@ namespace WcfServiceRest
         public User RetrieveUser(User user)
         {
             _Logger.Info("Method Start");
+            _Logger.Debug("Entering rest service retrieve user");
             User UserData;
             try
             {

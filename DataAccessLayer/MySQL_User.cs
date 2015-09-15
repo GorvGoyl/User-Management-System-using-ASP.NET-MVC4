@@ -16,12 +16,13 @@ namespace DataAccessLayer
         private static readonly ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         protected static string ConnString = ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString();
-        protected static MySqlConnection Con = new MySqlConnection(ConnString);
+       
         protected static MySqlDataReader Reader = null;
 
         #region Create
         public static void Create(User user)
         {
+            MySqlConnection Con = new MySqlConnection(ConnString);
             _Logger.Info("Method Start");
 
             try
@@ -70,6 +71,9 @@ namespace DataAccessLayer
         #region Retrieve
         public static List<User> Retrieve()
         {
+            _Logger.Debug("Constart");
+              MySqlConnection Con = new MySqlConnection(ConnString);
+              _Logger.Debug("Conend");
             _Logger.Info("Method Start");
             List<User> UsersList = new List<User>();
 
@@ -133,6 +137,9 @@ namespace DataAccessLayer
         #region RetrieveUser
         public static User RetrieveUser(User user)
         {
+            _Logger.Debug("Constart");
+            MySqlConnection Con = new MySqlConnection(ConnString);
+            _Logger.Debug("Conend");
             _Logger.Info("Method Start");
             User UserData = new User();
 
@@ -191,6 +198,9 @@ namespace DataAccessLayer
         #region Update
         public static void Update(User user)
         {
+            _Logger.Debug("Constart");
+            MySqlConnection Con = new MySqlConnection(ConnString);
+            _Logger.Debug("Conend");
             _Logger.Info("Method Start");
 
             try
@@ -240,6 +250,9 @@ namespace DataAccessLayer
         #region Delete
         public static void Delete(User user)
         {
+            _Logger.Debug("Constart");
+            MySqlConnection Con = new MySqlConnection(ConnString);
+            _Logger.Debug("Conend");
             _Logger.Info("Method Start");
 
 

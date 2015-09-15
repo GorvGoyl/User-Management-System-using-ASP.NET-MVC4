@@ -1,4 +1,11 @@
-﻿h1
+﻿.ValidationLabel{
+color:Red;
+font-size:12px;
+display:flex;
+margin-left: 97px;
+}
+
+h1
 {
   font-family: Helvetica;
   font-weight: 100;

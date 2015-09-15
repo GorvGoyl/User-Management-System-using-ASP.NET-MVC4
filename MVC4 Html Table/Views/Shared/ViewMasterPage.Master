@@ -6,29 +6,22 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link href="../../Content/CSS/header-basic.css" rel="stylesheet" type="text/css" />
-	<link href="../../Content/CSS/footer-basic-centered.css" rel="stylesheet" type="text/css" />
-
-
+	<link href="../../Content/CSS/header-footer.css" rel="stylesheet" type="text/css" />
 
 	<title>
 		<asp:ContentPlaceHolder ID="TitleContent" runat="server" />
 	</title>
-	<link href="../../Content/CSS/ValidationLabel.css" rel="stylesheet" type="text/css" />
+	
 	<link rel="stylesheet" href="../../Content/CSS/Style.css" />
-	<link rel="stylesheet" href="../../Content/CSS/Buttons.css" />
+	
 	<link rel="stylesheet" href="../../Content/CSS/Table.css" />
 	<link rel="stylesheet" href="../../Content/CSS/jquery-ui.css" />
-	<%--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">--%>
 	<link rel="stylesheet" href="../../Content/CSS/Box.css" />
-
 	<script type="text/javascript" src="../../Content/JS/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="../../Content/JS/jquery-ui.js"></script>
 	<meta name="viewport" content="width=device-width" />
 </head>
 <body>
-
 	<header class="header-basic">
 
 			<div class="header-limiter">
@@ -36,10 +29,6 @@
 				<h1><img src="../../Content/Images/queueoverflowlogo.png" /><a style="pointer-events:none;" href="../Home/login">Queue<span>Overflow</span></a></h1>
 
 				<nav>
-		<%--		<% if(Request.Cookies["MXGourav"] == null)%>
-			<%: Html.ActionLink("Home", "../Home/Login", null, new { @class = "a", style = "" })%>
-			<% if(Request.Cookies["MXGourav"] != null)%>
-			<%: Html.ActionLink("Admin", "../User/Index", null, new { @class = "a", style = "" })%>--%>
 				
 					
 			<% if(Request.Cookies["MXGourav"] == null)%>
@@ -61,13 +50,10 @@
 			</div>
 
 		</header>
-	
 	<div>
 		<asp:ContentPlaceHolder ID="MainContent" runat="server">
 		</asp:ContentPlaceHolder>
 	</div>
-
-	
 	<footer class="footer-basic-centered">
 
 			<%--<p class="footer-company-motto">The Best Answer to any Question</p>--%>
@@ -79,6 +65,5 @@
 			<p class="footer-company-name" >Queue Overflow &copy; 2015</p>
 
 		</footer>
-		
 </body>
 </html>

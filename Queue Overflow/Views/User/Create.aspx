@@ -107,17 +107,21 @@
             user.City = $("#City").val();
             user.Dob = $("#Dob").val();
             user.Password = $("#Password").val();
+            debugger;
             $.ajax({
                 type: "POST",
                 url: "../User/CreateUser",
                 data: '{objUser: ' + JSON.stringify(user) + '}',
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
-                success: function () {
+                
+                success: function (data) {
+                if(data.Status=='Success')
                     $("#message").fadeIn("slow").delay(1000).fadeOut("fast", function () {
                         window.location = "Index";
                     });
-
+                    else
+                        alert(data.Status);
                 },
                 error: function () {
                     alert("Error while creating user");

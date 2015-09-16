@@ -66,50 +66,50 @@
                     <table border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td>
-                                UserName :
+                                UserName 
                             </td>
                             <td>
-                                <%:ViewBag.UserName as string%>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                FullName :
-                                </td>
-                                <td>
-                                <%:ViewBag.FullName as string%>
+                                : <%:ViewBag.UserName as string%>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Phone :
+                                FullName
                                 </td>
                                 <td>
-                                <%:ViewBag.Phone as string%>
+                                : <%:ViewBag.FullName as string%>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Email :
+                                Phone
                                 </td>
                                 <td>
-                                <%:ViewBag.Email as string%>
+                                : <%:ViewBag.Phone as string%>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                City :
+                                Email
                                 </td>
                                 <td>
-                                <%:ViewBag.City as string%>
+                                : <%:ViewBag.Email as string%>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Dob :
+                                City
                                 </td>
                                 <td>
-                                <%:ViewBag.Dob as string%>
+                               : <%:ViewBag.City as string%>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Dob
+                                </td>
+                                <td>
+                               : <%:ViewBag.Dob as string%>
                             </td>
                         </tr>
                     </table>

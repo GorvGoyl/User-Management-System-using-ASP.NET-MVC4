@@ -31,18 +31,18 @@
 				<nav>
 				
 					
-			<% if(Request.Cookies["MXGourav"] == null)%>
+			<% if(Request.Cookies["MXAuthCookie"] == null)%>
 			<%: Html.ActionLink("Home", "../Home/Login", null, new { @class = "a", style = "" })%>
-			<% if(Request.Cookies["MXGourav"] != null)%>
+			<% if(Request.Cookies["MXAuthCookie"] != null)%>
 				<%: Html.ActionLink("Dashboard", "../User/Dashboard", null, new { @class = "a", style = "" })%>
 			
 
 			<a href="#">About</a>
 			<a href="#">FAQ</a>
 			<a href="#">Contact</a>
-			<% if(Request.Cookies["MXGourav"] == null)%>
+			<% if(Request.Cookies["MXAuthCookie"] == null)%>
 			<%: Html.ActionLink("Login", "../Home/Login", null, new { @class = "a", style = "" })%>
-			<% if(Request.Cookies["MXGourav"] != null)%>
+			<% if(Request.Cookies["MXAuthCookie"] != null)%>
 			<%: Html.ActionLink("Logout", "../Home/Logout", null, new { @class = "a", style = "" })%>
 				
 					
@@ -58,7 +58,7 @@
 
 			<%--<p class="footer-company-motto">The Best Answer to any Question</p>--%>
 			<% String action = ViewContext.RouteData.GetRequiredString("action").ToString();%>
-			<% if(action == "Create" ||action == "Edit" )%>
+			<% if(action == "Create" ||action == "Edit"||action == "Dashboard" )%>
 			<%: Html.ActionLink("Back to List", "../User/Index", null, new { @class = "myButton", style = "margin-top: 9px; position : absolute; right:0; margin-right:5px;" })%>
 			
 

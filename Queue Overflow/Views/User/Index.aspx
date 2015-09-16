@@ -8,7 +8,7 @@
     <%--  <script src="../../Content/JS/jquery.js" type="text/javascript"></script>--%>
     <script src="../../Content/JS/jquery.dataTables.min.js" type="text/javascript"></script>
     <link href="../../Content/CSS/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../Content/CSS/IconButton.css" rel="stylesheet" type="text/css" />
+   
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -23,51 +23,18 @@
     </script>
 
 
-    <%--<script type="text/javascript">
-        $(document).ready(function getDetails() {
-
-            $.ajax({
-
-                type: "POST",
-                contentType: "application/json",
-                url: "../User/GetData", //Default.aspx is page and GetData is the WebMethod  
-                data: {entries:"25"},
-                dataType: "json",
-                success: function (data) {
-
-                    $('#myTable tbody').remove(); // Every time I am removing the body of Table and applying loop to display data  
-                    //console.log(data.d);    
-                    for (var i = 0; i < 100; i++) {
-                        var userid = data.Data[i]["UserId"];
-                        $("#myTable").append(
-                    "<tr><td>" + data.Data[i]["UserName"] + "</td><td>" + data.Data[i]["FullName"] + "</td>" +
-                    "<td>" + data.Data[i]["Phone"] + "</td>" + "<td>" + data.Data[i]["Email"] + "</td>" +
-                    "<td>" + data.Data[i]["City"] + "</td>" + "<td>" + data.Data[i]["Dob"] + "</td>"
-                                     + "<td>" + '  <%: Html.ActionLink(" ", "Edit", "User", new { id_value = 4 }, new { @class = "IconButtons", style = " background: url(../../Content/Images/edit.png) 3px 5px no-repeat;" })%>'
-                                     + '  <%: Html.ActionLink(" ", "Delete", "User", new { id_value = 5 }, new { @class = "IconButtons", style = "background: url(../../Content/Images/delete.png) 3px 5px no-repeat;" })%>'
-                                     + "</td>"
-                                     + "</tr>"
-                    );
-                    }
-                },
-                error: function (data) {
-                   
-                    alert("Error while Showing update data");
-                }
-            });
-        });
-    </script>--%>
+    
     <br />
     <br />
     <div>
         <div id="myTable_wrapper" class="dataTables_wrapper no-footer" style="width: 1179px;
-            /* text-align: right; */
+          
     margin-left: auto; margin-right: auto;">
             <div style="width: 1056px; text-align: right; margin-left: auto; margin-right: auto;
                 padding-top: 10px; padding-bottom: 10px;">
                 <a style="position: relative; color: #002E40; font-size: 23px; pointer-events: none;
-                    float: left; right: 59px; bottom: 22px;">Members</a>
-                <%: Html.ActionLink("Create", "Create", "User", new { @class = "myButton", style = "position: relative; left: 58px;top: 21px; " })%>
+                    float: left; right: 63px; bottom: 22px;">Members</a>
+                <%: Html.ActionLink("Create", "Create", "User", new { @class = "myButton", style = "position: relative; left: 61px;top: 21px; " })%>
             </div>
             <table id='myTable' class="TableColor" align="center" style="">
                 <thead>

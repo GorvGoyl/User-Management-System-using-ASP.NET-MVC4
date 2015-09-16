@@ -12,6 +12,7 @@ using System.Net;
 using Newtonsoft.Json.Linq;
 using System.Configuration;
 using Utilities;
+using QueueOverflow.Libraries;
 namespace QueueOverflow.Controllers
 {
     public class HomeController : BaseController
@@ -63,21 +64,6 @@ namespace QueueOverflow.Controllers
         }
         #endregion
 
-        #region Error
-        public ActionResult Error()
-        {
-            return View();
-        }
-        #endregion
-
-        #region Demo
-        public ActionResult Demo()
-        {
-
-            return View();
-        }
-        #endregion
-
         #region Register
 
         public ActionResult Register()
@@ -98,13 +84,12 @@ namespace QueueOverflow.Controllers
             User RetrieveUser = JsonConvert.DeserializeObject<User>(UserResponseFromServer);
             if(!String.IsNullOrEmpty(RetrieveUser.UserName))
             {
-                ViewBag.Pass = "UserName already Exist";
+                ViewBag.Pass = "UserName already Exists";
                 ModelState.Remove("UserName");
                 return View();
             }
-            Guid NewGUID = Guid.NewGuid();
-            _Logger.Debug(NewGUID);
-            user.UserId = NewGUID.ToString();
+         
+            user.UserId = Guid.NewGuid().ToString();
             string URL = BaseURL + "Create";
             _Logger.Debug("URL = " + URL);
             try
@@ -131,7 +116,7 @@ namespace QueueOverflow.Controllers
         {
             _Logger.Debug("URLs = ");
             ViewBag.Pass = string.Empty;
-            if (Request.Cookies["MXGourav"] != null)
+            if (Request.Cookies["MXAuthCookie"] != null)
             {
                 return RedirectToAction("Index", "User");
             }
@@ -160,19 +145,7 @@ namespace QueueOverflow.Controllers
                     return View();
                 }
 
-                HttpCookie CustomAuthCookie = new HttpCookie("MXGourav");
-                FormsAuthenticationTicket Ticket = new FormsAuthenticationTicket(
-                   1,
-                   user.UserName,
-                   DateTime.Now,
-                   DateTime.Now.AddMinutes(30),
-                   false,
-                   UserDataResponse,
-                   CustomAuthCookie.Path);
-
-                string EncTicket = FormsAuthentication.Encrypt(Ticket);
-                _Logger.Debug("EncTicket = " + EncTicket);
-                Response.Cookies.Add(new HttpCookie(CustomAuthCookie.Name, EncTicket));
+                SigninManagement.SetAuthCookie(user, UserDataResponse);
                 return RedirectToAction("Index", "User");
 
             }
@@ -192,12 +165,12 @@ namespace QueueOverflow.Controllers
         public ActionResult Logout()
         {
 
-            HttpContext.Response.Cookies.Remove("MXGourav");
-            HttpContext.Response.Cookies["MXGourav"].Value = null;
+            HttpContext.Response.Cookies.Remove("MXAuthCookie");
+            HttpContext.Response.Cookies["MXAuthCookie"].Value = null;
             //Clearing the cookies of the response doesn't instruct the
             //browser to clear the cookie, it merely does not send the cookie back to the browser.
             //To instruct the browser to clear the cookie you need to tell it the cookie has expired
-            HttpContext.Response.Cookies["MXGourav"].Expires = DateTime.Now.AddMonths(-1);
+            HttpContext.Response.Cookies["MXAuthCookie"].Expires = DateTime.Now.AddMonths(-1);
             return RedirectToAction("Login", "Home");
         }
         #endregion

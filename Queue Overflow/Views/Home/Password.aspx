@@ -36,25 +36,6 @@
                 return false;
 
             }
-//            var user = {};
-//            user.UserName = $("#UserName").val();
-//            user.Email = $("#Email").val();
-//            $.ajax({
-//                type: "POST",
-//                url: "../Home/Password",
-//                data: '{objUser: ' + JSON.stringify(user) + '}',
-//                dataType: "json",
-//                contentType: "application/json; charset=utf-8",
-//                success: function () {
-//                    $("#message").fadeIn("slow").delay(1000).fadeOut("fast", function () {
-//                        window.location = "Index";
-//                    });
-
-//                },
-//                error: function () {
-//                    alert("Error while updating user");
-//                }
-//            });
             return true;   
 
 

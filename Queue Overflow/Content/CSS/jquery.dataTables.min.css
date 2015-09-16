@@ -287,7 +287,7 @@ table.dataTable, table.dataTable th, table.dataTable td
 	text-align: left;
 position: relative;
     bottom: 11px;
-    left: 4px;
+   
 }
 .dataTables_wrapper .dataTables_filter input
 {

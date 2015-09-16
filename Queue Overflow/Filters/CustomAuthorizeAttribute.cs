@@ -12,28 +12,19 @@ namespace QueueOverflow.Filters
         private readonly ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
-            _Logger.Debug("OnAuthorization start");
+            _Logger.Info("Method start");
             if (filterContext == null)
             {
                 throw new ArgumentNullException("filterContext");
             }
 
-            if (HttpContext.Current.Request.Cookies["MXGourav"] != null)
+            if (HttpContext.Current.Request.Cookies["MXAuthCookie"] == null)
             {
-                _Logger.Debug("OnAuthorization MXGourav");
-               // base.OnAuthorization(filterContext);
-
-
-            }
-            else
-            {
-                _Logger.Debug("OnAuthorization else part");
                 filterContext.Result = new HttpUnauthorizedResult();
                 filterContext.RequestContext.HttpContext.Response.Redirect("~/home/Login", true);
-
             }
 
-
+            _Logger.Info("Method end");
         }
 
 

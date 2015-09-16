@@ -16,6 +16,7 @@ using System.Configuration;
 using QueueOverflow.Filters;
 using System.Web.Services;
 using System.Web.Security;
+using QueueOverflow.Libraries;
 namespace QueueOverflow.Controllers
 {
     public class UserController : BaseController
@@ -28,6 +29,17 @@ namespace QueueOverflow.Controllers
         public JsonResult CreateUser(User objUser)
         {
             _Logger.Info("Method Start");
+
+            User CheckUser = new User();
+            CheckUser.UserName = objUser.UserName;
+            string UserResponseFromServer = ServiceConsumer.Post(BaseURL + "Retrieveuser", CheckUser);
+            User RetrieveUser = JsonConvert.DeserializeObject<User>(UserResponseFromServer);
+            if (!String.IsNullOrEmpty(RetrieveUser.UserName))
+            {
+                return Json(new { Status = "UserName already Exists" });
+            }
+
+
             string URL = BaseURL + "Create";
             _Logger.Debug("URL = " + URL);
 
@@ -81,7 +93,7 @@ namespace QueueOverflow.Controllers
         [ValidateInput(false)]
         public ActionResult Dashboard()
         {
-            HttpCookie cookie = HttpContext.Request.Cookies.Get("MXGourav");
+            HttpCookie cookie = HttpContext.Request.Cookies.Get("MXAuthCookie");
             FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(cookie.Value);
             string UserData = ticket.UserData;
             User User = JsonConvert.DeserializeObject<User>(UserData);
@@ -100,11 +112,10 @@ namespace QueueOverflow.Controllers
         [ValidateInput(false)]
         public ActionResult Index()
         {
-            _Logger.Debug("entered index page");
-            HttpCookie cookie = HttpContext.Request.Cookies.Get("MXGourav");
+            HttpCookie cookie = HttpContext.Request.Cookies.Get("MXAuthCookie");
             FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(cookie.Value);
             string UserData = ticket.UserData;
-            User User = JsonConvert.DeserializeObject<User>(UserData);
+            User User = SigninManagement.GetAuthCookieData();
             if (User.UserName != "admin")
             {
                 return RedirectToAction("Dashboard", "User");
@@ -118,6 +129,11 @@ namespace QueueOverflow.Controllers
                 _Logger.Debug("ResponseFromServer = " + ResponseFromServer);
 
                 List<User> UsersList = JsonConvert.DeserializeObject<List<User>>(ResponseFromServer);
+                if (UsersList!=null && UsersList .Count >0)
+                {
+                   
+                    UsersList.RemoveAll(x => x.UserName == "admin");
+                }
                 string JsonUser = JsonConvert.SerializeObject(UsersList);
                 _Logger.Debug("JsonUser = " + JsonUser);
                 ViewData["UserData"] = UsersList;

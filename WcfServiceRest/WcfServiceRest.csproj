@@ -10,18 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-<<<<<<< HEAD:WcfServiceRest/RestService.csproj
-<<<<<<< HEAD:WcfServiceRest/RestService.csproj
-    <RootNamespace>RestService</RootNamespace>
-    <AssemblyName>RestService</AssemblyName>
-=======
     <RootNamespace>WcfServiceRest</RootNamespace>
     <AssemblyName>WcfServiceRest</AssemblyName>
->>>>>>> parent of 742004b... renamed RestService:WcfServiceRest/WcfServiceRest.csproj
-=======
-    <RootNamespace>WcfServiceRest</RootNamespace>
-    <AssemblyName>WcfServiceRest</AssemblyName>
->>>>>>> parent of 742004b... renamed RestService:WcfServiceRest/WcfServiceRest.csproj
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>

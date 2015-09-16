@@ -11,8 +11,13 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
 <<<<<<< HEAD:WcfServiceRest/RestService.csproj
+<<<<<<< HEAD:WcfServiceRest/RestService.csproj
     <RootNamespace>RestService</RootNamespace>
     <AssemblyName>RestService</AssemblyName>
+=======
+    <RootNamespace>WcfServiceRest</RootNamespace>
+    <AssemblyName>WcfServiceRest</AssemblyName>
+>>>>>>> parent of 742004b... renamed RestService:WcfServiceRest/WcfServiceRest.csproj
 =======
     <RootNamespace>WcfServiceRest</RootNamespace>
     <AssemblyName>WcfServiceRest</AssemblyName>

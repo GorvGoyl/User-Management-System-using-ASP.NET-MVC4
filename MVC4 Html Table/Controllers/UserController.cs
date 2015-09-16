@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using QueueOverflow.Models;
-using RestService;
+using WcfServiceRest;
 using Newtonsoft.Json;
 using log4net;
 using System.Net;

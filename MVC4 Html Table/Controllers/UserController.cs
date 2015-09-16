@@ -253,49 +253,6 @@ namespace MVC4_Html_Table.Controllers
         }
         #endregion
 
-        //#region GetData
-        //public JsonResult GetData() //Show the details of the data after insert in HTML Table
-        //{
-        //    string URL =BaseURL + "Retrieve";
-        //    List<User> UsersList = null;
-        //    try
-        //    {
-        //        string ResponseFromServer = ServiceConsumer.Get(URL);
-        //        Logger.Debug("ResponseFromServer = " + ResponseFromServer);
-
-        //            UsersList = JsonConvert.DeserializeObject<List<User>>(ResponseFromServer);
-        //            string JsonUser = JsonConvert.SerializeObject(UsersList);
-        //            Logger.Debug(JsonUser);
-        //    }
-
-        //    catch (Exception exception)
-        //    {
-        //        Logger.Error(exception.Message, exception);
-        //        throw exception;
-        //    }
-        //    return Json(new {Data = UsersList });
-        //}
-        //#endregion
-
-        //[CustomAuthorize] // This is for Authorize user
-        //public ActionResult MyProfile()
-        //{
-        //    
-        //    if (HttpContext.Request.Cookies["MXGourav"] != null)
-        //    {
-        //        HttpCookie cookie = HttpContext.Request.Cookies.Get("MXGourav");
-        //        FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(cookie.Value);
-        //        string Json = ticket.UserData;
-        //        List<string> UserData = JsonConvert.DeserializeObject<List<string>>(Json);
-        //        ViewBag.UserName = UserData[0];
-        //        // ViewBag.Name = UserData[1];
-        //        ViewBag.Phone = UserData[2];
-        //        ViewBag.City = UserData[3];
-        //    }
-        //    
-        //    return View();
-        //}
-
 
     }
 }

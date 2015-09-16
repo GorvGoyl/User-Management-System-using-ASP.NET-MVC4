@@ -191,9 +191,9 @@
       <Project>{76931B54-9DCC-4316-8C46-66DA830B0B41}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WcfServiceRest\WcfServiceRest.csproj">
+    <ProjectReference Include="..\WcfServiceRest\RestService.csproj">
       <Project>{D031261D-8090-492E-8D30-AF9D7859E11C}</Project>
-      <Name>WcfServiceRest</Name>
+      <Name>RestService</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

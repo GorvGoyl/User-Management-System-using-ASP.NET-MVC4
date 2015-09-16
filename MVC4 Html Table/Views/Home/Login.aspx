@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/ViewMasterPage.Master" Title="Content Page Login"
-    Inherits="System.Web.Mvc.ViewPage<MVC4_Html_Table.Models.User>" %>
+    Inherits="System.Web.Mvc.ViewPage<QueueOverflow.Models.User>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="Server">
     Login

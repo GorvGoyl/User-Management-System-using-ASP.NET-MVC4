@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.IO;
 
-namespace MVC4_Html_Table
+namespace QueueOverflow
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801

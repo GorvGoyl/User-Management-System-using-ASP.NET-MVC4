@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MVC4_Html_Table.Controllers
+namespace QueueOverflow.Controllers
 {
     public class BaseController : Controller, IExceptionFilter, IActionFilter
     {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using log4net;
 
-namespace MVC4_Html_Table.Filters
+namespace QueueOverflow.Filters
 {
     public class CustomAuthorizeAttribute : AuthorizeAttribute
     {

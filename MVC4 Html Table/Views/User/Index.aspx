@@ -97,7 +97,7 @@
                 </thead>
                 <tbody>
                     <%  if (ViewData["UserData"] != null)
-                            foreach (var customer in (ViewData["UserData"] as IEnumerable<MVC4_Html_Table.Models.User>))
+                            foreach (var customer in (ViewData["UserData"] as IEnumerable<QueueOverflow.Models.User>))
                             {
                                
 

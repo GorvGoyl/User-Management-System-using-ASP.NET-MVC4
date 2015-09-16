@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVC4_Html_Table.Models;
+using QueueOverflow.Models;
 using WcfServiceRest;
 using Newtonsoft.Json;
 using log4net;
@@ -13,10 +13,10 @@ using System.Text;
 using Newtonsoft.Json.Linq;
 using Utilities;
 using System.Configuration;
-using MVC4_Html_Table.Filters;
+using QueueOverflow.Filters;
 using System.Web.Services;
 using System.Web.Security;
-namespace MVC4_Html_Table.Controllers
+namespace QueueOverflow.Controllers
 {
     public class UserController : BaseController
     {

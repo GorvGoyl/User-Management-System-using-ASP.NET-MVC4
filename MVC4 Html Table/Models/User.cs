@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace MVC4_Html_Table.Models
+namespace QueueOverflow.Models
 {
     public class User
     {

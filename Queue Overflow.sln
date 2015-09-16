@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessAccessLayer", "Busi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{AD90EBBF-A1A6-4355-908A-A0C54142925F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestService", "WcfServiceRest\RestService.csproj", "{D031261D-8090-492E-8D30-AF9D7859E11C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestService", "RestService\RestService.csproj", "{D031261D-8090-492E-8D30-AF9D7859E11C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Utilities", "01 Utilities", "{517984FA-94C0-45CA-8D6E-9FD8EA59B4CA}"
 EndProject

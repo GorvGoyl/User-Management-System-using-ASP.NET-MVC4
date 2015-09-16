@@ -27,30 +27,7 @@ namespace MVC4_Html_Table.Controllers
         }
         #endregion
 
-        //#region Password ajax
-        //public JsonResult GetPassword(User objUser) //passing the username and email
-        //{
-        //    _Logger.Info("Method Start");
-        //    string URL = BaseURL + "RetrieveUser";
-        //    _Logger.Debug("URL = " + URL);
-        //    string ResponseFromServer = "";
-        //    try
-        //    {
-        //        LogHelper.LogMaker(objUser);
-        //        ResponseFromServer = ServiceConsumer.Post(URL, objUser);
-        //        _Logger.Debug("ResponseFromServer = " + ResponseFromServer);
-        //    }
-
-        //    catch (Exception exception)
-        //    {
-        //        _Logger.Error(exception.Message, exception);
-        //        throw exception;
-        //    }
-
-        //    _Logger.Info("Method End");
-        //    return Json(ResponseFromServer);
-        //}
-        //#endregion
+       
 
         #region Password Post
         [HttpPost]

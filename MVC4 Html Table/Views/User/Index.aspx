@@ -21,6 +21,8 @@
             });
         });
     </script>
+
+
     <%--<script type="text/javascript">
         $(document).ready(function getDetails() {
 
@@ -121,7 +123,7 @@
                         </td>
                         <td class="td" style="min-width: 200px;">
                             <%: Html.ActionLink(" ", "Edit", "User", new { id_value = customer.UserId }, new { @class = "IconButtons", style = " background: url(../../Content/Images/edit.png) 3px 5px no-repeat;" })%>
-                            <%: Html.ActionLink(" ", "Delete", "User", new { id_value = customer.UserId }, new { @class = "IconButtons", onclick = "return confirm('Do you want to Delete this Record?');", style = "background: url(../../Content/Images/delete.png) 3px 5px no-repeat;" })%>
+                            <%: Html.ActionLink(" ", "Delete", "User", new { id_value = customer.UserId }, new { @class = "IconButtons", onclick = "return confirm('Do you want to delete this record?');", style = "background: url(../../Content/Images/delete.png) 3px 5px no-repeat;" })%>
                         </td>
                     </tr>
                     <% } %>

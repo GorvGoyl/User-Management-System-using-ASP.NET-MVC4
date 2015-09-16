@@ -17,6 +17,6 @@ namespace MVC4_Html_Table.Models
         public string City { get; set; }      
         public string Dob { get; set; }
         public string Password { get; set; }
-
+        
     }
 }

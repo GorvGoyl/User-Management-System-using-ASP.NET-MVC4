@@ -5,7 +5,7 @@
     Dashboard
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
-    <link href="../../Content/CSS/Tabs.css" rel="stylesheet" type="text/css" />
+   
     <script type="text/javascript">
 
         $(document).ready(function () {

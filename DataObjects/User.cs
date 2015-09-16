@@ -15,5 +15,6 @@ namespace DataObjects
         public string City { get; set; }
         public string Dob { get; set; }
         public string Password { get; set; }
+  
     }
 }

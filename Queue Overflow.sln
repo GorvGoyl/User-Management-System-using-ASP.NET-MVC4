@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC4 Html Table", "MVC4 Html Table\MVC4 Html Table.csproj", "{B993E650-DD07-4C78-BF17-FD44679E200F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue Overflow", "MVC4 Html Table\Queue Overflow.csproj", "{B993E650-DD07-4C78-BF17-FD44679E200F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessAccessLayer", "BusinessAccessLayer\BusinessAccessLayer.csproj", "{71B2D303-516C-4FB7-B9EB-12250EAE9CA1}"
 EndProject

@@ -5,13 +5,21 @@
     Login
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            UserNamelabel.innerHTML = "&nbsp;";
+            Passwordlabel.innerHTML = "&nbsp;";
+        }
+        );
+    </script>
     <script type="text/javascript">
         function validateform() {
 
             var username = document.getElementById("UserName").value;
             var password = document.getElementById("Password").value;
-            UserNamelabel.innerHTML = "";
-            Passwordlabel.innerHTML = "";
+            UserNamelabel.innerHTML = "&nbsp;";
+            Passwordlabel.innerHTML = "&nbsp;";
             if (username == null || username == "") {
                 UserNamelabel.innerHTML = "*Please enter a Username";
                 UserName.focus();
@@ -58,17 +66,17 @@
         <div>
             
             <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", id="UserName" , @PlaceHolder = "UserName*" })%>
-           <div id='UserNamelabel' class="ValidationLabel">
+           <div id='UserNamelabel' class="ValidationLabel">"&nbsp;"
             </div>
         </div>
-        <br />
+      
         <div>
           
             <%: Html.PasswordFor(model => model.Password, new { @class = "TextBox",id="Password", @PlaceHolder = "Password*" })%>
-              <div id='Passwordlabel' class="ValidationLabel">
+              <div id='Passwordlabel' class="ValidationLabel">"&nbsp;"
             </div>
         </div>
-        <br />
+       
         <div style="position: relative;">
             <input type="submit" id="submit" class="myButton" value="Login" onclick="return validateform(UserName,Password)"
                 style="font-weight: bold;" />
@@ -77,7 +85,7 @@
         <div>
             <br />
         </div>
-        <p class="change_link">
+        <p class="change_link" style = " position: relative; bottom: 8px;">
 									Forgot Password ?
 									<a href="../Home/Password" class="to_register">Click Here</a>
 								</p>

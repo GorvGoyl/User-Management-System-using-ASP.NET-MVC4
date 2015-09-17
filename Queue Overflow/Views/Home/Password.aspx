@@ -10,8 +10,8 @@
             debugger;
             var username = document.getElementById("UserName").value;
             var email = document.getElementById("Email").value;
-            UserNamelabel.innerHTML = "";
-            Emaillabel.innerHTML = "";
+            UserNamelabel.innerHTML = "&nbsp;";
+            Emaillabel.innerHTML = "&nbsp;";
             if (username == null || username == "") {
                 UserNamelabel.innerHTML = "*Please enter your Username";
                 UserName.focus();
@@ -62,17 +62,17 @@
         <div>
             
             <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", id="UserName" , @PlaceHolder = "Your UserName*" })%>
-           <div id='UserNamelabel' class="ValidationLabel">
+           <div id='UserNamelabel' class="ValidationLabel">&nbsp;
             </div>
         </div>
-        <br />
+    
         <div>
           
             <%: Html.TextBoxFor(model => model.Email, new { @class = "TextBox", id = "Email", @PlaceHolder = "Your Email*" })%>
-              <div id='Emaillabel' class="ValidationLabel">
+              <div id='Emaillabel' class="ValidationLabel">&nbsp;
             </div>
         </div>
-        <br />
+       
         <div style="position: relative;">
             <input type="submit" id="submit" class="myButton" value="Retrieve Password" onclick="return validateform()"
                 style="font-weight: bold;" />

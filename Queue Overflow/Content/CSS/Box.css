@@ -93,7 +93,8 @@
 
 	.Box
 		{
-		    
+		   position: inherit;
+    margin-top: 80px; 
     -webkit-animation-duration: 0.4s; 
     animation-duration: 0.4s; 
     -webkit-animation-fill-mode: both; 
@@ -102,8 +103,9 @@
     animation-timing-function: linear;  
 		    
 		background-color: #DCF8F9;	
-			position: absolute;
-			margin: auto;
+
+			margin-left: auto;
+			margin-right: auto;
 			top: 155px;
 			right: 0;
 			left: 0;

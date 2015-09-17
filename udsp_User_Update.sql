@@ -26,6 +26,8 @@ CREATE PROCEDURE udsp_User_Update
 	var_Password    VARCHAR(45)
 )
 BEGIN
+DECLARE error_InvalidInputs       CONDITION FOR SQLSTATE 'HY000';
+IF NOT EXISTS(SELECT * FROM USER_DATA WHERE UserName=var_UserName ) THEN
 	UPDATE     USER_DATA SET 
 	UserName = var_UserName ,
 	FullName = var_FullName	,
@@ -36,6 +38,10 @@ BEGIN
 
 	WHERE 
 	UserId     = var_UserId	    ;
-
+ELSE
+ SIGNAL error_InvalidInputs
+ SET MESSAGE_TEXT    = "UserName already exists",
+ MYSQL_ERRNO      = 2002;
+END IF;
 END //
 DELIMITER ;

@@ -26,6 +26,9 @@ CREATE PROCEDURE udsp_User_Create
 	var_Password    VARCHAR(45)
 )
 BEGIN
+
+DECLARE error_InvalidInputs       CONDITION FOR SQLSTATE 'HY000';
+IF NOT EXISTS(SELECT * FROM USER_DATA WHERE UserName=var_UserName ) THEN
 	INSERT INTO USER_DATA
 	(
 		UserId,
@@ -49,6 +52,12 @@ BEGIN
 		var_Dob,
 		var_Password
 	);
+	
+ELSE
+ SIGNAL error_InvalidInputs
+ SET MESSAGE_TEXT    = "UserName already exists",
+ MYSQL_ERRNO      = 2002;
+END IF;
 
 END //
 DELIMITER ;

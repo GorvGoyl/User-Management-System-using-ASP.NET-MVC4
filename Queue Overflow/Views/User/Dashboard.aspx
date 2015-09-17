@@ -74,7 +74,7 @@
                         </tr>
                         <tr>
                             <td>
-                                FullName
+                                Full Name
                                 </td>
                                 <td>
                                 : <%:ViewBag.FullName as string%>

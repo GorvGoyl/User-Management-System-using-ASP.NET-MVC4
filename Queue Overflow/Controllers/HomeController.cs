@@ -13,56 +13,13 @@ using Newtonsoft.Json.Linq;
 using System.Configuration;
 using Utilities;
 using QueueOverflow.Libraries;
+using System.Web.Services;
 namespace QueueOverflow.Controllers
 {
     public class HomeController : BaseController
     {
         private static readonly log4net.ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserServiceURL"].ToString();
-
-        #region Password
-        public ActionResult Password()
-        {
-            ViewBag.Pass = string.Empty;
-            return View();
-        }
-        #endregion
-
-        #region Password Post
-        [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult Password(User user) //passing the username and email
-        {
-            string URL = BaseURL + "RetrieveUser";
-            _Logger.Debug("URL = " + URL);
-            try
-            {
-                LogHelper.LogMaker(user);
-                string UserDataResponse = ServiceConsumer.Post(URL, user);
-                _Logger.Debug("UserDataResponse = " + UserDataResponse);
-                
-                User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
-                LogHelper.LogMaker(UserData);
-                
-                if (UserData.Password != null)
-                {
-                    ViewBag.Pass = "Password : " + UserData.Password;
-                    return View();
-                }
-                else
-                {
-                    ViewBag.Pass = "Username or Email is incorrect";
-                    return View();
-                }
-            }
-
-            catch (Exception exception)
-            {
-                _Logger.Error(exception.Message, exception);
-                throw exception;
-            }
-        }
-        #endregion
 
         #region Register
 
@@ -73,41 +30,33 @@ namespace QueueOverflow.Controllers
         }
         #endregion
 
-        #region Register Post
-        [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult Register(User user)
+        #region RegisterUser
+        [WebMethod]
+        public JsonResult RegisterUser(User objUser)
         {
-            User CheckUser = new User();
-            CheckUser.UserName = user.UserName;
-            string UserResponseFromServer = ServiceConsumer.Post(BaseURL + "Retrieveuser", CheckUser);
-            User RetrieveUser = JsonConvert.DeserializeObject<User>(UserResponseFromServer);
-            if(!String.IsNullOrEmpty(RetrieveUser.UserName))
-            {
-                ViewBag.Pass = "UserName already Exists";
-                ModelState.Remove("UserName");
-                return View();
-            }
-         
-            user.UserId = Guid.NewGuid().ToString();
+            _Logger.Info("Method Start");
+
             string URL = BaseURL + "Create";
             _Logger.Debug("URL = " + URL);
+
+            objUser.UserId = Guid.NewGuid().ToString();
             try
             {
-                LogHelper.LogMaker(user);
-                string ResponseFromServer = ServiceConsumer.Post(URL, user);
+                LogHelper.LogMaker(objUser);
+                string ResponseFromServer = ServiceConsumer.Post(URL, objUser);
                 _Logger.Debug("ResponseFromServer = " + ResponseFromServer);
-                string JsonUser = JsonConvert.SerializeObject(user);
-                _Logger.Debug(JsonUser);
+
             }
 
             catch (Exception exception)
             {
                 _Logger.Error(exception.Message, exception);
-                throw exception;
+                var ErrorDetail = JObject.Parse(exception.Message)["ErrorDetail"].ToString();
+                return Json(new { Status = ErrorDetail });
             }
-            return RedirectToAction("Index", "User");
 
+            _Logger.Info("Method End");
+            return Json(new { Status = "Success" });
         }
         #endregion
 
@@ -172,6 +121,50 @@ namespace QueueOverflow.Controllers
             //To instruct the browser to clear the cookie you need to tell it the cookie has expired
             HttpContext.Response.Cookies["MXAuthCookie"].Expires = DateTime.Now.AddMonths(-1);
             return RedirectToAction("Login", "Home");
+        }
+        #endregion
+
+        #region Password
+        public ActionResult Password()
+        {
+            ViewBag.Pass = string.Empty;
+            return View();
+        }
+        #endregion
+
+        #region Password Post
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Password(User user) //passing the username and email
+        {
+            string URL = BaseURL + "RetrieveUser";
+            _Logger.Debug("URL = " + URL);
+            try
+            {
+                LogHelper.LogMaker(user);
+                string UserDataResponse = ServiceConsumer.Post(URL, user);
+                _Logger.Debug("UserDataResponse = " + UserDataResponse);
+
+                User UserData = JsonConvert.DeserializeObject<User>(UserDataResponse);
+                LogHelper.LogMaker(UserData);
+
+                if (UserData.Password != null)
+                {
+                    ViewBag.Pass = "Password : " + UserData.Password;
+                    return View();
+                }
+                else
+                {
+                    ViewBag.Pass = "Username or Email is incorrect";
+                    return View();
+                }
+            }
+
+            catch (Exception exception)
+            {
+                _Logger.Error(exception.Message, exception);
+                throw exception;
+            }
         }
         #endregion
 

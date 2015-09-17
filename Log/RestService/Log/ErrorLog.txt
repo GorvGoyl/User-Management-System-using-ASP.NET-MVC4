@@ -1,0 +1,984 @@
+ |ERROR| ContactManager | 2015-09-16 20:09:33,743| MySQL_User               | Retrieve                      | Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'queueoverflow'
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'queueoverflow' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'queueoverflow'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at DataAccessLayer.MySQL_User.Retrieve() in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 83
+ |ERROR| ContactManager | 2015-09-16 20:09:33,749| Users                    | Retrieve                      | Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'queueoverflow'
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'queueoverflow' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'queueoverflow'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at DataAccessLayer.MySQL_User.Retrieve() in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 111
+   at BusinessAccessLayer.Users.Retrieve() in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 68
+ |ERROR| ContactManager | 2015-09-16 20:09:33,749| UserService              | Retrieve                      | Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'queueoverflow'
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'queueoverflow' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'queueoverflow'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at BusinessAccessLayer.Users.Retrieve() in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 74
+   at RestService.UserService.Retrieve() in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 71
+ |ERROR| ContactManager | 2015-09-17 12:15:20,933| MySQL_User               | Create                        | Procedure or function '`udsp_User_Crete`' cannot be found in database '`QueueOverflow`'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Procedure or function '`udsp_User_Crete`' cannot be found in database '`QueueOverflow`'.
+   at MySql.Data.MySqlClient.ProcedureCache.GetProcData(MySqlConnection connection, String spName)
+   at MySql.Data.MySqlClient.ProcedureCache.AddNew(MySqlConnection connection, String spName)
+   at MySql.Data.MySqlClient.ProcedureCache.GetProcedure(MySqlConnection conn, String spName, String cacheKey)
+   at MySql.Data.MySqlClient.StoredProcedure.GetParameters(String procName)
+   at MySql.Data.MySqlClient.StoredProcedure.CheckParameters(String spName)
+   at MySql.Data.MySqlClient.StoredProcedure.Resolve(Boolean preparing)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:15:20,969| Users                    | Create                        | Procedure or function '`udsp_User_Crete`' cannot be found in database '`QueueOverflow`'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Procedure or function '`udsp_User_Crete`' cannot be found in database '`QueueOverflow`'.
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:15:20,970| UserService              | Create                        | Procedure or function '`udsp_User_Crete`' cannot be found in database '`QueueOverflow`'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Procedure or function '`udsp_User_Crete`' cannot be found in database '`QueueOverflow`'.
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:17:59,605| MySQL_User               | RetrieveUser                  | Procedure or function '`udsp_User_Retieve`' cannot be found in database '`QueueOverflow`'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Procedure or function '`udsp_User_Retieve`' cannot be found in database '`QueueOverflow`'.
+   at MySql.Data.MySqlClient.ProcedureCache.GetProcData(MySqlConnection connection, String spName)
+   at MySql.Data.MySqlClient.ProcedureCache.AddNew(MySqlConnection connection, String spName)
+   at MySql.Data.MySqlClient.ProcedureCache.GetProcedure(MySqlConnection conn, String spName, String cacheKey)
+   at MySql.Data.MySqlClient.StoredProcedure.GetParameters(String procName)
+   at MySql.Data.MySqlClient.StoredProcedure.CheckParameters(String spName)
+   at MySql.Data.MySqlClient.StoredProcedure.Resolve(Boolean preparing)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DataAccessLayer.MySQL_User.RetrieveUser(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 153
+ |ERROR| ContactManager | 2015-09-17 12:17:59,608| Users                    | RetrieveUser                  | Procedure or function '`udsp_User_Retieve`' cannot be found in database '`QueueOverflow`'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Procedure or function '`udsp_User_Retieve`' cannot be found in database '`QueueOverflow`'.
+   at DataAccessLayer.MySQL_User.RetrieveUser(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 169
+   at BusinessAccessLayer.Users.RetrieveUser(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:17:59,608| UserService              | RetrieveUser                  | Procedure or function '`udsp_User_Retieve`' cannot be found in database '`QueueOverflow`'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Procedure or function '`udsp_User_Retieve`' cannot be found in database '`QueueOverflow`'.
+   at BusinessAccessLayer.Users.RetrieveUser(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 52
+   at RestService.UserService.RetrieveUser(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 48
+ |ERROR| ContactManager | 2015-09-17 12:33:34,953| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:33:34,959| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:33:34,959| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:36:16,547| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:36:16,548| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:36:16,549| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:43:14,642| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:43:14,654| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:43:14,655| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:44:57,914| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:44:57,914| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:44:57,915| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:45:00,948| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:45:00,949| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:45:00,950| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:45:52,619| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:45:52,620| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:45:52,620| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:47:04,744| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:47:04,745| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:47:04,745| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:48:07,385| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:48:07,385| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:48:07,386| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:48:12,368| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:48:12,369| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:48:12,370| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:48:36,030| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:48:36,031| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:48:36,031| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:53:56,781| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:53:56,782| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:53:56,782| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:53:56,824| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:53:56,825| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:53:56,825| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:53:56,853| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:53:56,854| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:53:56,857| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:55:14,336| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:55:14,337| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:55:14,337| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:55:20,930| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:55:20,932| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:55:20,933| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:55:34,489| MySQL_User               | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:55:34,490| Users                    | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:55:34,490| UserService              | Create                        | user already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): user already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:56:55,239| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:56:55,240| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:56:55,241| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:58:07,125| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:58:07,127| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:58:07,127| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:59:16,317| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:59:16,318| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:59:16,319| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 12:59:27,604| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 12:59:27,607| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 12:59:27,608| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:02:27,446| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:02:27,447| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:02:27,448| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:02:47,355| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:02:47,356| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:02:47,357| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:02:49,881| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:02:49,881| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:02:49,882| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:02:51,537| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:02:51,538| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:02:51,539| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:04:17,215| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:04:17,216| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:04:17,216| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:04:20,283| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:04:20,284| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:04:20,285| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:04:31,934| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:04:31,935| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:04:31,936| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:04:37,808| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:04:37,810| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:04:37,810| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:04:38,327| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:04:38,327| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:04:38,328| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:04:51,753| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:04:51,755| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:04:51,755| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:06:06,437| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:06:06,437| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:06:06,439| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:06:09,343| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:06:09,345| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:06:09,345| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:08:06,515| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:08:06,516| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:08:06,516| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:08:08,239| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:08:08,240| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:08:08,240| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:08:08,428| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:08:08,429| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:08:08,430| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:09:52,349| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:09:52,350| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:09:52,350| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:10:27,791| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:10:27,793| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:10:27,793| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:12:48,540| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:12:48,541| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:12:48,542| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:14:10,834| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:14:10,835| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:14:10,836| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:16:03,564| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:16:03,565| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:16:03,565| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:25:30,542| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:25:30,543| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:25:30,543| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:26:37,983| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:26:37,984| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:26:37,985| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:26:41,222| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:26:41,223| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:26:41,223| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:27:52,636| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:27:52,637| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:27:52,638| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:38:56,686| MySQL_User               | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 214
+ |ERROR| ContactManager | 2015-09-17 13:38:56,687| Users                    | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 221
+   at BusinessAccessLayer.Users.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 90
+ |ERROR| ContactManager | 2015-09-17 13:38:56,687| UserService              | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 96
+   at RestService.UserService.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 95
+ |ERROR| ContactManager | 2015-09-17 13:42:12,822| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 13:42:12,823| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 13:42:12,824| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 13:51:39,950| MySQL_User               | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 214
+ |ERROR| ContactManager | 2015-09-17 13:51:39,950| Users                    | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 221
+   at BusinessAccessLayer.Users.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 90
+ |ERROR| ContactManager | 2015-09-17 13:51:39,951| UserService              | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 96
+   at RestService.UserService.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 95
+ |ERROR| ContactManager | 2015-09-17 14:06:14,834| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 14:06:14,835| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 14:06:14,835| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 14:06:41,162| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 14:06:41,164| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 14:06:41,164| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27
+ |ERROR| ContactManager | 2015-09-17 14:22:34,261| MySQL_User               | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 214
+ |ERROR| ContactManager | 2015-09-17 14:22:34,262| Users                    | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 221
+   at BusinessAccessLayer.Users.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 90
+ |ERROR| ContactManager | 2015-09-17 14:22:34,262| UserService              | Update                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 96
+   at RestService.UserService.Update(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 95
+ |ERROR| ContactManager | 2015-09-17 14:34:39,107| MySQL_User               | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 44
+ |ERROR| ContactManager | 2015-09-17 14:34:39,111| Users                    | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at DataAccessLayer.MySQL_User.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\DataAccessLayer\MySQL_User.cs:line 49
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 23
+ |ERROR| ContactManager | 2015-09-17 14:34:39,112| UserService              | Create                        | UserName already exists
+MySql.Data.MySqlClient.MySqlException (0x80004005): UserName already exists
+   at BusinessAccessLayer.Users.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\BusinessAccessLayer\Users.cs:line 28
+   at RestService.UserService.Create(User user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\RestService\UserService.svc.cs:line 27

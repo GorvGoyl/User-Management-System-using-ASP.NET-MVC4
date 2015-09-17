@@ -74,10 +74,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\json-serialize.js" />
-    <Content Include="Scripts\json-serialize.min.js" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 DataAccessLayer", "02 Da
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 BusinessAccessLayer", "03 BusinessAccessLayer", "{6D072604-B58F-4767-BA49-43EC1DF8E63E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 WCFServices", "04 WCFServices", "{BA6609B9-1D13-4BAE-8CAC-F555F178CFF6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 RestService", "04 RestService", "{BA6609B9-1D13-4BAE-8CAC-F555F178CFF6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 WebApplication", "05 WebApplication", "{BE6BCF89-97BA-48B7-AC93-F7A6DEA0D40A}"
 EndProject
@@ -25,7 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObjects", "DataObjects\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase Scripts", "DataBase Scripts", "{BC79A6AB-FD5B-4E46-8883-0F0FB6BAF2A1}"
 	ProjectSection(SolutionItems) = preProject
-		udsp_Create__User_Schema.sql = udsp_Create__User_Schema.sql
+		Master.sql = Master.sql
+		udsp_Create_User_Schema.sql = udsp_Create_User_Schema.sql
 		udsp_User_Create.sql = udsp_User_Create.sql
 		udsp_User_Delete.sql = udsp_User_Delete.sql
 		udsp_User_Retrieve.sql = udsp_User_Retrieve.sql

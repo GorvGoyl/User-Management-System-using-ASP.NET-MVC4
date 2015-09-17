@@ -1,0 +1,1486 @@
+ |INFO | 2015-09-16 20:09:31,770| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:09:31,966| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:09:31,980| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-16 20:09:31,980| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-16 20:09:31,981| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:09:32,092| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-16 20:09:33,858| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-16 20:10:59,866| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:10:59,871| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:10:59,872| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:10:59,878| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-16 20:10:59,878| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-16 20:10:59,878| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:10:59,879| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-16 20:11:00,229| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-16 20:11:00,243| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:11:02,800| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:11:02,803| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:11:02,808| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-16 20:11:02,809| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-16 20:11:02,809| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:11:02,810| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-16 20:11:02,822| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-16 20:11:02,823| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:14:29,281| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:14:29,334| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:14:29,343| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-16 20:14:29,343| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-16 20:14:29,343| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:14:29,434| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-16 20:14:30,822| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-16 20:14:30,842| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:14:33,985| BaseController           | OnActionExecuting             | Method Start ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-16 20:14:33,987| BaseController           | OnActionExecuted              | Method End ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-16 20:14:34,008| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:14:34,009| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:14:40,555| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:14:40,583| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-16 20:14:40,593| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-16 20:14:40,594| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-16 20:14:40,594| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-16 20:14:40,595| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-16 20:14:40,663| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-16 20:14:40,663| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-16 20:14:40,664| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-16 20:14:40,665| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:14:40,673| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-16 20:14:40,673| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-16 20:14:40,674| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:14:40,674| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-16 20:14:40,681| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-16 20:14:40,681| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:34:55,373| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:34:55,461| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-16 20:34:55,473| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-16 20:34:55,474| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-16 20:34:55,474| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-16 20:34:55,577| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-16 20:34:56,700| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-16 20:34:56,717| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 11:55:48,321| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 11:55:48,639| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 11:55:48,763| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 11:55:48,764| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 11:55:48,764| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 11:55:49,029| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 11:55:52,101| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 11:55:52,122| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 11:55:58,976| BaseController           | OnActionExecuting             | Method Start ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 11:55:58,978| BaseController           | OnActionExecuted              | Method End ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 11:55:58,993| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 11:55:58,995| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 11:56:01,390| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 11:56:01,416| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 12:14:17,199| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:14:17,253| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:14:54,062| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:14:54,116| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:15:01,871| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:15:01,879| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:15:01,957| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:15:01,958| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:15:01,959| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:15:01,960| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:15:03,267| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:15:03,291| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:15:03,292| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:15:03,316| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:15:03,330| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:15:03,331| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:15:03,331| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:15:03,334| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:15:03,366| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:15:03,374| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:15:11,310| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:15:11,312| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:15:20,797| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:15:20,799| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:15:20,800| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:15:20,800| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:15:20,801| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:15:20,867| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:15:20,870| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:15:20,870| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:15:20,871| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:15:20,872| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:15:20,872| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:15:21,065| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:16:52,550| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:17:13,207| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:13,263| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:13,277| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:17:13,278| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:17:13,278| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:17:13,391| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:17:14,501| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:17:14,525| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:17:17,000| BaseController           | OnActionExecuting             | Method Start ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:17,002| BaseController           | OnActionExecuted              | Method End ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:17,015| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:17,017| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:23,808| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:23,810| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:17:23,823| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:17:23,824| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:17:23,825| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:17:23,825| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:17:23,849| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:17:23,850| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:17:23,850| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:17:23,851| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:23,856| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:17:23,856| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:17:23,856| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:17:23,857| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:17:23,865| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:17:23,865| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:17:49,651| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:49,703| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:49,716| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:17:49,717| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:17:49,717| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:17:49,808| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:17:50,710| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:17:50,729| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:17:53,944| BaseController           | OnActionExecuting             | Method Start ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:53,946| BaseController           | OnActionExecuted              | Method End ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:53,962| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:53,963| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:59,559| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:17:59,564| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:17:59,577| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:17:59,578| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:17:59,579| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:17:59,579| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:17:59,646| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:19:11,803| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:29:38,718| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:29:38,770| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:29:51,891| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:29:51,908| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:29:52,043| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:29:52,045| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:29:52,048| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:29:52,049| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:29:53,091| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:29:53,121| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:29:53,122| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:29:53,125| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:29:53,132| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:29:53,132| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:29:53,133| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:29:53,135| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:29:53,151| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:29:53,160| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:29:55,674| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:29:55,676| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:30:10,497| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:30:10,500| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:30:10,502| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:30:10,503| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:30:10,504| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:30:10,523| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:30:10,524| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:33:31,153| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:33:31,214| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:33:31,225| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:33:31,226| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:33:31,226| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:33:31,327| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:33:31,352| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:33:31,369| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:33:34,837| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:33:34,840| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:33:34,842| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:33:34,854| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:33:34,855| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:33:34,856| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:33:34,856| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:33:35,050| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:33:35,051| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:33:53,909| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:33:53,910| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:33:53,913| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:33:53,915| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:33:53,916| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:33:53,917| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:33:53,918| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:33:53,995| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:33:53,996| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 12:33:53,997| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:33:55,828| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:33:55,829| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:33:55,829| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:33:55,831| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:33:55,849| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:33:55,850| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:33:59,285| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:33:59,286| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:33:59,287| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 12:33:59,291| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:33:59,294| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:33:59,295| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:33:59,318| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:33:59,318| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:33:59,319| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:33:59,319| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 12:34:03,493| BaseController           | OnActionExecuting             | Method Start ACTION: SaveUser CONTROLLER: User
+ |INFO | 2015-09-17 12:34:03,495| UserController           | SaveUser                      | Method Start
+ |INFO | 2015-09-17 12:34:03,496| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:34:03,498| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:34:03,498| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:34:03,499| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:34:03,499| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:34:03,641| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:34:03,641| UserController           | SaveUser                      | Method End
+ |INFO | 2015-09-17 12:34:03,642| BaseController           | OnActionExecuted              | Method End ACTION: SaveUser CONTROLLER: User
+ |INFO | 2015-09-17 12:34:05,469| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:34:05,469| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:34:05,470| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:34:05,471| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:34:05,490| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:34:05,492| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:36:06,278| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:36:06,279| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:36:16,524| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:36:16,525| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:36:16,526| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:36:16,528| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:36:16,528| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:36:16,530| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:36:16,533| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:36:16,551| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:36:16,551| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:43:14,555| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:43:14,557| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:43:14,558| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:43:14,559| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:43:14,559| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:43:14,561| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:43:14,562| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:43:14,657| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:43:14,658| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:44:54,656| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:44:54,708| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:44:54,717| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:44:54,718| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:44:54,718| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:44:54,806| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:44:54,830| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:44:54,847| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:44:57,880| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:44:57,883| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:44:57,885| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:44:57,896| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:44:57,897| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:44:57,898| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:44:57,899| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:44:57,954| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:44:57,956| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:45:00,931| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:45:00,931| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:45:00,933| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:45:00,934| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:45:00,935| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:45:00,936| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:45:00,937| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:45:00,977| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:45:00,978| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:45:52,595| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:45:52,596| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:45:52,597| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:45:52,598| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:45:52,599| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:45:52,600| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:45:52,601| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:45:52,623| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:45:52,624| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:47:04,367| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:47:04,566| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:47:04,585| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:47:04,585| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:47:04,586| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:47:04,675| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:47:04,677| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:47:04,681| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:47:04,700| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:47:04,705| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:47:04,707| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:47:04,708| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:47:04,709| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:47:04,739| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:47:04,761| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:47:04,820| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:47:04,821| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:47:17,910| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:47:17,911| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:47:17,919| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:47:17,919| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:47:17,921| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:47:17,922| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:47:17,934| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:47:17,935| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:48:02,760| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:48:02,816| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:48:02,824| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:48:02,825| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:48:02,827| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:48:02,921| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:48:02,945| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:48:02,962| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:48:07,351| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:48:07,353| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:48:07,355| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:48:07,371| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:48:07,372| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:48:07,372| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:48:07,373| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:48:07,423| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:48:07,424| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:48:12,351| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:48:12,352| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:48:12,353| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:48:12,354| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:48:12,355| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:48:12,356| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:48:12,357| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:48:12,397| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:48:12,398| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:48:33,468| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:48:33,523| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:48:33,532| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:48:33,532| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:48:33,532| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:48:33,622| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:48:33,645| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:48:33,662| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:48:35,989| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:48:35,991| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:48:35,993| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:48:36,014| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:48:36,016| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:48:36,017| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:48:36,018| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:48:36,069| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:53:56,744| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:53:56,748| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:53:56,749| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:53:56,749| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:53:56,750| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:53:56,750| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:53:56,751| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:53:56,746| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:53:56,791| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:53:56,797| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:53:56,801| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:53:56,802| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:53:56,802| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:53:56,803| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:53:56,803| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:53:56,804| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:53:56,806| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:53:56,809| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:53:56,809| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:53:56,810| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:53:56,811| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:53:56,811| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:53:56,812| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:53:56,813| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:53:56,861| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:53:56,862| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:53:56,865| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:53:56,868| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:00,590| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:55:00,613| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:55:00,620| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:55:00,621| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:55:00,621| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:55:00,725| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:55:00,748| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:55:00,772| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:55:10,030| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:55:10,094| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:55:10,120| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:55:10,120| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:55:10,121| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:55:10,247| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:55:10,283| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:55:10,300| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:55:14,305| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:14,308| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:55:14,309| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:55:14,321| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:55:14,322| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:55:14,323| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:55:14,324| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:55:14,376| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:55:14,380| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:20,916| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:20,916| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:55:20,918| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:55:20,920| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:55:20,921| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:55:20,922| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:55:20,923| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:55:20,962| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:55:20,962| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:25,131| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:55:25,132| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:55:34,475| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:34,476| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:55:34,477| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:55:34,478| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:55:34,479| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:55:34,480| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:55:34,481| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:55:34,513| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:55:34,513| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:40,413| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:40,413| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:55:40,414| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:55:40,415| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:55:40,416| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:55:40,417| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:55:40,418| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:55:40,494| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:55:40,495| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 12:55:40,495| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:55:42,329| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:55:42,330| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:55:42,330| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:55:42,332| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:55:42,349| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:55:42,350| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:56:41,500| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:56:41,500| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:56:41,501| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:56:41,502| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:56:41,521| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:56:41,523| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:56:45,996| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:56:45,997| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:56:55,220| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:56:55,221| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:56:55,223| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:56:55,224| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:56:55,224| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:56:55,225| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:56:55,226| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:56:55,245| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:56:55,246| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:58:07,111| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:58:07,111| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:58:07,112| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:58:07,112| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:58:07,113| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:58:07,113| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:58:07,115| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:58:07,129| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:58:07,130| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:59:12,248| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:59:12,300| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 12:59:12,308| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 12:59:12,309| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 12:59:12,309| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:59:12,400| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 12:59:12,427| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 12:59:12,464| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 12:59:16,289| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:59:16,292| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:59:16,294| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:59:16,295| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:59:16,300| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:59:16,301| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:59:16,302| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:59:16,359| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:59:16,363| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:59:19,545| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:59:19,546| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 12:59:27,586| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 12:59:27,587| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 12:59:27,590| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:59:27,591| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:59:27,592| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 12:59:27,593| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 12:59:27,594| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 12:59:27,635| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 12:59:27,636| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:02:27,427| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:02:27,428| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:02:27,429| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:02:27,433| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:02:27,433| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:02:27,435| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:02:27,436| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:02:27,474| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:02:27,475| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:02:30,095| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:02:30,096| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:02:47,335| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:02:47,336| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:02:47,337| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:02:47,339| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:02:47,339| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:02:47,341| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:02:47,342| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:02:47,380| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:02:47,380| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:02:49,866| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:02:49,866| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:02:49,867| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:02:49,869| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:02:49,869| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:02:49,870| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:02:49,872| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:02:49,909| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:02:49,910| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:02:51,522| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:02:51,522| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:02:51,523| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:02:51,524| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:02:51,525| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:02:51,526| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:02:51,527| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:02:51,571| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:02:51,572| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:17,199| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:17,200| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:04:17,201| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:17,202| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:17,202| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:04:17,203| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:17,206| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:17,247| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:04:17,248| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:20,265| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:20,266| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:04:20,267| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:20,268| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:20,269| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:04:20,270| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:20,271| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:20,313| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:04:20,314| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:21,714| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:04:21,715| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:04:31,910| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:31,911| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:04:31,912| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:31,913| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:31,914| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:04:31,917| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:31,919| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:31,958| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:04:31,959| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:37,792| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:37,793| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:04:37,794| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:37,796| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:37,797| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:04:37,798| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:37,799| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:37,837| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:04:37,837| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:38,312| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:38,312| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:04:38,313| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:38,314| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:38,315| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:04:38,316| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:38,318| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:38,353| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:04:38,354| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:40,549| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:04:40,549| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:04:51,735| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:04:51,736| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:04:51,737| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:51,738| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:51,739| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:04:51,740| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:04:51,742| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:04:51,786| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:04:51,786| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:05:57,572| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:05:57,572| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:06:06,415| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:06:06,416| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:06:06,417| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:06:06,418| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:06:06,421| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:06:06,426| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:06:06,427| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:06:06,461| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:06:06,462| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:06:09,328| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:06:09,329| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:06:09,330| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:06:09,331| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:06:09,331| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:06:09,332| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:06:09,333| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:06:09,369| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:06:09,370| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:07:57,957| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:07:57,958| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:08:06,496| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:08:06,497| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:08:06,498| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:08:06,498| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:08:06,499| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:08:06,500| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:08:06,502| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:08:06,553| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:08:06,554| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:08:08,223| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:08:08,224| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:08:08,225| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:08:08,226| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:08:08,226| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:08:08,228| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:08:08,229| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:08:08,264| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:08:08,265| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:08:08,414| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:08:08,414| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:08:08,415| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:08:08,416| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:08:08,417| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:08:08,418| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:08:08,419| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:08:08,460| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:08:08,461| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:09:43,846| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:09:43,846| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:09:52,318| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:09:52,318| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:09:52,320| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:09:52,321| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:09:52,322| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:09:52,323| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:09:52,324| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:09:52,373| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:09:52,374| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:10:19,024| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:10:19,025| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:10:27,772| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:10:27,773| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:10:27,774| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:10:27,775| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:10:27,776| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:10:27,777| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:10:27,780| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:10:27,817| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:10:27,818| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:12:14,111| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:12:14,112| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:12:23,312| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:12:23,313| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:12:23,314| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:12:23,317| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:12:23,317| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:12:23,318| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:12:23,319| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:12:23,426| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:12:23,427| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 13:12:23,427| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:12:25,264| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:12:25,265| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:12:25,265| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:12:25,267| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:12:25,279| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:12:25,280| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:12:36,056| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:12:36,057| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:12:48,523| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:12:48,524| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:12:48,525| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:12:48,526| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:12:48,527| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:12:48,528| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:12:48,529| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:12:48,572| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:12:48,573| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:14:02,045| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:14:02,046| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:14:10,817| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:14:10,818| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:14:10,819| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:14:10,820| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:14:10,820| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:14:10,823| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:14:10,824| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:14:10,863| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:14:10,864| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:15:24,360| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:15:24,361| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:15:52,433| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:15:52,434| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:16:03,547| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:16:03,548| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:16:03,549| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:16:03,551| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:16:03,551| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:16:03,552| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:16:03,554| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:16:03,590| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:16:03,591| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:16:10,093| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:16:10,093| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:16:10,095| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:16:10,096| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:16:10,097| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:16:10,100| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:16:10,101| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:16:10,141| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:16:10,142| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 13:16:10,142| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:16:11,369| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:16:11,369| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:16:11,369| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:16:11,371| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:16:11,389| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:16:11,390| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:25:19,930| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:25:19,931| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:25:30,431| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:25:30,432| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:25:30,434| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:25:30,435| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:25:30,436| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:25:30,439| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:25:30,439| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:25:30,568| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:25:30,569| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:25:41,801| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:25:41,801| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:25:41,802| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:25:41,803| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:25:41,804| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:25:41,805| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:25:41,807| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:25:41,848| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:25:41,849| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 13:25:41,849| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:25:43,075| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:25:43,075| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:25:43,076| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:25:43,078| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:25:43,096| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:25:43,097| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:26:28,545| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:26:28,546| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:26:37,965| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:26:37,967| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:26:37,968| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:26:37,969| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:26:37,970| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:26:37,971| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:26:37,973| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:26:38,014| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:26:38,015| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:26:41,212| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:26:41,212| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:26:41,213| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:26:41,214| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:26:41,214| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:26:41,215| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:26:41,215| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:26:41,253| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:26:41,253| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:26:48,023| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:26:48,023| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:26:48,024| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:26:48,026| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:26:48,028| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:26:48,029| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:26:48,030| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:26:48,091| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:26:48,092| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 13:26:48,092| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:26:49,322| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:26:49,322| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:26:49,323| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:26:49,324| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:26:49,339| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:26:49,340| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:27:40,639| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:27:40,640| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:27:52,615| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:27:52,616| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:27:52,618| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:27:52,619| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:27:52,620| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:27:52,621| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:27:52,622| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:27:52,660| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:27:52,661| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:27:55,549| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:27:55,549| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:27:55,550| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:27:55,550| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:27:55,550| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:27:55,551| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:27:55,551| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:27:55,588| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:27:55,589| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 13:27:55,589| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:27:56,813| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:27:56,813| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:27:56,814| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:27:56,816| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:27:56,832| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:27:56,833| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:27:58,418| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:27:58,419| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 13:28:09,717| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:28:09,718| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 13:28:09,721| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:28:09,722| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:28:09,723| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:28:09,724| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:28:09,725| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:28:09,757| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:28:09,758| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 13:28:09,758| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:28:11,592| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:28:11,592| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:28:11,593| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:28:11,594| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:28:11,607| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:28:11,608| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:38:48,112| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:38:48,166| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:38:48,179| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:38:48,179| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:38:48,179| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:38:48,338| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:38:48,695| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:38:48,723| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:38:52,630| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:38:52,631| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:38:52,639| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:38:52,642| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:38:52,643| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:38:52,644| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:38:52,663| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:38:52,664| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:38:52,664| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:38:52,665| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:38:56,666| BaseController           | OnActionExecuting             | Method Start ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:38:56,669| UserController           | UpdateUser                    | Method Start
+ |INFO | 2015-09-17 13:38:56,670| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:38:56,671| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:38:56,672| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:38:56,673| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:38:56,674| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:38:56,724| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:38:56,727| BaseController           | OnActionExecuted              | Method End ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:39:10,938| BaseController           | OnActionExecuting             | Method Start ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:39:10,939| UserController           | UpdateUser                    | Method Start
+ |INFO | 2015-09-17 13:39:10,940| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:39:10,943| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:39:10,943| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:39:10,944| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:39:10,945| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:39:11,001| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:39:11,002| UserController           | UpdateUser                    | Method End
+ |INFO | 2015-09-17 13:39:11,002| BaseController           | OnActionExecuted              | Method End ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:39:12,228| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:39:12,229| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:39:12,230| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:39:12,231| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:39:12,249| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:39:12,250| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:39:24,418| BaseController           | OnActionExecuting             | Method Start ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 13:39:24,421| BaseController           | OnActionExecuted              | Method End ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 13:39:24,428| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:39:24,430| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:39:26,718| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 13:39:26,745| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 13:39:37,564| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 13:39:37,568| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:39:37,570| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:39:37,571| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:39:37,583| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:39:37,685| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 13:41:54,794| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:41:54,847| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:41:57,575| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 13:41:57,607| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 13:42:12,686| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 13:42:12,696| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:42:12,779| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:42:12,780| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:42:12,781| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:42:12,781| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:42:12,875| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:42:12,901| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 13:51:23,309| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:51:23,311| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:51:32,346| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:51:32,349| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:51:32,350| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:51:32,351| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:51:32,352| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:51:32,355| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:51:32,481| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:51:32,492| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:51:32,493| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:51:32,516| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 13:51:32,522| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:51:32,523| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:51:32,523| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:51:32,526| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:51:32,534| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:51:32,542| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:51:36,842| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:51:36,843| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:51:36,844| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:51:36,854| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:51:36,855| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:51:36,856| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:51:36,885| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:51:36,885| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:51:36,886| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:51:36,887| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:51:39,921| BaseController           | OnActionExecuting             | Method Start ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:51:39,922| UserController           | UpdateUser                    | Method Start
+ |INFO | 2015-09-17 13:51:39,923| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:51:39,924| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:51:39,924| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:51:39,924| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:51:39,926| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:51:39,979| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:51:39,980| BaseController           | OnActionExecuted              | Method End ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 13:54:49,187| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:54:49,188| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:54:49,189| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:54:49,190| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:54:49,191| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:54:49,192| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:54:49,230| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:54:49,230| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:54:49,231| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:54:49,231| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:55:00,040| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:55:00,041| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:55:00,042| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:55:00,043| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:55:00,070| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:55:00,071| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:55:01,835| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:55:01,837| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:55:01,838| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:55:01,843| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:55:01,844| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:55:01,847| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:55:01,883| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:55:01,883| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:55:01,884| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:55:01,884| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:55:16,455| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:55:16,456| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:55:16,457| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:55:16,459| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:55:16,460| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:55:16,461| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:55:16,517| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:55:16,518| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:55:16,519| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:55:16,520| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:55:32,338| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:55:32,339| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:55:32,340| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:55:32,342| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 13:55:32,343| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:55:32,346| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:55:32,379| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 13:55:32,380| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 13:55:32,380| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 13:55:32,380| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 13:55:42,378| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 13:55:42,380| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 13:55:42,381| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 13:55:42,382| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 13:55:42,406| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 13:55:42,407| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:05:55,648| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:05:55,769| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:05:55,778| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:05:55,779| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:05:55,779| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:05:56,065| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:05:56,179| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:05:56,233| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:06:01,902| BaseController           | OnActionExecuting             | Method Start ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 14:06:01,904| BaseController           | OnActionExecuted              | Method End ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 14:06:01,910| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:06:01,911| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:06:04,555| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:06:04,591| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:06:14,799| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:06:14,803| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 14:06:14,806| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:06:14,807| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:06:14,808| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:06:14,809| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:06:14,810| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:06:14,872| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:06:14,875| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:06:19,422| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:06:19,423| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 14:06:19,425| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:06:19,426| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:06:19,426| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:06:19,427| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:06:19,428| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:06:19,487| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:06:19,488| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 14:06:19,488| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:06:41,146| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:06:41,147| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 14:06:41,148| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:06:41,149| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:06:41,150| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:06:41,151| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:06:41,152| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:06:41,196| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:06:41,197| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:06:44,278| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:06:44,279| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 14:06:44,283| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:06:44,285| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:06:44,285| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:06:44,287| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:06:44,288| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:06:44,381| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:06:44,382| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 14:06:44,383| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:06:59,349| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:06:59,350| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:04,510| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:04,511| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:19,444| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:07:19,445| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 14:07:19,446| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:07:19,447| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:07:19,448| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:07:19,452| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:07:19,453| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:07:19,506| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:07:19,507| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 14:07:19,507| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:07:21,341| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:21,342| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:41,408| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:41,409| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:47,215| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:47,216| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:49,074| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:49,077| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:58,029| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:07:58,030| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 14:07:58,031| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:07:58,033| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:07:58,034| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:07:58,035| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:07:58,036| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:07:58,064| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:07:58,065| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 14:07:58,065| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:07:59,399| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:07:59,400| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:09:53,317| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:09:53,320| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:09:53,322| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:09:53,323| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:09:53,324| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:09:53,325| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:09:53,380| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:09:53,381| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:09:53,381| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:09:53,383| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:14:35,808| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:14:35,883| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:14:39,875| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:14:39,906| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:14:50,693| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:14:50,710| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:14:50,790| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:14:50,791| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:14:50,792| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:14:50,794| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:14:50,834| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:14:50,857| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:14:50,858| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:14:50,883| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:14:59,276| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:14:59,278| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:14:59,279| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:14:59,279| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:14:59,281| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:14:59,283| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:14:59,299| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:14:59,300| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:14:59,300| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:14:59,300| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:15,841| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:15,842| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:15,843| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:15,844| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:15:15,844| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:15,845| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:15,859| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:15:15,862| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:15,863| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:15,895| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:33,685| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:33,687| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:33,688| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:33,688| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:15:33,689| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:33,690| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:33,754| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:15:33,755| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:33,755| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:33,756| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:36,180| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:36,181| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:45,283| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:45,286| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:45,287| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:45,287| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:15:45,288| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:45,288| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:45,299| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:15:45,300| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:15:45,301| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:15:45,305| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:15:45,312| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:15:45,313| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:15:45,313| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:15:45,316| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:15:45,324| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:15:45,332| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:15:48,606| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:15:48,607| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:15:48,608| BaseController           | OnActionExecuting             | Method Start ACTION: Dashboard CONTROLLER: User
+ |INFO | 2015-09-17 14:15:48,743| BaseController           | OnActionExecuted              | Method End ACTION: Dashboard CONTROLLER: User
+ |INFO | 2015-09-17 14:18:50,894| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:18:50,896| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:18:50,902| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:18:50,902| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:18:50,902| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:18:50,903| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:18:50,920| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:18:50,921| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:19:29,989| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:19:29,990| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:19:29,990| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:19:29,992| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:19:30,008| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:19:30,010| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:20:20,568| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:20:20,569| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:20:20,570| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:20:20,572| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:20:20,589| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:20:20,591| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:22:13,788| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:22:13,852| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:22:13,863| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:13,864| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:13,864| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:22:13,980| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:22:14,023| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:22:14,061| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:22:18,618| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:18,619| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:18,620| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:18,620| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:18,624| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:22:18,628| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:22:18,633| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:18,635| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:18,656| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:22:18,657| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:18,657| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:18,658| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:22:23,102| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:23,103| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:23,104| BaseController           | OnActionExecuting             | Method Start ACTION: Delete CONTROLLER: User
+ |INFO | 2015-09-17 14:22:23,107| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:22:23,108| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:23,110| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:24,206| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:22:24,206| BaseController           | OnActionExecuted              | Method End ACTION: Delete CONTROLLER: User
+ |INFO | 2015-09-17 14:22:24,210| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:24,211| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:24,211| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:22:24,212| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:22:24,246| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:22:24,247| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:22:29,283| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:29,284| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:29,284| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:29,284| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:29,286| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:22:29,288| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:22:29,289| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:29,290| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:29,302| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:22:29,303| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:29,304| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:29,304| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:22:34,228| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:34,229| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:34,231| BaseController           | OnActionExecuting             | Method Start ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:22:34,235| UserController           | UpdateUser                    | Method Start
+ |INFO | 2015-09-17 14:22:34,237| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:34,238| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:34,238| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:22:34,239| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:34,240| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:34,300| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:22:34,303| BaseController           | OnActionExecuted              | Method End ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:22:42,854| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:42,855| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:42,856| BaseController           | OnActionExecuting             | Method Start ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:22:42,856| UserController           | UpdateUser                    | Method Start
+ |INFO | 2015-09-17 14:22:42,857| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:42,859| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:42,859| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:22:42,860| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:42,861| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:42,917| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:22:42,918| UserController           | UpdateUser                    | Method End
+ |INFO | 2015-09-17 14:22:42,918| BaseController           | OnActionExecuted              | Method End ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:22:43,646| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:43,647| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:43,647| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:22:43,649| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:22:43,666| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:22:43,667| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:22:57,726| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:57,727| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:57,728| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:57,728| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:57,729| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:22:57,731| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:22:57,732| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:57,733| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:57,745| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:22:57,745| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:22:57,746| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:22:57,746| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:22:59,986| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:22:59,986| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:22:59,987| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:22:59,989| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:23:00,016| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:23:00,017| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:31:30,254| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:31:30,313| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:31:30,331| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:31:30,332| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:31:30,332| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:31:30,429| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:31:32,395| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:31:32,413| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:31:43,883| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:31:43,885| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:31:43,888| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:31:43,889| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:32:08,285| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:32:08,289| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:32:08,304| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:32:08,305| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:32:08,306| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:32:08,307| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:32:08,414| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:32:08,415| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:32:08,416| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:32:08,418| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:32:08,426| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:32:08,426| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:32:08,426| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:32:08,429| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:32:08,475| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:32:08,476| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:33:38,895| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:33:38,946| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:33:38,954| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:33:38,955| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:33:38,955| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:33:39,052| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:33:39,090| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:33:39,107| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:33:40,335| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:33:40,336| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:33:40,337| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 14:33:40,338| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 14:33:53,706| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:33:53,707| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:33:53,708| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:33:53,709| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:33:53,726| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:33:53,728| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:33:57,588| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:33:57,589| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:33:57,589| BaseController           | OnActionExecuting             | Method Start ACTION: Dashboard CONTROLLER: User
+ |INFO | 2015-09-17 14:33:57,717| BaseController           | OnActionExecuted              | Method End ACTION: Dashboard CONTROLLER: User
+ |INFO | 2015-09-17 14:34:19,435| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:19,436| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:19,436| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:19,438| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:34:19,456| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:34:19,457| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:21,527| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:21,529| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:21,530| BaseController           | OnActionExecuting             | Method Start ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 14:34:21,530| BaseController           | OnActionExecuted              | Method End ACTION: Create CONTROLLER: User
+ |INFO | 2015-09-17 14:34:38,958| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:38,959| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:39,034| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:34:39,036| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 14:34:39,038| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:39,057| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:39,059| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:34:39,061| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:39,062| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:39,184| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:34:39,187| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:34:42,346| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:42,347| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:42,350| BaseController           | OnActionExecuting             | Method Start ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:34:42,350| UserController           | CreateUser                    | Method Start
+ |INFO | 2015-09-17 14:34:42,352| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:42,353| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:42,353| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:34:42,357| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:42,358| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:42,428| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:34:42,429| UserController           | CreateUser                    | Method End
+ |INFO | 2015-09-17 14:34:42,430| BaseController           | OnActionExecuted              | Method End ACTION: CreateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:34:43,152| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:43,153| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:43,153| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:43,155| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:34:43,170| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:34:43,172| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:45,441| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:45,441| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:45,442| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:45,442| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:45,443| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:34:45,447| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:34:45,448| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:45,449| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:45,469| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:34:45,469| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:45,470| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:45,470| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:34:48,536| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:48,537| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:48,539| BaseController           | OnActionExecuting             | Method Start ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:34:48,541| UserController           | UpdateUser                    | Method Start
+ |INFO | 2015-09-17 14:34:48,543| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:48,544| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:48,545| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:34:48,546| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:48,547| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:48,639| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:34:48,640| UserController           | UpdateUser                    | Method End
+ |INFO | 2015-09-17 14:34:48,641| BaseController           | OnActionExecuted              | Method End ACTION: UpdateUser CONTROLLER: User
+ |INFO | 2015-09-17 14:34:49,964| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:49,965| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:49,966| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:49,969| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:34:49,985| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:34:49,986| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:51,621| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:51,623| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:51,623| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:51,623| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:51,624| BaseController           | OnActionExecuting             | Method Start ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:34:51,625| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:34:51,625| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:51,626| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:51,642| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:34:51,642| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:51,643| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:51,643| BaseController           | OnActionExecuted              | Method End ACTION: Edit CONTROLLER: User
+ |INFO | 2015-09-17 14:34:53,362| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:53,363| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:53,363| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:53,364| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:34:53,373| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:34:53,374| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:56,833| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:56,834| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:56,835| BaseController           | OnActionExecuting             | Method Start ACTION: Delete CONTROLLER: User
+ |INFO | 2015-09-17 14:34:56,839| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:34:56,840| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:34:56,842| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:34:56,902| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:34:56,902| BaseController           | OnActionExecuted              | Method End ACTION: Delete CONTROLLER: User
+ |INFO | 2015-09-17 14:34:56,907| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:34:56,907| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:34:56,908| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:56,908| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:34:56,915| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:34:56,916| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:34:58,767| BaseController           | OnActionExecuting             | Method Start ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 14:34:58,769| BaseController           | OnActionExecuted              | Method End ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 14:34:58,778| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:34:58,780| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:35:01,012| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:35:01,049| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:35:14,294| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:35:14,297| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:35:14,298| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:35:14,299| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:35:14,300| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:35:14,300| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:35:14,310| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:35:14,311| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:35:14,311| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:35:14,333| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:35:18,981| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:35:18,982| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:35:18,982| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:35:18,983| ServiceConsumer          | Post                          | Method Start
+ |INFO | 2015-09-17 14:35:18,983| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:35:18,984| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:35:18,996| ServiceConsumer          | Post                          | Method End
+ |INFO | 2015-09-17 14:35:18,997| LogHelper                | LogMaker                      | Method Start
+ |INFO | 2015-09-17 14:35:18,998| LogHelper                | LogMaker                      | Method End
+ |INFO | 2015-09-17 14:35:19,018| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:35:24,287| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:35:24,289| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:26,253| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:26,355| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:26,371| CustomAuthorizeAttribute | OnAuthorization               | Method start
+ |INFO | 2015-09-17 14:36:26,372| CustomAuthorizeAttribute | OnAuthorization               | Method end
+ |INFO | 2015-09-17 14:36:26,373| BaseController           | OnActionExecuting             | Method Start ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:36:26,485| ServiceConsumer          | Get                           | Method Start
+ |INFO | 2015-09-17 14:36:26,509| ServiceConsumer          | Get                           | Method End
+ |INFO | 2015-09-17 14:36:26,532| BaseController           | OnActionExecuted              | Method End ACTION: Index CONTROLLER: User
+ |INFO | 2015-09-17 14:36:30,235| BaseController           | OnActionExecuting             | Method Start ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:30,237| BaseController           | OnActionExecuted              | Method End ACTION: Logout CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:30,277| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:30,278| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:31,950| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:31,983| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:34,618| BaseController           | OnActionExecuting             | Method Start ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 14:36:34,652| BaseController           | OnActionExecuted              | Method End ACTION: Password CONTROLLER: Home
+ |INFO | 2015-09-17 15:46:50,716| BaseController           | OnActionExecuting             | Method Start ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 15:46:50,716| BaseController           | OnActionExecuted              | Method End ACTION: Register CONTROLLER: Home
+ |INFO | 2015-09-17 15:47:48,238| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 15:47:48,240| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 15:47:53,259| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 15:47:53,260| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 15:48:09,129| BaseController           | OnActionExecuting             | Method Start ACTION: Login CONTROLLER: Home
+ |INFO | 2015-09-17 15:48:09,131| BaseController           | OnActionExecuted              | Method End ACTION: Login CONTROLLER: Home

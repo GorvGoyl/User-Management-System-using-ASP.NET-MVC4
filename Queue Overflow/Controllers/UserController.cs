@@ -19,79 +19,16 @@ using System.Web.Security;
 using QueueOverflow.Libraries;
 namespace QueueOverflow.Controllers
 {
+    [CustomAuthorize]
     public class UserController : BaseController
     {
         private readonly ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         string BaseURL = ConfigurationManager.AppSettings["UserServiceURL"].ToString();
 
-        #region CreateUser 
-        [WebMethod]
-        public JsonResult CreateUser(User objUser)
-        {
-            _Logger.Info("Method Start");
-
-            User CheckUser = new User();
-            CheckUser.UserName = objUser.UserName;
-            string UserResponseFromServer = ServiceConsumer.Post(BaseURL + "Retrieveuser", CheckUser);
-            User RetrieveUser = JsonConvert.DeserializeObject<User>(UserResponseFromServer);
-            if (!String.IsNullOrEmpty(RetrieveUser.UserName))
-            {
-                return Json(new { Status = "UserName already Exists" });
-            }
-
-
-            string URL = BaseURL + "Create";
-            _Logger.Debug("URL = " + URL);
-
-            objUser.UserId =  Guid.NewGuid().ToString();
-            try
-            {
-                LogHelper.LogMaker(objUser);
-                string ResponseFromServer = ServiceConsumer.Post(URL, objUser);
-                _Logger.Debug("ResponseFromServer = " + ResponseFromServer);
-
-            }
-
-            catch (Exception exception)
-            {
-                _Logger.Error(exception.Message, exception);
-                throw exception;
-            }
-
-            _Logger.Info("Method End");
-            return Json(new { Status = "Success" });
-        }
-        #endregion
-
-        #region SaveUser ajax
-        [WebMethod]
-        public JsonResult SaveUser(User objUser)
-        {
-            _Logger.Info("Method Start");
-            string URL = BaseURL + "Update";
-            _Logger.Debug("URL = " + URL);
-            try
-            {
-                LogHelper.LogMaker(objUser);
-                string UserDataResponse = ServiceConsumer.Post(URL, objUser);
-                _Logger.Debug("UserDataResponse = " + UserDataResponse);
-            }
-
-            catch (Exception exception)
-            {
-                _Logger.Error(exception.Message, exception);
-                throw exception;
-            }
-            _Logger.Info("Method End");
-            return Json(new { Status = "Success" });
-
-        }
-        #endregion
 
         #region Dashboard
-        [CustomAuthorize]
-        [ValidateInput(false)]
-        public ActionResult Dashboard()
+        [ValidateInput(false)]  
+        public ActionResult Dashboard() 
         {
             HttpCookie cookie = HttpContext.Request.Cookies.Get("MXAuthCookie");
             FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(cookie.Value);
@@ -105,10 +42,9 @@ namespace QueueOverflow.Controllers
             ViewBag.Dob = User.Dob;
             return View();
         }
-        #endregion
+        #endregion  
 
         #region Index
-        [CustomAuthorize]
         [ValidateInput(false)]
         public ActionResult Index()
         {
@@ -149,29 +85,20 @@ namespace QueueOverflow.Controllers
         }
         #endregion
 
-        #region Create
-
-        public ActionResult Create()
+        #region CreateUser
+        [WebMethod]
+        public JsonResult CreateUser(User objUser)
         {
-            return View(new User());
-        }
-        #endregion
+            _Logger.Info("Method Start");
 
-        #region Create Post
-        [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult Create(User user)
-        {
-
-            Guid NewGUID = Guid.NewGuid();
-            _Logger.Debug(NewGUID);
-            user.UserId = NewGUID.ToString();
             string URL = BaseURL + "Create";
             _Logger.Debug("URL = " + URL);
+
+            objUser.UserId = Guid.NewGuid().ToString();
             try
             {
-                LogHelper.LogMaker(user);
-                string ResponseFromServer = ServiceConsumer.Post(URL, user);
+                LogHelper.LogMaker(objUser);
+                string ResponseFromServer = ServiceConsumer.Post(URL, objUser);
                 _Logger.Debug("ResponseFromServer = " + ResponseFromServer);
 
             }
@@ -179,11 +106,12 @@ namespace QueueOverflow.Controllers
             catch (Exception exception)
             {
                 _Logger.Error(exception.Message, exception);
-                throw exception;
+                var ErrorDetail = JObject.Parse(exception.Message)["ErrorDetail"].ToString();
+                return Json(new { Status = ErrorDetail });
             }
 
-            return RedirectToAction("Index", "User");
-
+            _Logger.Info("Method End");
+            return Json(new { Status = "Success" });
         }
         #endregion
 
@@ -216,35 +144,42 @@ namespace QueueOverflow.Controllers
         }
         #endregion
 
-        #region Edit Post
-        [HttpPost]  //posting the data to dB
-        [ValidateInput(false)]
-        public ActionResult Edit(User user)
-        {
+        #region Create
 
+        public ActionResult Create()
+        {
+            return View(new User());
+        }
+        #endregion
+
+        #region UpdateUser
+        [WebMethod]
+        public JsonResult UpdateUser(User objUser)
+        {
+            _Logger.Info("Method Start");
             string URL = BaseURL + "Update";
             _Logger.Debug("URL = " + URL);
             try
             {
-                string JsonUser = JsonConvert.SerializeObject(user, Formatting.Indented);
-                _Logger.Debug("JsonUser = " + JsonUser);
-                
-                string UserDataResponse = ServiceConsumer.Post(URL, JsonUser);
+                LogHelper.LogMaker(objUser);
+                string UserDataResponse = ServiceConsumer.Post(URL, objUser);
                 _Logger.Debug("UserDataResponse = " + UserDataResponse);
             }
 
             catch (Exception exception)
             {
                 _Logger.Error(exception.Message, exception);
-                throw exception;
+                var ErrorDetail = JObject.Parse(exception.Message)["ErrorDetail"].ToString();
+                return Json(new { Status = ErrorDetail });
             }
 
-            return RedirectToAction("Index", "User");
+            _Logger.Info("Method End");
+            return Json(new { Status = "Success" });
+
         }
         #endregion
 
         #region Delete
-        [CustomAuthorize]
         public ActionResult Delete(string id_value)
         {
 

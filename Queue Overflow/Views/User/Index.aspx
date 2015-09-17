@@ -2,7 +2,7 @@
     Title="Content Page Index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="Server">
-    Super User
+    Admin
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
     <%--  <script src="../../Content/JS/jquery.js" type="text/javascript"></script>--%>

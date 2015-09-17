@@ -29,7 +29,7 @@ namespace RestService
             catch (Exception exception)
             {
                 _Logger.Error(exception.Message, exception);
-                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                CustomException Error = new CustomException("Unexpected Error", exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
             _Logger.Info("Method End");
@@ -51,8 +51,8 @@ namespace RestService
             catch (Exception exception)
             {
                 _Logger.Error(exception.Message, exception);
-                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
-                throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
+                CustomException Error = new CustomException("Unexpected Error", exception.Message);
+                throw new WebFaultException<CustomException>(Error, System.Net.HttpStatusCode.InternalServerError);
             }
 
             _Logger.Info("Method End");
@@ -75,7 +75,7 @@ namespace RestService
             catch (Exception exception)
             {
                 _Logger.Error(exception.Message, exception);
-                CustomException Error = new CustomException("Unexpected error caused by " + exception.Source, exception.Message);
+                CustomException Error = new CustomException("Unexpected Error", exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
 
@@ -97,7 +97,7 @@ namespace RestService
             catch (Exception exception)
             {
                 _Logger.Error(exception.Message, exception);
-                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                CustomException Error = new CustomException("Unexpected Error", exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
             _Logger.Info("Method End");
@@ -118,7 +118,7 @@ namespace RestService
             catch (Exception exception)
             {
                 _Logger.Error(exception.Message, exception);
-                CustomException Error = new CustomException("Unexpected Error caused by " + exception.Source, exception.Message);
+                CustomException Error = new CustomException("Unexpected Error", exception.Message);
                 throw new WebFaultException<CustomException>(Error, HttpStatusCode.InternalServerError);
             }
             _Logger.Info("Method End");

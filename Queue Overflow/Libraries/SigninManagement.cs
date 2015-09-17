@@ -13,6 +13,7 @@ namespace QueueOverflow.Libraries
     {
         private static readonly log4net.ILog _Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        #region SetAuthCookie
         public static void SetAuthCookie(User user, string userDataResponse)
         {
             HttpCookie CustomAuthCookie = new HttpCookie("MXAuthCookie");
@@ -30,7 +31,9 @@ namespace QueueOverflow.Libraries
             HttpContext.Current.Response.Cookies.Add(new HttpCookie(CustomAuthCookie.Name, EncTicket));
       
         }
+        #endregion
 
+        #region GetAuthCookieData
         public static User GetAuthCookieData()
         {
             //HttpCookie cookie = HttpContext.Request.Cookies["MXAuthCookie"];
@@ -50,5 +53,7 @@ namespace QueueOverflow.Libraries
             return User;
 
         }
+        #endregion
+
     }
 }

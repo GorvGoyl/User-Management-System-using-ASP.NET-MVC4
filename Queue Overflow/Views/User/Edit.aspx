@@ -96,28 +96,32 @@
             
             $.ajax({
                 type: "POST",
-                url: "../User/SaveUser",
+                url: "../User/UpdateUser",
                 data: '{objUser: ' + JSON.stringify(user) + '}',
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
-                success: function () {
-                    $("#message").fadeIn("slow").delay(1000).fadeOut("fast", function () {
-                        window.location = "Index";
-                    });
-                  
-                  },
+                success: function (data) {
+                    if (data.Status == 'Success')
+                        $("#message").removeClass('RedMessage').fadeIn("slow").text("User updated successfully").delay(500).fadeOut("fast", function () {
+                            window.location = "Index";
+                        });
+                    else {
+                        $("#message").addClass('RedMessage').fadeIn("slow");
+                        $("div#message p").text(data.Status);
+                    }
+                },
                 error: function () {
-                    alert("Error while updating user");
+                    $("#message").addClass('RedMessage').fadeIn("slow");
+                    $("div#message p").text("Error while updating user");
                 }
             });
-            return false;  
+            return false; 
 
         } 
     </script>
      <div id="message" class="Message" style="width:274px; display:none;position: relative;
-    top: 25px;">
-            <span style="position: relative; top: 2px;">
-                User Updated Successfully</span>
+    top: 25px;"><p style="position: relative;bottom:14px;"></p>
+            
         </div>
     <% using (Html.BeginForm())
        { %>

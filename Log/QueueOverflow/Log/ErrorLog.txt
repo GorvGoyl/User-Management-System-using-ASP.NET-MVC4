@@ -758,3 +758,17 @@ System.Exception: {
 }
    at Utilities.ServiceConsumer.Post(String url, Object user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\UtilityClassLibrary\ServiceConsumer.cs:line 132
    at QueueOverflow.Controllers.UserController.CreateUser(User objUser) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\Queue Overflow\Controllers\UserController.cs:line 101
+ |ERROR| ContactManager | 2015-09-29 12:53:17,718| ServiceConsumer          | Post                          | The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Utilities.ServiceConsumer.Post(String url, Object user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\UtilityClassLibrary\ServiceConsumer.cs:line 96
+ |ERROR| ContactManager | 2015-09-29 12:53:17,779| UserController           | UpdateUser                    | {
+  "ErrorDetail": "UserName already exists",
+  "ErrorInfo": "Unexpected Error"
+}
+System.Exception: {
+  "ErrorDetail": "UserName already exists",
+  "ErrorInfo": "Unexpected Error"
+}
+   at Utilities.ServiceConsumer.Post(String url, Object user) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\UtilityClassLibrary\ServiceConsumer.cs:line 132
+   at QueueOverflow.Controllers.UserController.UpdateUser(User objUser) in C:\Users\Gourav\Documents\Visual Studio 2010\Projects\MVC4 Html Table\Queue Overflow\Controllers\UserController.cs:line 165

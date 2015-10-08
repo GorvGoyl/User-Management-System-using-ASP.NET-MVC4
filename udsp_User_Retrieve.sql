@@ -19,7 +19,7 @@ CREATE PROCEDURE udsp_User_Retrieve
 	var_UserId	 VARCHAR(45),
 	var_UserName VARCHAR(45),
 	var_Password VARCHAR(45),
-	var_Email varchar(45)
+	var_Email VARCHAR(45)
 )
 BEGIN
 

@@ -4,15 +4,15 @@ USE QueueOverflow;
 
 CREATE TABLE `USER_DATA` 
 	(
-	  `UserAutoId` int(11) NULL AUTO_INCREMENT,
-	  `UserId` varchar(60) NOT NULL,
-	  `UserName` varchar(45) DEFAULT NULL,
-	  `FullName` varchar(45) DEFAULT NULL,
-	  `Phone` varchar(45) DEFAULT NULL,
-	  `Email` varchar(45) DEFAULT NULL,
-	  `City` varchar(45) DEFAULT NULL,
-	  `Dob` varchar(45) DEFAULT NULL,
-	  `Password` varchar(45) DEFAULT NULL,
+	  `UserAutoId` INT(11) NULL AUTO_INCREMENT,
+	  `UserId` VARCHAR(60) NOT NULL,
+	  `UserName` VARCHAR(45) DEFAULT NULL,
+	  `FullName` VARCHAR(45) DEFAULT NULL,
+	  `Phone` VARCHAR(45) DEFAULT NULL,
+	  `Email` VARCHAR(45) DEFAULT NULL,
+	  `City` VARCHAR(45) DEFAULT NULL,
+	  `Dob` VARCHAR(45) DEFAULT NULL,
+	  `Password` VARCHAR(45) DEFAULT NULL,
 	  CONSTRAINT  UserId   PRIMARY KEY (UserId)  ,
 	  CONSTRAINT  UserAutoId  UNIQUE (UserAutoId)
 	) ;
@@ -153,7 +153,7 @@ CREATE PROCEDURE udsp_User_Retrieve
 	var_UserId	 VARCHAR(45),
 	var_UserName VARCHAR(45),
 	var_Password VARCHAR(45),
-	var_Email varchar(45)
+	var_Email VARCHAR(45)
 )
 BEGIN
 

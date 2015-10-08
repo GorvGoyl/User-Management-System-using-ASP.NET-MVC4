@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <!-- <script src="https://testingleadsquaredpages.s3.amazonaws.com/common/images/connectors/Deployables_G/bootstrapValidator.js"
+        type="text/javascript"></script>-->
+    <link href="https://testingleadsquaredpages.s3.amazonaws.com/common/images/connectors/Deployables_G/bootstrapValidator.css"
+        rel="stylesheet" type="text/css" />
+    <script src="https://testingleadsquaredpages.s3.amazonaws.com/common/images/connectors/Deployables_G/bootstrapValidator.js" type="text/javascript"></script>
+</head>
+<style>
+
+@media screen and (orientation : landscape)  {
+
+  .centr{
+  top:20% !important;
+
+  }
+}
+
+
+@media screen and (max-width: 600px)  {
+
+  .padd {
+        margin-top: 10px !important;
+    }
+
+    .padd2{
+
+      margin-top: 10px !important;
+    }
+}
+.padd {
+      margin-top: 60px;
+  }
+
+.padd2{
+
+  margin-top: 35px;
+}
+
+.centr{
+top:31%;
+
+}
+
+    .texts
+    {
+        border-bottom-style: solid;
+        border-bottom-width: 1px; /* width: 100%; */ /* padding-right: 49%; */
+        border-bottom-color: gray;
+        padding-bottom: 7px;
+    }
+
+    .glyphicon.glyphicon-ok
+    {
+        margin-right: 7px;
+        color: green;
+    }
+    .help-block
+    {
+        text-align: left;
+        color: #9C0C09 !important;
+    }
+
+    body
+    {
+        background-image: url("https://testingleadsquaredpages.s3.amazonaws.com/common/images/connectors/Deployables_G/bg.jpg");
+        background-repeat: no-repeat; /*<img src="https://testingleadsquaredpages.s3.amazonaws.com/common/images/connectors/Deployables_G/bg.jpg" />*/
+        width: 100%;
+    }
+</style>
+<body>
+    <script type="text/javascript">
+        // var x = null;
+        // function formsubmit() {
+        //
+        //   x =check();
+        //
+        //     var count = $(".form-group.has-feedback.has-success").size();
+        //     if (count == '4') {
+        //
+        //         $("#myModal").modal();
+        //     }
+        //
+        //
+        // }
+
+
+        function check() {
+
+            return $('#basicBootstrapForm').bootstrapValidator({
+                //container: 'popover',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    fullname: {
+                        message: 'The Name is not valid',
+
+                        validators: {
+                            notEmpty: {
+                                message: 'The Name is required and cannot be empty'
+                            },
+
+                            regexp: {
+                                regexp: /^[a-zA-Z ]+$/,
+                                message: 'The Name can only consist of alphabets'
+                            }
+
+                        }
+                    },
+
+
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The email address cannot be empty'
+                            },
+                            emailAddress: {
+                                message: 'The email address is not a valid'
+                            }
+                        }
+                    },
+                    address: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The address cannot be empty'
+                            }
+
+
+                        }
+                    },
+
+                    phone: {
+                        validators: {
+                            digits: {
+                                message: 'The mobile number can contain digits only'
+                            },
+                            regexp: {
+                                regexp: /^[0-9]{10}$/,
+                                message: 'Mobile number must consist of 10 digits'
+                            },
+                            notEmpty: {
+                                message: 'The mobile number is required'
+                            }
+                        }
+                    }
+
+                }
+
+            });
+
+        }
+
+        $(document).ready(function () {
+
+          //  check();
+
+
+        });
+    </script>
+    <nav class="navbar  navbar-default" style="background-color: #E7E5E8; border-radius: 0px;
+        padding-bottom: 11px; width: 100%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="color: #0963B9;   font-weight: bolder;  font-size: 22px;">HEALTH INSURANCE<br /><small style="font-size: 9px;
+    color: black;">AFFORDABLE SOLUTIONS FOR YOUR FAMILY</small></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="#">Home</a></li>
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Features
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu" style="  border: #E7E5E8;  background-color: #E7E5E8;">
+            <li><a style="    color: #777;" href="#">Claim Assistance</a></li>
+            <li><a style="    color: #777;" href="#">Hospital Locator</a></li>
+            <li><a style="    color: #777;" href="#">Hospital Network</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 " style="/*position: absolute; bottom: 0; */">
+                <p style="text-align: justify; font-size: xx-large; font-weight: bolder; text-align: center;    margin-top: -10px;">
+                    GET A <span style="color: #005CB7;">FREE QUOTE</span> FROM LOCAL AGENT</p>
+            </div>
+            <div class="col-sm-4">
+                <form role="form" id="basicBootstrapForm" class="form-horizontal" style="min-width: 320px;
+                text-align: center; background-color: #146BBA; padding-left: 34px; padding-right: 34px;
+                padding-top: 21px; padding-bottom: 21px; border-radius: 10px; float: right;">
+                <div style="font-weight: bold; text-align: center; color: #FFFFFF; font-size: xx-large;">
+                    START HERE!</div>
+                <div>
+                    <p style="color: #FFFFFF; font-size: x-small; border-bottom-style: dotted; text-align: center;
+                        padding-bottom: 7px;">
+                        JUST FILL OUT THE FORM TO GET STARTED!</p>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" data-bv-field="fullname" name="fullname"
+                                placeholder="Full Name"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                            <input type="text" class="form-control" data-bv-field="address" name="address" placeholder="Address"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                            </span>
+                            <input type="email" class="form-control" data-bv-field="email" name="email" placeholder="Email"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span>
+                            </span>
+                            <input type="text" class="form-control" data-bv-field="phone" name="phone" placeholder="Phone"></div>
+                    </div>
+                </div>
+                <button type="button" onclick="return check()" class="btn btn-default" style="background-image: repeating-linear-gradient(to bottom,rgb(255, 255, 255) 0%,rgb(243, 243, 243) 50%,rgb(209, 209, 209) 51%,rgb(241, 236, 236) 100%);
+                    border-radius: 17px; color: #0561B6; font-weight: bold; outline: none;">
+                    SUBMIT & CONTINUE</button>
+
+                </form>
+            </div>
+        </div>
+        <div style="display: inline-block;  " class="padd2">
+            <div class="row">
+                <div class="col-sm-9" style="text-align: justify;">
+                    <h2 style="text-align: center">
+                        Enjoy affordable coverage</h2>
+                    <p class="texts">
+                        <span class="glyphicon glyphicon-ok" style=""></span>Lorem ipsum dol rspiciatis
+                        unde omnis iste natus error sitem aperiam, eaque ipsa quae ab illo inventore veritatis
+                        et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p class="texts">
+                        <span class="glyphicon glyphicon-ok" style=""></span>elit, sed do espiciatis unde
+                        omnis iste natus eriam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae vitae dicta sunt explicabo.</p>
+                    <p class="texts">
+                        <span class="glyphicon glyphicon-ok" style=""></span>etur adipisiciniqua Sed ut
+                        perspiciatis unde omnis otam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                        et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p style="margin-bottom: 25px;">
+                        <span class="glyphicon glyphicon-ok" style=""></span>adipisicing elit, sed do eiusm
+                        ut perspiciatis unde omnism, totam rem aperiam, eaque ipsa quae ab illo inventore
+                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+                <div class="col-sm-3">
+                    <img class="img-responsive" style="margin-top: 26px;margin-bottom: 26px;
+ border-style: solid; border-width: 1px;
+                        margin-left: auto; margin-right: auto; border-color: grey;" src="https://testingleadsquaredpages.s3.amazonaws.com/common/images/connectors/Deployables_G/Familie.jpg"
+                        alt="Chania">
+                </div>
+            </div>
+            <div class="row" style="background-color: #F1F1F1; border-style: solid; border-width: 1px;
+                border-color: rgba(128, 128, 128, 0.41);">
+                <div class="col-sm-3">
+                    <img class="img-responsive" style="margin-top: 26px; margin-bottom: 26px; border-style: solid;
+                        border-width: 2px; margin-left: auto; margin-right: auto; border-color: white;"
+                        src="https://testingleadsquaredpages.s3.amazonaws.com/common/images/connectors/Deployables_G/service-bg.jpg"
+                        alt="Chania">
+                </div>
+                <div class="col-sm-9" style="text-align: justify;">
+                    <h2 style="text-align: center">
+                        Enjoy top-class service</h2>
+                    <p>
+                        Lorem ipsum dol rspiciatis unde omnis iste natus error sitem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>
+                        elit, sed do espiciatis unde omnis iste natus eriam, eaque ipsa quae ab illo inventore
+                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>
+                        etur adipisiciniqua Sed ut perspiciatis unde omnis otam rem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>
+                        adipisicing elit, sed do eiusm ut perspiciatis unde omnism, totam rem aperiam, eaque
+                        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo.</p>
+                </div>
+            </div>
+            <div class="row" style="font-size: medium;">
+                <div class="col-sm-3" style="text-align: justify;">
+                    <p class="texts" style="margin-top: 21px;">
+                        <span class="glyphicon glyphicon-ok" style=""></span>aperiam, eaque  quasi architecto
+                        beatae vitae dicta sunt explicabo.</p>
+                    <p class="texts">
+                        <span class="glyphicon glyphicon-ok" style=""></span>elit, que ipsa qis eecto beatae
+                        vitae dicta sunt explicabo.</p>
+                    <p class="texts">
+                        <span class="glyphicon glyphicon-ok" style=""></span>etur aperiam, eaqitatis beatae
+                        vitae dicta sunt explicabo.</p>
+                    <p class="texts">
+                        <span class="glyphicon glyphicon-ok" style=""></span>adipitotam rem aperiaritatieatae
+                        vitae dicta sunt explicabo.</p>
+                </div>
+                <div class="col-sm-3">
+                    <h2 style="text-align: center">
+                        Testimonials</h2>
+                    <img class="img-responsive" style="border-style: solid; border-width: 2px; border-color: white;
+                        margin-left: auto; margin-right: auto;" src="https://testingleadsquaredpages.s3.amazonaws.com/common/images/connectors/Deployables_G/6.jpg"
+                        alt="Chania">
+                </div>
+                <div class="col-sm-6 padd" style="font-style: italic; text-align: justify;">
+                    <p style="">
+                        " Lorem ipsum dol rspiciatis unde omnis iste natus error sitem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>
+                        elit, sed do espiciatis unde omnis iste natus eriam, eaque ipsa quae ab illo inventore
+                        veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>
+                        etur adipisiciniqua Sed ut perspiciatis unde omnis otam rem aperiam, eaque ipsa
+                        quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."</p>
+                    <p style="color: #2A78BF; font-style: normal; font-weight: bold;">
+                        - Jon Smith, LA</p>
+                </div>
+            </div>
+            <div class="row" style="">
+                <div class="col-sm-12" style="text-align: center; margin-top: 9px;">
+                    <button type="submit" class="btn btn-default" style="padding-left: 85px; border-radius: 74px;
+                        color: #FFF; font-weight: bold; padding-right: 85px; outline: none; background-color: #0561B4;
+                        font-size: 35px; padding-top: 10px; padding-bottom: 10px; font-size: 2vw; margin-top: 11px;">
+                        CLICK HERE TO GET STARTED</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade centr" role="dialog" style="">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" style="    margin-top: -1px;
+margin-right: 5px; " class="close" data-dismiss="modal">
+                        &times;</button>
+                    <h4 class="modal-title" style="text-align:left">
+                      Form submitted successfully
+                      </h4>
+                </div>
+                <div class="modal-body">
+                    <p style="text-align:left">
+                    Thank you for your interest</p>
+                </div>
+                <div class="modal-footer" style="    padding-top: 5px;
+padding-bottom: 5px;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer style="background-color: #F1F1F1; margin-top: 36px; padding-top: 23px; text-align: center;
+    padding-bottom: 4px;">
+
+
+  <p>Contact information: <a href="mailto:someone@example.com">
+  someone@example.com</a>.</p>
+</footer>
+</html>

@@ -44,7 +44,7 @@
             return true;
 
 
-        } 
+        }
     </script>
      <div id="message" class="Message" style="width:274px; position: relative;
     top: 25px;background-color:transparent;    color: red;">
@@ -59,24 +59,24 @@
             <div style="position: relative; top: 2px;">
                 Login</div>
         </div>
-      
+
         <div>
             <br />
         </div>
         <div>
-            
+
             <%: Html.TextBoxFor(model => model.UserName, new { @class = "TextBox", id="UserName" , @PlaceHolder = "UserName*" })%>
            <div id='UserNamelabel' class="ValidationLabel">"&nbsp;"
             </div>
         </div>
-      
+
         <div>
-          
+
             <%: Html.PasswordFor(model => model.Password, new { @class = "TextBox",id="Password", @PlaceHolder = "Password*" })%>
               <div id='Passwordlabel' class="ValidationLabel">"&nbsp;"
             </div>
         </div>
-       
+
         <div style="position: relative;">
             <input type="submit" id="submit" class="myButton" value="Login" onclick="return validateform(UserName,Password)"
                 style="font-weight: bold;" />

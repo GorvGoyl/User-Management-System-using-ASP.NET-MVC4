@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="D:\RestService" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="Web.config" publishTime="09/16/2015 20:18:27" />
+    <file relUrl="Web.config" publishTime="09/17/2015 16:56:09" />
     <file relUrl="UserService.svc" publishTime="09/16/2015 12:10:12" />
     <file relUrl="packages.config" publishTime="09/15/2015 22:55:24" />
-    <file relUrl="bin/Utilities.pdb" publishTime="09/16/2015 20:17:39" />
     <file relUrl="bin/Newtonsoft.Json.xml" publishTime="09/15/2015 22:55:24" />
-    <file relUrl="bin/DataObjects.dll" publishTime="09/16/2015 20:17:38" />
-    <file relUrl="bin/DataAccessLayer.pdb" publishTime="09/16/2015 20:17:40" />
-    <file relUrl="bin/BusinessAccessLayer.dll" publishTime="09/16/2015 20:17:41" />
+    <file relUrl="bin/DataObjects.dll" publishTime="09/17/2015 16:55:56" />
+    <file relUrl="bin/DataAccessLayer.pdb" publishTime="09/17/2015 16:56:08" />
+    <file relUrl="bin/BusinessAccessLayer.dll" publishTime="09/17/2015 16:56:08" />
     <file relUrl="bin/log4net.dll" publishTime="09/15/2015 22:55:24" />
-    <file relUrl="bin/DataObjects.pdb" publishTime="09/16/2015 20:17:38" />
+    <file relUrl="bin/DataObjects.pdb" publishTime="09/17/2015 16:55:56" />
+    <file relUrl="bin/BusinessAccessLayer.pdb" publishTime="09/17/2015 16:56:08" />
     <file relUrl="bin/log4net.xml" publishTime="09/15/2015 22:55:24" />
-    <file relUrl="bin/RestService.dll" publishTime="09/16/2015 20:17:41" />
-    <file relUrl="bin/Utilities.dll" publishTime="09/16/2015 20:17:39" />
+    <file relUrl="bin/RestService.dll" publishTime="09/17/2015 16:56:09" />
+    <file relUrl="bin/Utilities.dll" publishTime="09/17/2015 16:55:57" />
     <file relUrl="bin/Newtonsoft.Json.dll" publishTime="09/15/2015 22:55:24" />
-    <file relUrl="bin/DataAccessLayer.dll" publishTime="09/16/2015 20:17:40" />
-    <file relUrl="bin/RestService.pdb" publishTime="09/16/2015 20:17:41" />
-    <file relUrl="bin/BusinessAccessLayer.pdb" publishTime="09/16/2015 20:17:40" />
+    <file relUrl="bin/DataAccessLayer.dll" publishTime="09/17/2015 16:56:08" />
+    <file relUrl="bin/RestService.pdb" publishTime="09/17/2015 16:56:09" />
+    <file relUrl="bin/Utilities.pdb" publishTime="09/17/2015 16:55:57" />
   </publishProfile>
 </publishData>
